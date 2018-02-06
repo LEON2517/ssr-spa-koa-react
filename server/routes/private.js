@@ -13,7 +13,8 @@ exports.get = compose([
     ctx.body = {
       private: 'top most secret info',
       email: ctx.state.user.email,
-      day: '30 дней'
+      firstName: ctx.state.user.firstName,
+      lastName: ctx.state.user.lastName
     };
   }
 ]);

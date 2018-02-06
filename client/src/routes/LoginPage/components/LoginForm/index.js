@@ -8,8 +8,8 @@ import {signIn} from '../../../../actions'
 class LoginForm extends Component {
 
     state = {
-        email: '',
-        password: '',
+        email: 'dima.durdyev.92@list.ru',
+        password: '123456',
     };
 
 

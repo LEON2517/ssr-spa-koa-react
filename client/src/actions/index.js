@@ -1,4 +1,5 @@
-import { GET_ICON, LOAD_HOME_PAGE_ARTICLES, SEND_FORM, START, SUCCESS, FAIL } from '../constants'
+import { GET_ICON, LOAD_HOME_PAGE_ARTICLES, SEND_FORM, LOAD_CUSTOMER_INFORMATION, START, SUCCESS, FAIL } from '../constants'
+import {push} from 'react-router-redux'
 
 
 export function loadHomePageArticles() {
@@ -68,21 +69,34 @@ export function signIn(formData) {
                     return response.token;
                 })
                 .then(token => {
-                    alert("Auth success, fetching private information...");
-
                     return fetch("http://localhost:3001/private", {
                         headers: { "Authorization": token }
                     });
                 })
                 .then(res => res.json())
                 .then(response => {
-                    alert(JSON.stringify(response));
+                    dispatch({
+                        type: SEND_FORM + SUCCESS,
+                        response
+                    });
+
+                    dispatch(push('/account'))
+
                 })
+/*                .then(response => dispatch({
+                    type: SEND_FORM + SUCCESS,
+                    response
+                }))*/
+/*                .then(response => {
+                    alert(JSON.stringify(response));
+                })*/
                 .catch(function(err) {
                     alert("Error: " + err.message);
                 });
         }, 500)
     }
 }
+
+
 
 

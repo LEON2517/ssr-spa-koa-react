@@ -1,11 +1,12 @@
-import { LOAD_HOME_PAGE_ARTICLES, SUCCESS, START, FAIL } from '../constants'
+import { SEND_FORM, SUCCESS, START, FAIL } from '../constants'
 
 const defaultUser = {
-    status: false
+    isLoaded: false,
+    isLoading: false
 };
 
 export default (state = defaultUser, action) => {
-    const { type, status } = action;
+    const { type, status, response } = action;
 
     /*
 const action = {
@@ -16,15 +17,19 @@ const action = {
 
     switch (type) {
 
-        case LOAD_HOME_PAGE_ARTICLES + START:
-            return {
-                ...state
-            };
-
-        case LOAD_HOME_PAGE_ARTICLES + SUCCESS:
+        case SEND_FORM + START:
             return {
                 ...state,
-                status : true
+                isLoading: true,
+                isLoaded: false
+            };
+
+        case SEND_FORM + SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                isLoaded: true,
+                response
             }
     }
     return state
