@@ -1,0 +1,169 @@
+/* xs */
+@media (min-width: 0) {
+    .slider-presentation__row {
+        height: 350px;
+        background-color: #292d34;
+    }
+
+    .slider-presentation__h1 {
+        font-size: 25px;
+        color: #61dafb;
+    }
+
+    .slider-presentation__h2 {
+        font-size: 16px;
+        font-weight: 200;
+        margin-top: 30px;
+        color: #fff;
+    }
+
+    .slider-presentation__btn_centre  {
+        width: 185px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50px;
+    }
+
+    .block-center {
+        position: relative;
+        top: 20px;
+    }
+}
+
+/* sm */
+@media (min-width: 576px) {
+    .slider-presentation__row {
+        height: 375px;
+        background-color: #292d34;
+    }
+
+    .slider-presentation__h1 {
+        font-size: 30px;
+        color: #61dafb;
+    }
+
+    .slider-presentation__h2 {
+        font-size: 18px;
+        font-weight: 200;
+        margin-top: 30px;
+        color: #fff;
+    }
+
+    .slider-presentation__btn_centre  {
+        width: 185px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50px;
+    }
+
+    .block-center {
+        position: relative;
+        top: 20px;
+    }
+
+}
+
+/* md*/
+@media (min-width: 768px) {
+    .slider-presentation__row {
+        height: 400px;
+        background-color: #292d34;
+    }
+
+    .slider-presentation__h1 {
+        font-size: 35px;
+        color: #61dafb;
+    }
+
+    .slider-presentation__h2 {
+        font-size: 22px;
+        font-weight: 200;
+        margin-top: 30px;
+        color: #fff;
+    }
+
+    .slider-presentation__btn_centre  {
+        width: 185px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50px;
+    }
+
+    .block-center {
+        position: relative;
+        top: 20px;
+    }
+
+}
+/* lg*/
+@media (min-width: 992px) {
+    .slider-presentation__row {
+        height: 425px;
+        background-color: #292d34;
+    }
+
+    .slider-presentation__h1 {
+        font-size: 40px;
+        color: #61dafb;
+    }
+
+    .slider-presentation__h2 {
+        font-size: 24px;
+        font-weight: 200;
+        margin-top: 30px;
+        color: #fff;
+    }
+
+    .slider-presentation__btn_centre  {
+        width: 185px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50px;
+    }
+
+    .block-center {
+        position: relative;
+        top: 25px;
+    }
+
+}
+/* xl увеличил размер слайда на 55 пикселей изза фикседа, был 505*/
+@media (min-width: 1200px) {
+
+    .slider-presentation__row {
+        height: 560px;
+        background-color: #292d34;
+    }
+
+    .slider-presentation__h1 {
+        font-size: 45px;
+        color: #61dafb;
+    }
+
+    .slider-presentation__h2 {
+        font-size: 28px;
+        font-weight: 200;
+        margin-top: 30px;
+        color: #fff;
+    }
+
+    .slider-presentation__btn_centre  {
+        width: 185px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50px;
+    }
+
+}
+
+
+
+.btn {
+    margin-left: 10px;
+    border: none;
+}
+
+.btn:hover {
+    background-color: white;
+}
+

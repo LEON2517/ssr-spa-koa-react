@@ -1,0 +1,8 @@
+.login-form__button:hover {
+    background-color: #61dafb;
+}
+
+.login-form__container_margin {
+    margin-top: 100px;
+    width: 600px;
+}

@@ -1,0 +1,17 @@
+.registration-stripe__carousel {
+    background-color: #20232a;
+    height: 220px;
+}
+
+.registration-stripe__h1 {
+    font-size: 60px;
+    font-weight: 300;
+    color: white;
+    margin-top: 60px;
+}
+
+.registration-stripe__h2 {
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+}

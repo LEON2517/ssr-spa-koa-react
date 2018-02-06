@@ -1,0 +1,239 @@
+@media (min-width: 0) and (max-width: 575px) {
+    .partners__carousel {
+        background-color: #61dafb;
+        height: 100px;
+        margin-top: 30px;
+
+
+    }
+
+    .partners__h2 {
+        font-size: 20px;
+        font-weight: 200;
+        margin-top: 20px;
+        color: #fff;
+    }
+
+    .partners__neteller {
+        width: 130px;
+        margin-top: 5px;
+    }
+
+    .partners__skrill {
+        width: 110px;
+        margin-top: 15px;
+    }
+
+    .partners__williamhill {
+        width: 160px;
+    }
+
+    .partners__betfair {
+        width: 175px;
+    }
+
+    .partners__pinacle {
+        width: 150px;
+        margin-top: 15px;
+    }
+
+    .partners__sbobet {
+        width: 175px;
+    }
+
+
+
+    .partners__row_width {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* sm */
+@media (min-width: 576px) {
+    .partners__carousel {
+        background-color: #61dafb;
+        height: 110px;
+        margin-top: 30px;
+
+    }
+
+    .partners__h2 {
+        font-size: 20px;
+        font-weight: 200;
+        margin-top: 20px;
+        color: #fff;
+    }
+
+    .partners__neteller {
+        width: 130px;
+        margin-top: 15px;
+
+    }
+
+    .partners__skrill {
+        width: 90px;
+        margin-top: 15px;
+    }
+
+    .partners__williamhill {
+        width: 140px;
+    }
+
+
+    .partners__row_width {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+/* md*/
+@media (min-width: 768px) {
+    .partners__carousel {
+        background-color: #61dafb;
+        height: 120px;
+        margin-top: 30px;
+
+    }
+
+    .partners__h2 {
+        font-size: 22px;
+        font-weight: 200;
+        margin-top: 20px;
+        color: #fff;
+    }
+
+    .partners__neteller {
+        width: 140px;
+        margin-top: 20px;
+
+    }
+
+    .partners__skrill {
+        width: 100px;
+        margin-top: 15px;
+    }
+
+    .partners__williamhill {
+        width: 150px;
+    }
+
+    .partners__betfair {
+        width: 165px;
+    }
+
+
+    .partners__row_width {
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+/* lg*/
+@media (min-width: 992px) {
+    .partners__carousel {
+        background-color: #61dafb;
+        height: 130px;
+        margin-top: 30px;
+
+    }
+
+    .partners__h2 {
+        font-size: 26px;
+        font-weight: 200;
+        margin-top: 20px;
+        color: #fff;
+    }
+
+    .partners__neteller {
+        width: 150px;
+        margin-top: 20px;
+
+    }
+
+    .partners__skrill {
+        width: 100px;
+        margin-top: 15px;
+    }
+
+    .partners__williamhill {
+        width: 150px;
+    }
+
+    .partners__betfair {
+        width: 165px;
+    }
+
+    .partners__pinacle {
+        width: 140px;
+        margin-top: 15px;
+    }
+
+
+    .partners__row_width {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* xl*/
+@media (min-width: 1200px) {
+    .partners__carousel {
+        background-color: #61dafb;
+        height: 140px;
+        margin-top: 30px;
+
+    }
+
+    .partners__h2 {
+        font-size: 28px;
+        font-weight: 200;
+        margin-top: 20px;
+        color: #fff;
+    }
+
+    .partners__neteller {
+        width: 170px;
+        margin-top: 20px;
+
+    }
+
+    .partners__skrill {
+        width: 110px;
+        margin-top: 15px;
+    }
+
+    .partners__williamhill {
+        width: 160px;
+    }
+
+    .partners__betfair {
+        width: 175px;
+    }
+
+    .partners__pinacle {
+        width: 150px;
+        margin-top: 15px;
+    }
+
+    .partners__sbobet {
+        width: 175px;
+    }
+
+
+
+    .partners__row_width {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+}
+

@@ -1,0 +1,122 @@
+/* xs */
+@media (min-width: 0) {
+    .advantages__row {
+        height: 600px;
+    }
+
+    .slider-presentation__h3 {
+        font-size: 24px;
+        font-weight: 300;
+        color: darkgray;
+    }
+
+    .slider-presentation__p {
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    .advantages__btn-link_margin {
+        margin-left: -15px;
+    }
+}
+
+/* sm */
+@media (min-width: 576px) {
+    .advantages__row {
+        height: 450px;
+    }
+
+    .slider-presentation__h3 {
+        font-size: 26px;
+        font-weight: 300;
+        color: darkgray;
+    }
+
+    .slider-presentation__p {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .advantages__btn-link_margin {
+        margin-left: -15px;
+    }
+
+}
+
+/* md*/
+@media (min-width: 768px) {
+    .advantages__row {
+        height: 450px;
+    }
+
+    .slider-presentation__h3 {
+        font-size: 26px;
+        font-weight: 300;
+        color: darkgray;
+    }
+
+    .slider-presentation__p {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .advantages__btn-link_margin {
+        margin-left: -15px;
+    }
+
+}
+/* lg*/
+@media (min-width: 992px) {
+    .advantages__row {
+        height: 300px;
+    }
+
+    .slider-presentation__h3 {
+        font-size: 26px;
+        font-weight: 300;
+        color: darkgray;
+    }
+
+    .slider-presentation__p {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .advantages__btn-link_margin {
+        margin-left: -15px;
+    }
+}
+/* xl*/
+@media (min-width: 1200px) {
+    .advantages__row {
+        height: 300px;
+    }
+
+    .slider-presentation__h3 {
+        font-size: 28px;
+        font-weight: 300;
+        color: darkgray;
+    }
+
+    .slider-presentation__p {
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+    .advantages__btn-link_margin {
+        margin-left: -15px;
+    }
+}
+
+.hr {
+    border: none; /* Убираем границу */
+    background-color: lightgray; /* Цвет линии */
+    color: lightgray; /* Цвет линии для IE6-7 */
+    height: 1px; /* Толщина линии */
+}
+
+.advantages__h2 {
+    color: #292d34;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}

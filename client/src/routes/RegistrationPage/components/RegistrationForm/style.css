@@ -1,0 +1,17 @@
+.registration-form__container_margin {
+    margin-top: 80px;
+    width: 600px;
+}
+
+.form-input__error {
+    outline-color: red;
+}
+
+hr {
+    border: none; /* Убираем границу */
+    background-color: black; /* Цвет линии */
+    color: black; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
