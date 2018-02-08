@@ -7,11 +7,11 @@ import {signUp} from '../../../../actions'
 class RegistrationForm extends Component {
 
     state = {
-        firstName: 'ivan',
-        lastName: 'ivanov',
+        firstName: 'Dima',
+        lastName: 'Leontev',
         email: 'dima.durdyev.92@list.ru',
         password: '123456',
-        passwordConfirm: '123456'
+        passwordConfirm: ''
     };
 
 

@@ -44,6 +44,9 @@ router.post('/sign_up', require('./routes/sign_up').post);
 router.post('/logout', require('./routes/logout').post);
 router.get('/private', require('./routes/private').get);
 
+router.get('/verify-email/:verifyEmailToken', require('./routes/verifyEmail').get);
+
+
 
 app.use(router.routes());
 

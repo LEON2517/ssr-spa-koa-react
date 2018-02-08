@@ -34,8 +34,6 @@ export function signUp(formData) {
                     response
                 }))*/
                 .catch(error => {
-                    dispatch(push('/error'))
-
                     dispatch({
                         type: SEND_FORM + FAIL,
                         error

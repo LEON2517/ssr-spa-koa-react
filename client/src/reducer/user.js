@@ -19,9 +19,7 @@ const action = {
 
         case SEND_FORM + START:
             return {
-                ...state,
-                isLoading: true,
-                isLoaded: false
+                ...state
             };
 
         case SEND_FORM + SUCCESS:
