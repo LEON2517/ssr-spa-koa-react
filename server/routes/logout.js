@@ -4,5 +4,5 @@ exports.post = async function(ctx, next) {
 
   ctx.session = null; // destroy session (!!!)
 
-  ctx.redirect('/');
+  ctx.redirect('http://localhost:8080/home');
 };

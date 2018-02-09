@@ -10,13 +10,13 @@ import {connect} from 'react-redux'
 class Root extends Component {
 
     render() {
-        const {user} = this.props;
+        const {form} = this.props;
 
 
         return (
             <div>
                 <Header/>
-                <PanelInformation user = {user}/>
+                <PanelInformation form = {form}/>
                 <Footer/>
             </div>
         )
@@ -26,7 +26,7 @@ class Root extends Component {
 
 export default connect(state => {
     return {
-        user: state.user
+        form: state.form
 
     }
 })(Root)

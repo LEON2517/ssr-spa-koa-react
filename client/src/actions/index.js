@@ -1,4 +1,4 @@
-import { GET_ICON, LOAD_HOME_PAGE_ARTICLES, SEND_FORM, LOAD_CUSTOMER_INFORMATION, START, SUCCESS, FAIL } from '../constants'
+import { GET_ICON, LOAD_HOME_PAGE_ARTICLES, SEND_FORM, LOAD_CUSTOMER_INFORMATION,SIGN_IN_FORM, SIGN_UP_FORM, START, SUCCESS, FAIL } from '../constants'
 import {push} from 'react-router-redux'
 
 
@@ -10,11 +10,11 @@ export function loadHomePageArticles() {
 }
 
 export function signUp(formData) {
-    return (dispatch, getState) => {
+    return (dispatch) => {
 
         dispatch({
-            type: SEND_FORM + START,
-        })
+            type: SIGN_UP_FORM + START
+        });
 
         setTimeout(() => {
             fetch(`http://localhost:3001/sign_up`, {
@@ -25,17 +25,16 @@ export function signUp(formData) {
                 body: JSON.stringify(formData)
             })
                 .then(res => {
-                    if (res.status >= 400) throw new Error(res.statusText)
+                    if (res.status >= 400) throw new Error(res.statusText);
                     return res.json()
                 })
-/*                .then(response => dispatch({
-                    type: LOAD_ARTICLE + SUCCESS,
-                    payload: { id },
+                .then(response => dispatch({
+                    type: SIGN_UP_FORM + SUCCESS,
                     response
-                }))*/
+                }))
                 .catch(error => {
                     dispatch({
-                        type: SEND_FORM + FAIL,
+                        type: SIGN_UP_FORM + FAIL,
                         error
                     })
                 })
@@ -45,13 +44,12 @@ export function signUp(formData) {
 
 
 export function signIn(formData) {
-    return (dispatch, getState) => {
+    return (dispatch) => {
 
         dispatch({
-            type: SEND_FORM + START,
+            type: SIGN_IN_FORM + START,
         });
 
-        setTimeout(() => {
             fetch("http://localhost:3001/sign_in", {
                 method: "POST",
                 headers: {
@@ -74,24 +72,20 @@ export function signIn(formData) {
                 .then(res => res.json())
                 .then(response => {
                     dispatch({
-                        type: SEND_FORM + SUCCESS,
+                        type: SIGN_IN_FORM + SUCCESS,
                         response
                     });
 
                     dispatch(push('/account'))
 
                 })
-/*                .then(response => dispatch({
-                    type: SEND_FORM + SUCCESS,
-                    response
-                }))*/
-/*                .then(response => {
-                    alert(JSON.stringify(response));
-                })*/
-                .catch(function(err) {
-                    alert("Error: " + err.message);
-                });
-        }, 500)
+                .catch(error => {
+                    dispatch({
+                        type: SIGN_IN_FORM + FAIL,
+                        error
+                    })
+                })
+
     }
 }
 

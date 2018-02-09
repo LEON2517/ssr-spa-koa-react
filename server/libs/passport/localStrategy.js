@@ -17,11 +17,17 @@ passport.use(new LocalStrategy({
 
       if (!user || !user.checkPassword(password)) {
         // don't say whether the user exists
-        return done(null, false, { message: 'Нет такого пользователя или пароль неверен.' });
+        return done(
+            null,
+            false,
+            { message: 'Нет такого пользователя или пароль неверен.' });
       }
 
         if (!user.verifiedEmail) {
-            return done(null, false, { message: 'Email не подтверждён' });
+            return done(
+                null,
+                false,
+                { message: 'Email не подтверждён' });
         }
 
       return done(null, user);

@@ -12,7 +12,7 @@ exports.get = async function(ctx, next) {
     ctx.throw(404, 'Ссылка подтверждения недействительна или устарела.');
   }
 
-  const redirect = user.verifyEmailRedirect || '/';
+  const redirect = user.verifyEmailRedirect || 'http://localhost:8080/sign_in';
   delete user.verifyEmailRedirect;
 
   user.verifiedEmailsHistory.push({date: new Date(), email: user.email});

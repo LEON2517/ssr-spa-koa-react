@@ -17,7 +17,7 @@ exports.post = compose([
       ctx.body = {token};
     } else {
       ctx.status = 400;
-      ctx.body = {error: "Invalid credentials"};
+      ctx.body = {message: "Invalid credentials"};
     }
   }
 ]);

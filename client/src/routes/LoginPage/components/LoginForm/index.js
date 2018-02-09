@@ -14,6 +14,11 @@ class LoginForm extends Component {
 
 
     render() {
+        const {form, status} = this.props;
+        const message = status ? (
+            <h2>{form.error.message}</h2>
+        ) : "sdafasdfdsf";
+
         return (
             <form className="container login-form__container_margin" id="needs-validation" noValidate>
                 <div className="form-group">
@@ -39,6 +44,8 @@ class LoginForm extends Component {
                            aria-describedby="passwordHelp"
                            placeholder="Пароль"/>
                 </div>
+
+                <div>{message}</div>
 
                 <div className="form-check">
                     <label className="form-check-label">
@@ -101,4 +108,9 @@ const limits = {
 };
 
 
-export default connect(null,{signIn})(LoginForm)
+export default connect(state => {
+    return {
+        form: state.form,
+        status: state.form.status
+    }
+},{signIn})(LoginForm)

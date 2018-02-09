@@ -8,9 +8,9 @@ exports.post = async function(ctx) {
 
     const verifyEmailToken = uuid4();
 
-    console.log(ctx.request.body);
+/*    console.log(ctx.request.body);
     console.log(ctx.request.body.firstName);
-    console.log(ctx.request.body.email);
+    console.log(ctx.request.body.email);*/
 
     const user = new User({
         firstName: ctx.request.body.firstName,
@@ -19,26 +19,22 @@ exports.post = async function(ctx) {
         password: ctx.request.body.password,
         verifiedEmail: false,
         verifyEmailToken: verifyEmailToken,
-        verifyEmailRedirect: ctx.request.body.successRedirect
+        verifyEmailRedirect: ctx.request.body.successRedirect //не очень понятно как это работает? в verifyEmail есть условие   const redirect = user.verifyEmailRedirect || 'http://localhost:8080/sign_in';  и в sign_in successRedirect: 'http://localhost:8080/sign_in'
+
     });
 
 
     try {
         await user.save();
     } catch(e) {
-        if (e.name == 'ValidationError') {
             let errorMessages = "";
             for(let key in e.errors) {
                 errorMessages += `${key}: ${e.errors[key].message}<br>`;
             }
-            ctx.redirect('/sign_up');
+            ctx.body = {error: errorMessages};
             return;
-        } else {
-            ctx.throw(e);
-        }
     }
 
-    // We're here if no errors happened
 
     await sendMail({
         template: 'verify-registration-email',
@@ -47,6 +43,6 @@ exports.post = async function(ctx) {
         link: config.server.siteHost + '/verify-email/' + verifyEmailToken
     });
 
-    ctx.body = 'Вы зарегистрированы. Пожалуйста, загляните в почтовый ящик, там письмо с Email-подтверждением.'
+    ctx.body = {success: 'Вы зарегистрированы. Пожалуйста, загляните в почтовый ящик, там письмо с Email-подтверждением.'}
 
 };

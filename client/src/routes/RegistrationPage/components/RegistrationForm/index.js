@@ -16,6 +16,12 @@ class RegistrationForm extends Component {
 
 
     render() {
+        const {form, status} = this.props;
+        const massage = status ? (
+            <h2>{form.response.success || form.response.error}</h2>
+        ) : null;
+
+
         return (
                 <form className="container registration-form__container_margin" id="needs-validation" noValidate>
 
@@ -113,6 +119,8 @@ class RegistrationForm extends Component {
                         </label>
                     </div>
 
+                    <div>{massage}</div>
+
                     <button type="button" className="btn btn-secondary" onClick = {this.handleSubmit}>Создать аккаунт</button>
 
                     <div>
@@ -120,6 +128,7 @@ class RegistrationForm extends Component {
                     </div>
                 </form>
         )
+
     }
 
     handleSubmit = ev => {
@@ -175,4 +184,9 @@ const limits = {
 };
 
 
-export default connect(null,{signUp})(RegistrationForm)
+export default connect(state => {
+    return {
+        form: state.form,
+        status: state.form.status
+    }
+},{signUp})(RegistrationForm)

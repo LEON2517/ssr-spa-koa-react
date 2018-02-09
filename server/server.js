@@ -38,7 +38,6 @@ const router = new Router();
 
 router.get('/api/home', require('./routes/HomePage').get);
 
-router.get('/', require('./routes/frontpage').get);
 router.post('/sign_in', require('./routes/sign_in').post);
 router.post('/sign_up', require('./routes/sign_up').post);
 router.post('/logout', require('./routes/logout').post);

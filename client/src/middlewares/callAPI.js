@@ -25,7 +25,10 @@ export default store => next => action => {
             })
             .then(
                 response => {
-                    return next({...rest, type: type + SUCCESS, response})
+                    return next({
+                        ...rest,
+                        type: type + SUCCESS,
+                        response})
                 }
             )
             .catch(error => next({...rest, type: type + FAIL, error}))
