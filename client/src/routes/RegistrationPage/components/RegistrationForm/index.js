@@ -17,7 +17,7 @@ class RegistrationForm extends Component {
 
     render() {
         const {form, status} = this.props;
-        const massage = status ? (
+        const message = status ? (
             <h2>{form.response.success || form.response.error}</h2>
         ) : null;
 
@@ -119,7 +119,7 @@ class RegistrationForm extends Component {
                         </label>
                     </div>
 
-                    <div>{massage}</div>
+                    <div>{message}</div>
 
                     <button type="button" className="btn btn-secondary" onClick = {this.handleSubmit}>Создать аккаунт</button>
 

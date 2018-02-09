@@ -1,7 +1,8 @@
 import { SIGN_IN_FORM, SIGN_UP_FORM, SUCCESS, START, FAIL } from '../constants'
 
 const defaultForm = {
-    status: false
+    status: false,
+    accountUserInfo: JSON.parse(localStorage.getItem('accountUserInfo'))
 };
 
 export default (state = defaultForm, action) => {
@@ -37,9 +38,12 @@ export default (state = defaultForm, action) => {
             };
 
         case SIGN_IN_FORM + SUCCESS:
+            const serialAccountUserInfo = JSON.stringify(response);
+            localStorage.setItem('accountUserInfo', serialAccountUserInfo);
+            const accountUserInfo = JSON.parse(localStorage.getItem("accountUserInfo"));
             return {
                 ...state,
-                response
+                accountUserInfo
             };
 
         case SIGN_IN_FORM + FAIL:

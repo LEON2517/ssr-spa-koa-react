@@ -1,4 +1,4 @@
-import { GET_ICON, LOAD_HOME_PAGE_ARTICLES, SEND_FORM, LOAD_CUSTOMER_INFORMATION,SIGN_IN_FORM, SIGN_UP_FORM, START, SUCCESS, FAIL } from '../constants'
+import {LOAD_HOME_PAGE_ARTICLES, LOAD_CUSTOMER_INFORMATION,SIGN_IN_FORM, SIGN_UP_FORM, START, SUCCESS, FAIL } from '../constants'
 import {push} from 'react-router-redux'
 
 
@@ -50,6 +50,7 @@ export function signIn(formData) {
             type: SIGN_IN_FORM + START,
         });
 
+        setTimeout(() => {
             fetch("http://localhost:3001/sign_in", {
                 method: "POST",
                 headers: {
@@ -85,7 +86,7 @@ export function signIn(formData) {
                         error
                     })
                 })
-
+        }, 500)
     }
 }
 

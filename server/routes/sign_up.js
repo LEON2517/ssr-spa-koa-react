@@ -27,11 +27,7 @@ exports.post = async function(ctx) {
     try {
         await user.save();
     } catch(e) {
-            let errorMessages = "";
-            for(let key in e.errors) {
-                errorMessages += `${key}: ${e.errors[key].message}<br>`;
-            }
-            ctx.body = {error: errorMessages};
+            ctx.body = {error: 'Такой пользователь уже существет'};
             return;
     }
 

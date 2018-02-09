@@ -12,9 +12,9 @@ class PanelInformation extends Component {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col castomclass">
-                        <h2 className="">{form.response.firstName}</h2>
-                        <h2 className="">{form.response.lastName}</h2>
-                        <h2 className="">{form.response.private}</h2>
+                        <h2 className="">{form.accountUserInfo.firstName}</h2>
+                        <h2 className="">{form.accountUserInfo.lastName}</h2>
+                        <h2 className="">{form.accountUserInfo.private}</h2>
                     </div>
                 </div>
             </div>
