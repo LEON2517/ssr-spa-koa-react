@@ -29,6 +29,9 @@ const userSchema = new mongoose.Schema({
     passwordHash:  {
         type: String
     },
+    passwordResetToken: String,
+    passwordResetTokenExpires: String,
+    passwordResetRedirect: String,
     salt:          {
         type: String
     },

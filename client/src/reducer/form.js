@@ -1,4 +1,4 @@
-import { SIGN_IN_FORM, SIGN_UP_FORM, SUCCESS, START, FAIL } from '../constants'
+import { SIGN_IN_FORM, SIGN_UP_FORM, FORGOT_PASSWORD_FORM, RECOVERY_PASSWORD_FORM, SUCCESS, START, FAIL } from '../constants'
 
 const defaultForm = {
     status: false,
@@ -51,6 +51,47 @@ export default (state = defaultForm, action) => {
                 ...state,
                 status: true,
                 error
+            };
+
+
+        case FORGOT_PASSWORD_FORM + START:
+            return {
+                ...state
+            };
+
+        case FORGOT_PASSWORD_FORM + SUCCESS:
+            return {
+                ...state,
+                status: true,
+                response
+            };
+
+        case FORGOT_PASSWORD_FORM + FAIL:
+            return {
+                ...state,
+                status: true,
+                response
+            };
+
+
+
+        case RECOVERY_PASSWORD_FORM + START:
+            return {
+                ...state
+            };
+
+        case RECOVERY_PASSWORD_FORM + SUCCESS:
+            return {
+                ...state,
+                status: true,
+                response
+            };
+
+        case RECOVERY_PASSWORD_FORM + FAIL:
+            return {
+                ...state,
+                status: true,
+                response
             };
 
 

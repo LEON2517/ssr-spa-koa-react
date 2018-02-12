@@ -43,9 +43,11 @@ router.post('/sign_up', require('./routes/sign_up').post);
 router.post('/logout', require('./routes/logout').post);
 router.get('/private', require('./routes/private').get);
 
+router.post('/forgot_recover', require('./routes/forgot_recover').post);
+router.get('/forgot-recover/:passwordResetToken', require('./routes/forgot_recover').get);
+router.post('/recover_password', require('./routes/recover_password').post);
+
 router.get('/verify-email/:verifyEmailToken', require('./routes/verifyEmail').get);
-
-
 
 app.use(router.routes());
 

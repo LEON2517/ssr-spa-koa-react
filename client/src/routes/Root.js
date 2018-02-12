@@ -3,6 +3,8 @@ import {Route, Link, Switch, Redirect} from 'react-router-dom'
 import HomePage from './HomePage'
 import RegistrationPage from './RegistrationPage'
 import LoginPage from './LoginPage'
+import ForgotPasswordPage from './ForgotPasswordPage'
+import RecoverPasswordPage from './RecoverPasswordPage'
 import AccountPage from './AccountPage'
 
 
@@ -11,9 +13,11 @@ export default class Root extends Component {
         return (
             <div>
                 <Switch>
-                    <Redirect from="/" exact to="home" />
+                    <Redirect from="/" exact to="forgot-recover/forgot-password" />
                     <Route path="/home" component={HomePage} exact/>
                     <Route path="/account" component={AccountPage} exact/>
+                    <Route path="/forgot-recover/forgot-password" component={ForgotPasswordPage} exact/>
+                    <Route path="/forgot-recover/recover-password/:passwordResetToken" component={RecoverPasswordPage}/>
                     <Route path="/sign_up" component={RegistrationPage} exact/>
                     <Route path="/sign_in" component={LoginPage} exact/>
                     <Route path="/error" render={() => <h1 style={styles}>Error</h1>}/>

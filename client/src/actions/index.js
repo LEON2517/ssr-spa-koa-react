@@ -1,4 +1,4 @@
-import {LOAD_HOME_PAGE_ARTICLES, LOAD_CUSTOMER_INFORMATION,SIGN_IN_FORM, SIGN_UP_FORM, START, SUCCESS, FAIL } from '../constants'
+import {LOAD_HOME_PAGE_ARTICLES,SIGN_IN_FORM, SIGN_UP_FORM, FORGOT_PASSWORD_FORM, RECOVERY_PASSWORD_FORM, START, SUCCESS, FAIL } from '../constants'
 import {push} from 'react-router-redux'
 
 
@@ -19,9 +19,7 @@ export function signUp(formData) {
         setTimeout(() => {
             fetch(`http://localhost:3001/sign_up`, {
                 method: "POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(formData)
             })
                 .then(res => {
@@ -53,12 +51,10 @@ export function signIn(formData) {
         setTimeout(() => {
             fetch("http://localhost:3001/sign_in", {
                 method: "POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(formData)
             })
-                .then(response => response.json())
+                .then(res => res.json())
                 .then(response => {
                     if (response.error)
                         throw response.error;
@@ -67,6 +63,7 @@ export function signIn(formData) {
                 })
                 .then(token => {
                     return fetch("http://localhost:3001/private", {
+                        method: "GET",
                         headers: { "Authorization": token }
                     });
                 })
@@ -83,6 +80,72 @@ export function signIn(formData) {
                 .catch(error => {
                     dispatch({
                         type: SIGN_IN_FORM + FAIL,
+                        error
+                    })
+                })
+        }, 500)
+    }
+}
+
+
+export function forgotPassword(formData) {
+    return (dispatch) => {
+
+        dispatch({
+            type: FORGOT_PASSWORD_FORM + START
+        });
+
+        setTimeout(() => {
+            fetch(`http://localhost:3001/forgot_recover`, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(res => {
+                    if (res.status >= 400) throw new Error(res.statusText);
+                    return res.json()
+                })
+                .then(response => dispatch({
+                    type: FORGOT_PASSWORD_FORM + SUCCESS,
+                    response
+                }))
+                .catch(error => {
+                    dispatch({
+                        type: FORGOT_PASSWORD_FORM + FAIL,
+                        error
+                    })
+                })
+        }, 500)
+    }
+}
+
+
+export function recoveryPassword(formData) {
+    return (dispatch) => {
+
+        dispatch({
+            type: RECOVERY_PASSWORD_FORM + START
+        });
+
+        setTimeout(() => {
+            fetch(`http://localhost:3001/recover_password`, {
+                method: "POST",
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(formData)
+            })
+                .then(res => {
+                    if (res.status >= 400) throw new Error(res.statusText);
+                    return res.json()
+                })
+                .then(response => dispatch({
+                    type: RECOVERY_PASSWORD_FORM + SUCCESS,
+                    response
+                }))
+                .catch(error => {
+                    dispatch({
+                        type: RECOVERY_PASSWORD_FORM + FAIL,
                         error
                     })
                 })
