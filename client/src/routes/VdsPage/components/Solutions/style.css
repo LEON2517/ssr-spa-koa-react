@@ -1,0 +1,42 @@
+.why-vps__bg_color {
+    background-color: #f7f7f7;
+}
+
+.col-9__padding {
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+
+.container__color {
+
+
+}
+
+.fixed-right {
+    position: fixed;
+    top: 100px;
+    padding: 30px;
+}
+
+.text__padding {
+    padding: 100px;
+    padding-top: 140px;
+}
+
+.why-vps__header_ac {
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.why-vps__link_first {
+    color: #1a1a1a;
+
+
+}
+
+.why-vps__activelink {
+    color: red;
+}

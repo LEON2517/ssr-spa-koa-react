@@ -6,39 +6,40 @@ const uuid4 = require('uuid4');
 
 exports.post = async function(ctx) {
 
+    const user = await User.findOne({
+        email: ctx.request.body.email
+    });
+
+    if(user) {
+        ctx.body = { message: 'Электронный адресс ' + user.email + ' занят' };
+        return;
+    }
+
     const verifyEmailToken = uuid4();
-
-/*    console.log(ctx.request.body);
-    console.log(ctx.request.body.firstName);
-    console.log(ctx.request.body.email);*/
-
-    const user = new User({
+    const newUser = new User({
         firstName: ctx.request.body.firstName,
         lastName: ctx.request.body.lastName,
         email: ctx.request.body.email.toLowerCase(),
         password: ctx.request.body.password,
         verifiedEmail: false,
         verifyEmailToken: verifyEmailToken,
-        verifyEmailRedirect: ctx.request.body.successRedirect //не очень понятно как это работает? в verifyEmail есть условие   const redirect = user.verifyEmailRedirect || 'http://localhost:8080/sign_in';  и в sign_in successRedirect: 'http://localhost:8080/sign_in'
-
+        verifyEmailRedirect: ctx.request.body.successRedirect
     });
 
-
     try {
-        await user.save();
+        await newUser.save();
     } catch(e) {
-            ctx.body = {error: 'Такой пользователь уже существет'};
-            return;
+        ctx.body = { message: 'Другая ошибка' };
+        return;
     }
-
 
     await sendMail({
         template: 'verify-registration-email',
-        to: user.email,
+        to: newUser.email,
         subject: "Подтверждение email",
         link: config.server.siteHost + '/verify-email/' + verifyEmailToken
     });
 
-    ctx.body = {success: 'Вы зарегистрированы. Пожалуйста, загляните в почтовый ящик, там письмо с Email-подтверждением.'}
+    ctx.body = { message: 'Вы зарегистрированы. Пожалуйста, загляните в почтовый ящик, там письмо с Email-подтверждением.' }
 
 };

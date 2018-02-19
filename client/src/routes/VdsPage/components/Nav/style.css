@@ -1,0 +1,39 @@
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+.nav__title {
+    color: #6d6d6d;
+
+}
+
+.nav__title:hover {
+    color: #1a1a1a;
+}
+
+.nav__title:visited {
+    color: red;
+}
+
+.nav_link {
+    color: #6d6d6d;;
+}
+
+.nav_link:hover  {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.nav__title_h3 {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+
+

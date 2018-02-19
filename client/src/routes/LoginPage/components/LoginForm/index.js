@@ -14,10 +14,10 @@ class LoginForm extends Component {
 
 
     render() {
-        const {form, status} = this.props;
+        const {user, status} = this.props;
         const message = status ? (
-            <h2>{form.error.message}</h2>
-        ) : "sdafasdfdsf";
+            <h2>{user.response.message}</h2>
+        ) : null;
 
         return (
             <form className="container login-form__container_margin" id="needs-validation" noValidate>
@@ -110,7 +110,7 @@ const limits = {
 
 export default connect(state => {
     return {
-        form: state.form,
-        status: state.form.status
+        user: state.user,
+        status: state.user.status
     }
 },{signIn})(LoginForm)

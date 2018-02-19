@@ -1,4 +1,4 @@
-import { SIGN_IN_FORM, SIGN_UP_FORM, FORGOT_PASSWORD_FORM, RECOVERY_PASSWORD_FORM, SUCCESS, START, FAIL } from '../constants'
+import { SIGN_IN_USER, SIGN_UP_USER, FORGOT_PASSWORD_USER, RECOVERY_PASSWORD_USER, SUCCESS, START, FAIL } from '../constants'
 
 const defaultForm = {
     status: false,
@@ -11,19 +11,19 @@ export default (state = defaultForm, action) => {
 
     switch (type) {
 
-        case SIGN_UP_FORM + START:
+        case SIGN_UP_USER + START:
             return {
                 ...state
             };
 
-        case SIGN_UP_FORM + SUCCESS:
+        case SIGN_UP_USER + SUCCESS:
             return {
                 ...state,
                 status: true,
                 response
             };
 
-        case SIGN_UP_FORM + FAIL:
+        case SIGN_UP_USER + FAIL:
             return {
                 ...state,
                 status: true,
@@ -32,12 +32,12 @@ export default (state = defaultForm, action) => {
 
 
 
-        case SIGN_IN_FORM + START:
+        case SIGN_IN_USER + START:
             return {
                 ...state
             };
 
-        case SIGN_IN_FORM + SUCCESS:
+        case SIGN_IN_USER + SUCCESS:
             const serialAccountUserInfo = JSON.stringify(response);
             localStorage.setItem('accountUserInfo', serialAccountUserInfo);
             const accountUserInfo = JSON.parse(localStorage.getItem("accountUserInfo"));
@@ -46,27 +46,27 @@ export default (state = defaultForm, action) => {
                 accountUserInfo
             };
 
-        case SIGN_IN_FORM + FAIL:
+        case SIGN_IN_USER + FAIL:
             return {
                 ...state,
                 status: true,
-                error
+                response
             };
 
 
-        case FORGOT_PASSWORD_FORM + START:
+        case FORGOT_PASSWORD_USER + START:
             return {
                 ...state
             };
 
-        case FORGOT_PASSWORD_FORM + SUCCESS:
+        case FORGOT_PASSWORD_USER + SUCCESS:
             return {
                 ...state,
                 status: true,
                 response
             };
 
-        case FORGOT_PASSWORD_FORM + FAIL:
+        case FORGOT_PASSWORD_USER + FAIL:
             return {
                 ...state,
                 status: true,
@@ -75,19 +75,19 @@ export default (state = defaultForm, action) => {
 
 
 
-        case RECOVERY_PASSWORD_FORM + START:
+        case RECOVERY_PASSWORD_USER + START:
             return {
                 ...state
             };
 
-        case RECOVERY_PASSWORD_FORM + SUCCESS:
+        case RECOVERY_PASSWORD_USER + SUCCESS:
             return {
                 ...state,
                 status: true,
                 response
             };
 
-        case RECOVERY_PASSWORD_FORM + FAIL:
+        case RECOVERY_PASSWORD_USER + FAIL:
             return {
                 ...state,
                 status: true,

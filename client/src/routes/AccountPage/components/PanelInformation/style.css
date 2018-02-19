@@ -1,3 +1,96 @@
 .castomclass {
-    top: 300px;
+    background-color: #292d34;
+    height: 900px;
+}
+
+.row__balance {
+    margin-top: 56px;
+    background-color: #61dafb;
+    height: 56px;
+}
+
+.row__navigation {
+    background-color: #20232a;
+    height: 28px;
+}
+
+.row__account {
+    background-color: #292d34;
+    height: 56px;
+    cursor: pointer;
+}
+
+.row__account:hover {
+    background: linear-gradient(to left, #20232a 98%, #61dafb 2%);
+    cursor: pointer;
+}
+
+.col__margin_top {
+    margin-top: 100px;
+}
+
+.panel-information__h3_balance {
+    color: white;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.panel-information__h3_navigation {
+    color: #939394;
+    font-size: 11px;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.panel-information__h3 {
+    color: #939394;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.card-body__wight {
+    margin-top: 100px;
+    height: 290px;
+    width: 500px;
+}
+
+.btn-custom {
+    margin-left: -2px;
+    color: white;
+}
+
+.btn-custom:hover {
+    margin-left: -2px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.panel-information__col-10_wight {
+    width: 1031px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.panel-information__row_top {
+    margin-top: 20px;
+}
+
+.panel-information__hr {
+    margin-top: 60px;
+}
+
+.panel-information__hr_card {
+    position: relative;
+    bottom: 12px;
+    background-color: #61dafb;
+    height: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
 }

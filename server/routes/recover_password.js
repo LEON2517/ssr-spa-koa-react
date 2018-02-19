@@ -6,18 +6,14 @@ exports.post = async function(ctx) {
 
     console.log(ctx.request.body);
 
-/*    const url = new URL(`http://localhost:8080${ctx.url}`);
-    const token = url.pathname.splite('/')[8];
-
-    console.log('token', token);*/
-
     const user = await User.findOne({
         passwordResetToken: ctx.request.body.passwordResetToken,
         passwordResetTokenExpires: { $gt: Date.now() }
     });
 
     if (!user) {
-        ctx.body = {error: 'Токен устарел или не действителен'};
+        ctx.status = 408;
+        ctx.body = { message: 'Токен устарел или не действителен' };
         return;
     }
 
@@ -28,12 +24,12 @@ exports.post = async function(ctx) {
     await user.save();
 
     await sendMail({
-        template: 'forgot-email',
+        template: 'forgot-password',
         to: user.email,
         subject: 'Востановление пароля',
         text: 'Уведомляем вас, что пароль на аккаунте' + user.email + 'успешно изменен'
     });
 
     ctx.status = 200;
-    ctx.body = {success: 'Пароль успешно изменен'};
+    ctx.body = { message: 'Пароль успешно изменен' };
 };

@@ -45,6 +45,10 @@
 
 /* md*/
 @media (min-width: 768px) {
+    .row__block_bottom_second {
+        margin-top: 20px;
+    }
+
     .advantages__row {
         height: 450px;
     }
@@ -67,6 +71,14 @@
 }
 /* lg*/
 @media (min-width: 992px) {
+    .row__block_bottom_one {
+        margin-top: 8px;
+    }
+
+    .row__block_bottom_second {
+        margin-top: 25px;
+    }
+
     .advantages__row {
         height: 300px;
     }
@@ -88,6 +100,26 @@
 }
 /* xl*/
 @media (min-width: 1200px) {
+
+    .advantages__link {
+        color: #61dafb;
+        font-size: 20px;
+    }
+
+    .advantages__link:hover {
+        color: #939394;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .row__block_bottom_one {
+        margin-top: 10px;
+    }
+
+    .row__block_bottom_second {
+        margin-top: 30px;
+    }
+
     .advantages__row {
         height: 300px;
     }

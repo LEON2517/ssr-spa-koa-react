@@ -11,6 +11,7 @@ exports.get = compose([
     }
 
     ctx.body = {
+      balance: '0 RUR',
       private: 'top most secret info',
       email: ctx.state.user.email,
       firstName: ctx.state.user.firstName,

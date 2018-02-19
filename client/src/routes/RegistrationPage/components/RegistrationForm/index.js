@@ -16,9 +16,9 @@ class RegistrationForm extends Component {
 
 
     render() {
-        const {form, status} = this.props;
+        const {user, status} = this.props;
         const message = status ? (
-            <h2>{form.response.success || form.response.error}</h2>
+            <h2>{user.response.message}</h2>
         ) : null;
 
 
@@ -186,7 +186,7 @@ const limits = {
 
 export default connect(state => {
     return {
-        form: state.form,
-        status: state.form.status
+        user: state.user,
+        status: state.user.status
     }
 },{signUp})(RegistrationForm)

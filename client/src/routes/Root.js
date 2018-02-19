@@ -6,6 +6,8 @@ import LoginPage from './LoginPage'
 import ForgotPasswordPage from './ForgotPasswordPage'
 import RecoverPasswordPage from './RecoverPasswordPage'
 import AccountPage from './AccountPage'
+import VdsPage from './VdsPage'
+
 
 
 export default class Root extends Component {
@@ -14,7 +16,8 @@ export default class Root extends Component {
             <div>
                 <Switch>
                     <Redirect from="/" exact to="forgot-recover/forgot-password" />
-                    <Route path="/home" component={HomePage} exact/>
+                    <Route path="/home" component={HomePage}/>
+                    <Route path="/vds" component={VdsPage}/>
                     <Route path="/account" component={AccountPage} exact/>
                     <Route path="/forgot-recover/forgot-password" component={ForgotPasswordPage} exact/>
                     <Route path="/forgot-recover/recover-password/:passwordResetToken" component={RecoverPasswordPage}/>

@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const sendMail = require('../libs/sendMail');
 const config = require('config');
+const uuid4 = require('uuid4');
 
 exports.get = async function(ctx) {
 
@@ -12,7 +13,8 @@ exports.get = async function(ctx) {
     });
 
     if (!user) {
-        ctx.body = {error: 'Токен сбоса пароля не действителен или истек'};
+        ctx.status = 408;
+        ctx.body = {message: 'Токен сбоса пароля не действителен или истек'};
         return;
     }
 
@@ -29,22 +31,23 @@ exports.post = async function(ctx) {
     });
 
     if (!user) {
-        ctx.body = {error: 'Введите корректный Email'};
+        ctx.status = 400;
+        ctx.body = { message: 'Введите корректный Email' };
         return;
     }
 
-    user.passwordResetToken = Math.random().toString(36).slice(2, 10);
+    user.passwordResetToken = uuid4();
     user.passwordResetTokenExpires = new Date(Date.now() + 86400*1e3);
 
     await user.save();
 
     await sendMail({
-        template: 'forgot-email',
+        template: 'forgot-password',
         to: user.email,
         subject: 'Востановление пароля',
         link: config.server.siteHost + '/forgot-recover/' + user.passwordResetToken,
     });
 
     ctx.status = 200;
-    ctx.body = {success: 'Проверте Вашу почту, на нее отправленна ссылка для восстановления пароля'};
+    ctx.body = { message: 'Проверте Вашу почту, на нее отправленна ссылка для восстановления пароля' };
 };

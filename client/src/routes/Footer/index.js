@@ -29,12 +29,12 @@ class Footer extends Component {
 
                         <div className="col-xl-4 col-lg-4 d-none d-lg-block">
 
-                            <h3 className="footer__h3">VPS</h3>
+                            <h3 className="footer__h3">VDS</h3>
 
                             <div className="footer__link_margin-top">
 
-                                <div><NavLink to="" >Quick Start</NavLink></div>
-                                <div className="footer__link_margin"><NavLink to="" >Thinking in React</NavLink></div>
+                                <div><NavLink to="" >Быстрый старт</NavLink></div>
+                                <div className="footer__link_margin"><NavLink to="" >FAQ</NavLink></div>
 
                             </div>
 
@@ -42,12 +42,12 @@ class Footer extends Component {
 
                         <div className="col-xl-4 col-lg-4 d-none d-lg-block">
 
-                            <h3 className="footer__h3">VPS</h3>
+                            <h3 className="footer__h3">PROXY</h3>
 
                             <div className="footer__link_margin-top">
 
-                                <div><NavLink to="" >Quick Start</NavLink></div>
-                                <div className="footer__link_margin"><NavLink to="" >Thinking in React</NavLink></div>
+                                <div><NavLink to="" >Быстрый старт</NavLink></div>
+                                <div className="footer__link_margin"><NavLink to="" >FAQ</NavLink></div>
 
                             </div>
 
@@ -61,12 +61,12 @@ class Footer extends Component {
 
                         <div className="col-xl-4 col-lg-4 d-none d-lg-block">
 
-                            <h3 className="footer__h3">VPS</h3>
+                            <h3 className="footer__h3">CASH-BACK</h3>
 
                             <div className="footer__link_margin-top">
 
-                                <div><NavLink to="" >Quick Start</NavLink></div>
-                                <div className="footer__link_margin"><NavLink to="" >Thinking in React</NavLink></div>
+                                <div><NavLink to="" >Быстрый старт</NavLink></div>
+                                <div className="footer__link_margin"><NavLink to="" >FAQ</NavLink></div>
 
                             </div>
 
@@ -74,13 +74,14 @@ class Footer extends Component {
 
                         <div className="col-xl-4 col-lg-4 d-none d-lg-block">
 
-                            <h3 className="footer__h3">VPS</h3>
+                            <h3 className="footer__h3">CHANNELS</h3>
 
                             <div className="footer__link_margin-top">
-
-                                <div><NavLink to="" >Quick Start</NavLink></div>
-                                <div className="footer__link_margin"><NavLink to="" >Thinking in React</NavLink></div>
-
+                                <div><NavLink to="" >Telegram</NavLink></div>
+                                <div className="footer__link_margin"><NavLink to="" >Vkontakte</NavLink></div>
+                                <div className="footer__link_margin"><NavLink to="" >Facebook</NavLink></div>
+                                <div className="footer__link_margin"><NavLink to="" >Twitter</NavLink></div>
+                                <div className="footer__link_margin"><NavLink to="" >YouTube</NavLink></div>
                             </div>
 
                         </div>

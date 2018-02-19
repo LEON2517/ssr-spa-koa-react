@@ -1,4 +1,4 @@
-import {LOAD_HOME_PAGE_ARTICLES,SIGN_IN_FORM, SIGN_UP_FORM, FORGOT_PASSWORD_FORM, RECOVERY_PASSWORD_FORM, START, SUCCESS, FAIL } from '../constants'
+import {LOAD_HOME_PAGE_ARTICLES,SIGN_IN_USER, SIGN_UP_USER, FORGOT_PASSWORD_USER, RECOVERY_PASSWORD_USER, START, SUCCESS, FAIL } from '../constants'
 import {push} from 'react-router-redux'
 
 
@@ -13,7 +13,7 @@ export function signUp(formData) {
     return (dispatch) => {
 
         dispatch({
-            type: SIGN_UP_FORM + START
+            type: SIGN_UP_USER + START
         });
 
         setTimeout(() => {
@@ -27,12 +27,12 @@ export function signUp(formData) {
                     return res.json()
                 })
                 .then(response => dispatch({
-                    type: SIGN_UP_FORM + SUCCESS,
+                    type: SIGN_UP_USER + SUCCESS,
                     response
                 }))
                 .catch(error => {
                     dispatch({
-                        type: SIGN_UP_FORM + FAIL,
+                        type: SIGN_UP_USER + FAIL,
                         error
                     })
                 })
@@ -45,7 +45,7 @@ export function signIn(formData) {
     return (dispatch) => {
 
         dispatch({
-            type: SIGN_IN_FORM + START,
+            type: SIGN_IN_USER + START,
         });
 
         setTimeout(() => {
@@ -70,17 +70,17 @@ export function signIn(formData) {
                 .then(res => res.json())
                 .then(response => {
                     dispatch({
-                        type: SIGN_IN_FORM + SUCCESS,
+                        type: SIGN_IN_USER + SUCCESS,
                         response
                     });
 
                     dispatch(push('/account'))
 
                 })
-                .catch(error => {
+                .catch(response => {
                     dispatch({
-                        type: SIGN_IN_FORM + FAIL,
-                        error
+                        type: SIGN_IN_USER + FAIL,
+                        response
                     })
                 })
         }, 500)
@@ -92,7 +92,7 @@ export function forgotPassword(formData) {
     return (dispatch) => {
 
         dispatch({
-            type: FORGOT_PASSWORD_FORM + START
+            type: FORGOT_PASSWORD_USER + START
         });
 
         setTimeout(() => {
@@ -108,12 +108,12 @@ export function forgotPassword(formData) {
                     return res.json()
                 })
                 .then(response => dispatch({
-                    type: FORGOT_PASSWORD_FORM + SUCCESS,
+                    type: FORGOT_PASSWORD_USER + SUCCESS,
                     response
                 }))
                 .catch(error => {
                     dispatch({
-                        type: FORGOT_PASSWORD_FORM + FAIL,
+                        type: FORGOT_PASSWORD_USER + FAIL,
                         error
                     })
                 })
@@ -126,7 +126,7 @@ export function recoveryPassword(formData) {
     return (dispatch) => {
 
         dispatch({
-            type: RECOVERY_PASSWORD_FORM + START
+            type: RECOVERY_PASSWORD_USER + START
         });
 
         setTimeout(() => {
@@ -140,12 +140,12 @@ export function recoveryPassword(formData) {
                     return res.json()
                 })
                 .then(response => dispatch({
-                    type: RECOVERY_PASSWORD_FORM + SUCCESS,
+                    type: RECOVERY_PASSWORD_USER + SUCCESS,
                     response
                 }))
                 .catch(error => {
                     dispatch({
-                        type: RECOVERY_PASSWORD_FORM + FAIL,
+                        type: RECOVERY_PASSWORD_USER + FAIL,
                         error
                     })
                 })

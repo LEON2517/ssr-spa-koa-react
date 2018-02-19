@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import './style.css'
 
 class Header extends Component {
@@ -10,7 +11,7 @@ class Header extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-react">
-                <a className="navbar-brand" href="#">ARBITRAGE BETS</a>
+                <Link to="/home"><a className="navbar-brand" href="#">ARBITRAGE BETS</a></Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -32,8 +33,8 @@ class Header extends Component {
                         </li>
                     </ul>
                     <form className="form-inline">
-                        <button className="btn btn-sm align-middle btn-outline-main btn-log " type="button">Log in</button>
-                        <button className="btn btn-sm align-middle btn-primary" type="button">Join</button>
+                        <Link to="/sign_in"><button className="btn btn-sm align-middle btn-outline-main btn-log " type="button">Log in</button></Link>
+                        <Link to="/sign_up"><button className="btn btn-sm align-middle btn-primary" type="button">Join</button></Link>
                     </form>
 
                 </div>
