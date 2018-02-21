@@ -26,8 +26,8 @@ class CallForRegistration extends Component {
                                 <div className="col-xl-4 col-lg-4 col-md-4 d-none d-md-block">
 
                                     <form className="form-inline call-for-registration__btn">
-                                        <Link to="/sign_in"><button className="btn btn-lg  btn-outline-main btn-log " type="button">Log in</button></Link>
-                                        <Link to="/sign_up"><button className="btn btn-lg  btn-primary" type="button">Join</button></Link>
+                                        <Link to="/sign_in"><button className="btn btn-homepage btn-lg  btn-outline-main btn-log " type="button">Log in</button></Link>
+                                        <Link to="/sign_up"><button className="btn btn-homepage btn-lg  btn-primary" type="button">Join</button></Link>
                                     </form>
 
                                 </div>

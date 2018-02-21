@@ -6,3 +6,36 @@
     margin-top: 100px;
     width: 600px;
 }
+
+.input-password {
+    margin-top: 10px;
+}
+
+.forgot-password-page__small_pas {
+    margin-top: 25px;
+}
+
+.forgot-password-page__small_email {
+    margin-top: 10px;
+}
+
+.forgot-password-page__col {
+    margin-right: 15px;
+}
+
+.forgot-password-page__btn-outline-secondary {
+    border-color:  rgba(192, 192, 192, 0.8);
+    margin-top: 20px;
+    color: #6d6d6d;
+}
+
+.forgot-password-page__btn-outline-secondary:hover {
+    border-color:  rgba(192, 192, 192, 0.8);
+    background-color:  rgba(192, 192, 192, 0.4);
+    transition: 0.5s;
+    color: #6d6d6d;
+}
+
+.forgot-password-page__btn-outline-secondary:not(:hover) {
+    transition: 0.5s;
+}

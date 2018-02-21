@@ -158,12 +158,12 @@
 
 
 
-.btn {
+.btn-homepage {
     margin-left: 10px;
     border: none;
 }
 
-.btn:hover {
+.btn-homepage:hover {
     background-color: white;
 }
 

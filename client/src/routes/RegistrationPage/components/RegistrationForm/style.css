@@ -15,3 +15,77 @@ hr {
     margin-top: 0;
     margin-bottom: 10px;
 }
+
+.registration-form__container_size {
+    margin-top: 50px;
+    width: 620px;
+}
+
+.registration-form__btn {
+    color: white;
+    margin-top: 20px;
+}
+
+.registration-form__btn:hover {
+    color: white;
+}
+
+.registration-page__email_margin {
+    margin-top: 20px;
+}
+
+.registration-page__password_margin {
+    margin-top: 20px;
+}
+
+.registration-page__small_pas {
+    margin-left: 15px;
+}
+
+.registration-page__form-check_margin {
+    margin-top: 20px;
+}
+
+.registration-form__input_login {
+    width: 200px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.registration-form__h4 {
+    color: #6d6d6d;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.registration-form__h3 {
+    font-size: 15px;
+    color: #61dafb;
+}
+
+.registration-form__h3:hover {
+    font-size: 15px;
+    text-decoration: underline;
+    color: #61dafb;
+}
+
+.Modal {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    background-color: papayawhip;
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rebeccapurple;
+    z-index: 1000000;
+}

@@ -1,112 +1,116 @@
-import React, { Component } from 'react'
-import './style.css'
+import React, { Component } from 'react';
+import Header from '../../../Header'
 
+import {Link } from 'react-router-dom'
+import { withFormik } from 'formik';
 import {connect} from 'react-redux'
 import {signIn} from '../../../../actions'
+
+import './style.css'
 
 
 class LoginForm extends Component {
 
-    state = {
-        email: 'dima.durdyev.92@list.ru',
-        password: '123456',
-    };
-
-
     render() {
         const {user, status} = this.props;
         const message = status ? (
-            <h2>{user.response.message}</h2>
+            <h2 className="server-response">{user.response.message}</h2>
         ) : null;
 
-        return (
-            <form className="container login-form__container_margin" id="needs-validation" noValidate>
-                <div className="form-group">
-                    <small id="emailHelpBlock" className="form-text text-muted">
-                        Адресс электронной почты.
-                    </small>
-                    <input type = "email"
-                           value = {this.state.email}
-                           onChange = {this.handleChange('email')}
-                           className = "form-control"
-                           aria-describedby="emailHelp"
-                           placeholder="Адресс электронной почты"/>
-                </div>
-
-                <div className="form-group">
-                    <small id="passwordHelpBlock" className="form-text text-muted">
-                        Пароль.
-                    </small>
-                    <input type = "password"
-                           value = {this.state.password}
-                           onChange = {this.handleChange('password')}
-                           className = "form-control"
-                           aria-describedby="passwordHelp"
-                           placeholder="Пароль"/>
-                </div>
-
+        const InnerForm = ({
+                               values,
+                               errors,
+                               touched,
+                               handleChange,
+                               handleBlur,
+                               handleSubmit,
+                               isSubmitting,
+                           }) => (
+            <form onSubmit={handleSubmit}>
+                <small className="form-text text-muted forgot-password-page__small_email"></small>
+                <input
+                    type="email"
+                    name="email"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.email}
+                    className={errors.email && touched.email ? 'text-input error' : 'text-input'}
+                    placeholder="Адрес электронной почты"/>
+                {touched.email && errors.email && <div className="input-feedback">{errors.email}</div>}
+                <small className="form-text text-muted forgot-password-page__small_pas"></small>
+                <input
+                    type="password"
+                    name="password"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.password}
+                    className={errors.password && touched.password ? 'text-input error' : 'text-input'}
+                    placeholder="Пароль"/>
+                {touched.password && errors.password && <div className="input-feedback">{errors.password}</div>}
                 <div>{message}</div>
-
-                <div className="form-check">
-                    <label className="form-check-label">
-                        <input className="form-check-input"
-                               type="checkbox"
-                               id="inlineCheckbox1"
-                               value="option1"/> Запомнить мой адресс электронной почты.
-                    </label>
-                </div>
-
-                <button type="submit" className="btn btn-secondary login-form__button" onClick = {this.handleSubmit}>Вход</button>
-                <button type="submit" className="btn btn-secondary login-form__button" onClick = {this.handleSubmit}>Забыли пароль?</button>
-
-                <div>
-                    <h4>У Вас еще нет аккаунта? Создать аккаунт</h4>
-                </div>
-                <div>
-                    <h4>Забыли пароль? Восстановить пароль</h4>
-                </div>
-                <div>
-                    <h4>Не получили инструкции для подтверждения учетной записи? Отправить еще раз</h4>
+                <div className="row">
+                    <div className="col">
+                        <button className="btn btn-md btn-primary forgot-password-page__btn forgot-password-page__btn_hover" type="submit" disabled={isSubmitting}>
+                            Вход
+                        </button>
+                    </div>
+                    <div className="col-offset forgot-password-page__col">
+                        <Link to="/forgot-recover/forgot-password">
+                            <button className="btn btn-md btn-outline-secondary forgot-password-page__btn-outline-secondary" type="submit" disabled={isSubmitting}>
+                            Забыли пароль?
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </form>
+        );
+
+        const Form = withFormik({
+            mapPropsToValues: props => ({ email: '', password: '' }),
+            validate: (values) => {
+                const errors = {};
+                if (!values.email) {
+                    errors.email = 'Укажите действительный адрес электронной почты.';
+                } if (
+                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+                ) {
+                    errors.email = 'Укажите действительный адрес электронной почты.';
+                } if (!values.password) {
+                    errors.password = 'Пароль обязательное поле.';
+                }
+                return errors;
+            },
+            handleSubmit: (values) => {
+                this.props.signIn(values);
+            },
+        })(InnerForm);
+
+
+        return (
+            <div>
+                <Header />
+                <div className="container forgot-password-page___container_size">
+                    <div className="card">
+                        <div className="card-body">
+                            <div className="">
+                                <Form />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row login-form__row">
+                        <div className="col text-center">
+                            <Link to="/sign_up">
+                                <button className="btn btn-md btn-primary forgot-password-page__btn forgot-password-page__btn_hover">
+                                Создать аккаунт
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
-
-    handleSubmit = ev => {
-        ev.preventDefault();
-        this.props.signIn({
-            email: this.state.email,
-            password: this.state.password
-        });
-        this.setState({
-            email: '',
-            password: ''
-        })
-    };
-
-    getClassName = type => this.state[type].length && this.state[type].length < limits[type].min
-        ? 'form-input__error' : ''
-
-    handleChange = type => ev => {
-        const {value} = ev.target
-        if (value.length > limits[type].max) return
-        this.setState({
-            [type]: value
-        })
-    }
 }
-
-const limits = {
-    email: {
-        min: 1,
-        max: 100
-    },
-    password: {
-        min: 1,
-        max: 20
-    }
-};
-
 
 export default connect(state => {
     return {

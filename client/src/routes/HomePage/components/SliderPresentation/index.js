@@ -21,8 +21,8 @@ class SliderPresentation extends Component {
                         <h2 className="slider-presentation__h2">{articles.response[0].presentation.text}</h2>
 
                         <div className="form-inline slider-presentation__btn_centre">
-                            <Link to="/sign_in"><button className="btn btn-lg  btn-outline-main slider-presentation__btn_margin" type="button">Log in</button></Link>
-                            <Link to="/sign_up"><button className="btn btn-lg  btn-primary" type="button">Join</button></Link>
+                            <Link to="/sign_in"><button className="btn btn-homepage btn-lg  btn-outline-main slider-presentation__btn_margin" type="button">Log in</button></Link>
+                            <Link to="/sign_up"><button className="btn btn-homepage btn-lg  btn-primary" type="button">Join</button></Link>
                         </div>
                     </div>
 

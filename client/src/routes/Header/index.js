@@ -33,8 +33,8 @@ class Header extends Component {
                         </li>
                     </ul>
                     <form className="form-inline">
-                        <Link to="/sign_in"><button className="btn btn-sm align-middle btn-outline-main btn-log " type="button">Log in</button></Link>
-                        <Link to="/sign_up"><button className="btn btn-sm align-middle btn-primary" type="button">Join</button></Link>
+                        <Link to="/sign_in"><button className="btn btn-homepage btn-sm align-middle btn-outline-main btn-log " type="button">Log in</button></Link>
+                        <Link to="/sign_up"><button className="btn btn-homepage btn-sm align-middle btn-primary" type="button">Join</button></Link>
                     </form>
 
                 </div>
