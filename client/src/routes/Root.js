@@ -9,20 +9,18 @@ import AccountPage from './AccountPage'
 import VdsPage from './VdsPage'
 
 
-
 export default class Root extends Component {
     render() {
         return (
             <div>
                 <Switch>
-                    <Redirect from="/" exact to="forgot-recover/forgot-password" />
-                    <Route path="/home" component={HomePage}/>
+                    <Route exact path="/" component={HomePage}/>
                     <Route path="/vds" component={VdsPage}/>
-                    <Route path="/account" component={AccountPage} exact/>
-                    <Route path="/forgot-recover/forgot-password" component={ForgotPasswordPage} exact/>
+                    <Route path="/account" component={AccountPage}/>
+                    <Route path="/forgot-recover/forgot-password" component={ForgotPasswordPage}/>
                     <Route path="/forgot-recover/recover-password/:passwordResetToken" component={RecoverPasswordPage}/>
-                    <Route path="/sign_up" component={RegistrationPage} exact/>
-                    <Route path="/sign_in" component={LoginPage} exact/>
+                    <Route path="/sign_up" component={RegistrationPage}/>
+                    <Route path="/sign_in" component={LoginPage}/>
                     <Route path="/error" render={() => <h1 style={styles}>Error</h1>}/>
                     <Route path="*" render={() => <h1 style={styles}>Not Found</h1>}/>
                 </Switch>

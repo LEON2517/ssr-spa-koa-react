@@ -3,6 +3,7 @@ import Header from '../Header'
 import RegistrationForm from './components/RegistrationForm'
 import RegistrationStripe from './components/RegistrationStripe'
 import Footer from '../Footer'
+import {user_agreement} from './fixtures'
 
 class RegistrationPage extends Component {
 
@@ -11,7 +12,7 @@ class RegistrationPage extends Component {
             <div>
                 <Header/>
                 <RegistrationStripe/>
-                <RegistrationForm/>
+                <RegistrationForm user_agreement={user_agreement}/>
                 <Footer/>
             </div>
         )

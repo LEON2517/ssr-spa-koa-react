@@ -13,9 +13,9 @@ class LoginForm extends Component {
 
     render() {
         const {user, status} = this.props;
-        const message = status ? (
+/*        const message = status ? (
             <h2 className="server-response">{user.response.message}</h2>
-        ) : null;
+        ) : null;*/
 
         const InnerForm = ({
                                values,
@@ -47,7 +47,9 @@ class LoginForm extends Component {
                     className={errors.password && touched.password ? 'text-input error' : 'text-input'}
                     placeholder="Пароль"/>
                 {touched.password && errors.password && <div className="input-feedback">{errors.password}</div>}
-                <div>{message}</div>
+
+{/*                <div>{message}</div>*/}
+
                 <div className="row">
                     <div className="col">
                         <button className="btn btn-md btn-primary forgot-password-page__btn forgot-password-page__btn_hover" type="submit" disabled={isSubmitting}>

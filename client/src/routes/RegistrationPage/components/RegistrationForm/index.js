@@ -4,49 +4,13 @@ import {Link, NavLink } from 'react-router-dom'
 import { withFormik } from 'formik';
 import {connect} from 'react-redux'
 import {signUp} from '../../../../actions'
-import Modal from 'react-modal';
 
 import './style.css'
 
-const customStyles = {
-    content : {
-        top                   : '50%',
-        left                  : '50%',
-        right                 : 'auto',
-        bottom                : 'auto',
-        marginRight           : '-50%',
-        transform             : 'translate(-50%, -50%)'
-    }
-};
-
 class RegistrationForm extends Component {
-    constructor() {
-        super();
-
-        this.state = {
-            modalIsOpen: false
-        };
-
-        this.openModal = this.openModal.bind(this);
-        this.afterOpenModal = this.afterOpenModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
-    }
-
-    openModal() {
-        this.setState({modalIsOpen: true});
-    }
-
-    afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        this.subtitle.style.color = '#f00';
-    }
-
-    closeModal() {
-        this.setState({modalIsOpen: false});
-    }
 
     render() {
-        const {user, status} = this.props;
+        const {user, status, user_agreement} = this.props;
         const message = status ? (
             <h2 className="server-response">{user.response.message}</h2>
         ) : null;
@@ -161,27 +125,7 @@ class RegistrationForm extends Component {
                                         className="form-check-input"
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        value={values.checkbox}/> Я прочитал(-а) и соглашаюсь с <h3 className="registration-form__h3" onClick={this.openModal}>Пользовательское соглашение.</h3>
-                                    <Modal
-                                        isOpen={this.state.modalIsOpen}
-                                        onAfterOpen={this.afterOpenModal}
-                                        onRequestClose={this.closeModal}
-                                        className="Modal"
-                                        overlayClassName="Overlay"
-                                        contentLabel="Example Modal"
-                                    >
-
-                                        <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
-                                        <button onClick={this.closeModal}>close</button>
-                                        <div>I am a modal</div>
-                                        <form>
-                                            <input />
-                                            <button>tab navigation</button>
-                                            <button>stays</button>
-                                            <button>inside</button>
-                                            <button>the modal</button>
-                                        </form>
-                                    </Modal>
+                                        value={values.checkbox}/> Я прочитал(-а) и соглашаюсь с <Link to="">Пользовательское соглашение.</Link>
                                     {touched.checkbox && errors.checkbox && <div className="input-feedback">{errors.checkbox}</div>}
                                 </label>
                             </div>
@@ -227,7 +171,7 @@ class RegistrationForm extends Component {
                 return errors;
             },
             handleSubmit: (values) => {
-                this.props.signIn(values);
+                this.props.signUp(values);
             },
         })(InnerForm);
 

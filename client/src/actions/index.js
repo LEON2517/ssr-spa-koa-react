@@ -1,4 +1,4 @@
-import {LOAD_HOME_PAGE_ARTICLES,SIGN_IN_USER, SIGN_UP_USER, FORGOT_PASSWORD_USER, RECOVERY_PASSWORD_USER, START, SUCCESS, FAIL } from '../constants'
+import {LOG_OUT_USER, LOAD_HOME_PAGE_ARTICLES,SIGN_IN_USER, SIGN_UP_USER, FORGOT_PASSWORD_USER, RECOVERY_PASSWORD_USER, START, SUCCESS, FAIL } from '../constants'
 import {push} from 'react-router-redux'
 
 
@@ -8,6 +8,18 @@ export function loadHomePageArticles() {
         callAPI: `http://localhost:3001/api/home`
     };
 }
+
+
+export function logOut() {
+    return (dispatch) => {
+
+        dispatch({
+            type: LOG_OUT_USER
+        });
+
+    }
+}
+
 
 export function signUp(formData) {
     return (dispatch) => {
@@ -74,7 +86,7 @@ export function signIn(formData) {
                         response
                     });
 
-                    dispatch(push('/account'))
+                    dispatch(push('/account/id'))
 
                 })
                 .catch(response => {

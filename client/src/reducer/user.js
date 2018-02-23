@@ -1,4 +1,4 @@
-import { SIGN_IN_USER, SIGN_UP_USER, FORGOT_PASSWORD_USER, RECOVERY_PASSWORD_USER, SUCCESS, START, FAIL } from '../constants'
+import { LOG_OUT_USER, SIGN_IN_USER, SIGN_UP_USER, FORGOT_PASSWORD_USER, RECOVERY_PASSWORD_USER, SUCCESS, START, FAIL } from '../constants'
 
 const defaultForm = {
     status: false,
@@ -10,6 +10,15 @@ export default (state = defaultForm, action) => {
 
 
     switch (type) {
+
+        case LOG_OUT_USER:
+            localStorage.removeItem('accountUserInfo');
+            return {
+                ...state,
+                accountUserInfo: null
+            };
+
+
 
         case SIGN_UP_USER + START:
             return {
@@ -43,6 +52,7 @@ export default (state = defaultForm, action) => {
             const accountUserInfo = JSON.parse(localStorage.getItem("accountUserInfo"));
             return {
                 ...state,
+                status: true,
                 accountUserInfo
             };
 
@@ -52,6 +62,7 @@ export default (state = defaultForm, action) => {
                 status: true,
                 response
             };
+            
 
 
         case FORGOT_PASSWORD_USER + START:

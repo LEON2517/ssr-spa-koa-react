@@ -1,6 +1,7 @@
 .castomclass {
     background-color: #292d34;
     height: 900px;
+    position: fixed;
 }
 
 .row__balance {

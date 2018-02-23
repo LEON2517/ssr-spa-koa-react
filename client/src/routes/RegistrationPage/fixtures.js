@@ -1,112 +1,145 @@
-export const articles = [
-    {
-        "id": "56c782f18990ecf954f6e027",
-        "date": "2016-06-09T15:03:23.000Z",
-        "title": "QUICK START",
-        "title1": "Installation",
-        "title2": "Hello World",
-        "text": "Velit anim deserunt elit velit est fugiat duis eiusmod eu do incididunt ut tempor voluptate",
-        "comments": [
-            {
-                "id": "qwerqwer",
-                "user": "Gilliam Underwood",
-                "text": "Velit anim deserunt elit velit est fugiat duis eiusmod eu do incididunt ut tempor voluptate. Officia dolor aliqua id anim mollit pariatur id commodo. Laborum minim non ut aliquip commodo est consectetur. Mollit eu aliqua tempor est nulla ullamco irure. Sit non amet et eiusmod cillum ex cillum anim incididunt ad laboris mollit. Sunt quis incididunt elit ea qui non ullamco aliquip consequat voluptate eiusmod est. Irure laboris amet culpa sit aliquip."
-            },
-            {
-                "id": "lkjhsdlfkg",
-                "user": "Dolly Franklin",
-                "text": "Aliquip id nostrud adipisicing irure. Labore reprehenderit ea ex officia ullamco incididunt consequat elit amet quis commodo. Fugiat amet veniam cillum ut aliquip velit est esse minim fugiat eiusmod sint. Commodo ea in culpa deserunt."
-            },
-            {
-                "id": "zxcvzcxvzxcv",
-                "user": "Brennan Atkins",
-                "text": "Nisi sit nisi cillum dolor fugiat sint do nostrud ex cillum cupidatat. Culpa do duis non et excepteur labore dolor culpa qui tempor veniam. Ex labore deserunt qui sit aute ad incididunt do cupidatat eiusmod reprehenderit ad. Qui laborum qui voluptate velit et consectetur ipsum enim dolore minim. Est sint velit tempor reprehenderit. Qui consectetur ad minim consequat."
-            },
-            {
-                "id": "fghjfghjfghj",
-                "user": "Jodi Humphrey",
-                "text": "Non amet amet ut magna culpa dolore consequat occaecat. Commodo adipisicing laboris voluptate enim mollit mollit anim aliquip deserunt nostrud deserunt cillum est. Ad eu cupidatat dolor nostrud et minim id in dolor occaecat ad magna elit. Laboris elit laboris aliquip Lorem reprehenderit id amet reprehenderit laborum minim incididunt cupidatat eiusmod."
-            },
-            {
-                "id": "ertyoertywte",
-                "user": "Joyce Weber",
-                "text": "Non qui Lorem qui commodo sint in esse non aliqua pariatur mollit veniam. Elit labore ad nisi anim adipisicing tempor velit commodo adipisicing ipsum ut. Nostrud cillum aliquip adipisicing id do occaecat est eiusmod adipisicing duis. Magna dolore et non nisi in non cillum officia elit non esse proident irure aute. Proident mollit amet enim dolore eiusmod dolor qui. Eiusmod reprehenderit cillum sit deserunt nostrud enim duis excepteur. Excepteur pariatur sunt in ipsum id minim est mollit."
-            }
-        ]
-    },
-    {
-        "id": "56c782f17b4e0ba78c7ad717",
-        "date": "2016-04-09T18:03:23.000Z",
-        "title": "ADVANCED GUIDES",
-        "title1": "Vds3",
-        "title2": "Vds4",
-        "text": "Quis occaecat duis aliqua reprehenderit excepteur nisi deserunt excepteur elit magna. Magna cillum anim veniam deserunt voluptate occaecat irure fugiat laboris proident. Tempor do magna deserunt cillum laborum cillum ut.\n\nEst sunt cupidatat in deserunt sit aliqua duis. Mollit consequat duis aliquip occaecat pariatur non do eiusmod dolore amet deserunt ullamco. Ea minim tempor exercitation do tempor nostrud dolor minim veniam laboris commodo ex duis. Do nostrud voluptate ullamco consequat anim tempor voluptate incididunt aliqua tempor.\n\nIn irure quis nostrud do. Labore laboris irure culpa reprehenderit pariatur laboris in commodo culpa enim cillum magna. Magna ipsum pariatur sunt in reprehenderit ipsum duis officia voluptate adipisicing ad officia. Duis est sint mollit amet laborum magna non quis nulla ipsum in veniam sit. Amet velit consequat esse esse ea. Ipsum non do ut cillum in adipisicing labore non commodo do laborum sunt.",
-        "comments": [
-            {
-                "id": "qwerqwertyy",
-                "user": "Gilliam Underwood",
-                "text": "Velit anim deserunt elit velit est fugiat duis eiusmod eu do incididunt ut tempor voluptate. Officia dolor aliqua id anim mollit pariatur id commodo. Laborum minim non ut aliquip commodo est consectetur. Mollit eu aliqua tempor est nulla ullamco irure. Sit non amet et eiusmod cillum ex cillum anim incididunt ad laboris mollit. Sunt quis incididunt elit ea qui non ullamco aliquip consequat voluptate eiusmod est. Irure laboris amet culpa sit aliquip."
-            },
-            {
-                "id": "sdfgsdfghu7u7urtv",
-                "user": "Jodi Humphrey",
-                "text": "Non amet amet ut magna culpa dolore consequat occaecat. Commodo adipisicing laboris voluptate enim mollit mollit anim aliquip deserunt nostrud deserunt cillum est. Ad eu cupidatat dolor nostrud et minim id in dolor occaecat ad magna elit. Laboris elit laboris aliquip Lorem reprehenderit id amet reprehenderit laborum minim incididunt cupidatat eiusmod."
-            }
-        ]
-    },
-    {
-        "id": "56c782f1978fdf9a0100df52",
-        "date": "2016-06-02T11:03:23.000Z",
-        "title": "REFERENCE",
-        "text": "Culpa dolor deserunt veniam irure amet officia excepteur labore nisi labore ad labore laborum aute. Ea irure sit exercitation ex. Aliquip dolore duis ullamco labore qui. Et anim irure laborum quis ipsum. Adipisicing culpa est ea velit veniam dolor nisi. Sit cupidatat velit commodo eu.\n\nUt nulla ut irure cillum irure sint sunt cupidatat tempor laboris incididunt elit occaecat fugiat. Reprehenderit enim cupidatat consectetur pariatur ad pariatur consequat veniam do fugiat Lorem laborum do velit. Nulla aute magna magna nisi officia et. Aute adipisicing eu eiusmod tempor exercitation sint non enim laboris dolor adipisicing.\n\nEa do sint pariatur voluptate ad culpa irure. Cillum pariatur deserunt fugiat elit. Exercitation labore amet deserunt magna. Velit veniam aute officia aliqua ipsum veniam pariatur. Aliquip ullamco fugiat officia non sunt ad consequat ipsum est esse commodo reprehenderit. Ad quis consectetur est exercitation fugiat eiusmod. Laborum reprehenderit esse qui irure.",
-        "comments": [
-            {
-                "id": "kjfviudfv089w74",
-                "user": "Joyce Weber",
-                "text": "Non qui Lorem qui commodo sint in esse non aliqua pariatur mollit veniam. Elit labore ad nisi anim adipisicing tempor velit commodo adipisicing ipsum ut. Nostrud cillum aliquip adipisicing id do occaecat est eiusmod adipisicing duis. Magna dolore et non nisi in non cillum officia elit non esse proident irure aute. Proident mollit amet enim dolore eiusmod dolor qui. Eiusmod reprehenderit cillum sit deserunt nostrud enim duis excepteur. Excepteur pariatur sunt in ipsum id minim est mollit."
-            },
-            {
-                "id": "r23uyrghasdfb7",
-                "user": "Joyce Weber",
-                "text": "Non qui Lorem qui commodo sint in esse non aliqua pariatur mollit veniam. Elit labore ad nisi anim adipisicing tempor velit commodo adipisicing ipsum ut. Nostrud cillum aliquip adipisicing id do occaecat est eiusmod adipisicing duis. Magna dolore et non nisi in non cillum officia elit non esse proident irure aute. Proident mollit amet enim dolore eiusmod dolor qui. Eiusmod reprehenderit cillum sit deserunt nostrud enim duis excepteur. Excepteur pariatur sunt in ipsum id minim est mollit."
-            }
-        ]
-    },
-    {
-        "id": "56c782f1e17f4f9311dfaa2c",
-        "date": "2016-05-19T23:03:23.000Z",
-        "title": "CONTRIBUTING",
-        "text": "Voluptate est officia pariatur tempor labore consequat consequat consectetur culpa enim. Amet laborum commodo in ullamco magna aliquip. Cupidatat veniam adipisicing labore irure nostrud sunt proident aute in. Sit Lorem consequat cillum enim id excepteur aliqua nostrud sint quis aute est est dolor. Sunt culpa est magna ad qui consequat exercitation. Enim sit ex do cupidatat laborum.\n\nOccaecat do tempor ex in dolor cupidatat do quis laboris anim. Et duis esse pariatur magna ex ipsum ut do ut id cillum. Nostrud fugiat sit minim ea. Nisi nulla sunt et et voluptate. Velit reprehenderit enim nulla mollit dolore excepteur Lorem do Lorem do cillum est qui. Ipsum mollit duis laboris incididunt non sit sunt proident. Aute voluptate id sunt aute proident officia.\n\nEnim ut nulla cillum officia cupidatat eiusmod amet laborum do labore id. Laborum in laboris aliquip anim consectetur magna reprehenderit consequat eiusmod esse Lorem consequat aliqua. Eiusmod voluptate mollit sint consectetur eu deserunt laboris ad et sunt nulla fugiat quis non. Dolor qui do cupidatat proident mollit amet sint pariatur non aliquip enim ex.",
-        "comments": [
-            {
-                "id": "rflsbvyeuwr334rg5",
-                "user": "Random Name",
-                "text": "Non qui Lorem qui commodo sint in esse non aliqua pariatur mollit veniam. Elit labore ad nisi anim adipisicing tempor velit commodo adipisicing ipsum ut. Nostrud cillum aliquip adipisicing id do occaecat est eiusmod adipisicing duis. Magna dolore et non nisi in non cillum officia elit non esse proident irure aute. Proident mollit amet enim dolore eiusmod dolor qui. Eiusmod reprehenderit cillum sit deserunt nostrud enim duis excepteur. Excepteur pariatur sunt in ipsum id minim est mollit."
-            },
-            {
-                "id": "234faasffasgfq3r3eda",
-                "user": "Felix Soyferman",
-                "text": "Non qui Lorem qui commodo sint in esse non aliqua pariatur mollit veniam. Elit labore ad nisi anim adipisicing tempor velit commodo adipisicing ipsum ut. Nostrud cillum aliquip adipisicing id do occaecat est eiusmod adipisicing duis. Magna dolore et non nisi in non cillum officia elit non esse proident irure aute. Proident mollit amet enim dolore eiusmod dolor qui. Eiusmod reprehenderit cillum sit deserunt nostrud enim duis excepteur. Excepteur pariatur sunt in ipsum id minim est mollit."
-            },
-        ]
-    },
-    {
-        "id": "56c782f197fe2bad471b3740",
-        "date": "2016-06-04T15:03:23.000Z",
-        "title": "FAQ",
-        "text": "Ex sunt sunt aliqua reprehenderit aliqua occaecat. Minim anim commodo officia veniam proident aute cillum eu sunt aute nostrud. Laboris fugiat velit ut pariatur occaecat adipisicing pariatur occaecat. Duis sint enim et consectetur quis pariatur laborum excepteur. Ipsum aliquip qui laborum commodo consectetur do velit veniam occaecat. Ad nisi dolor cillum elit magna dolor voluptate ea. Enim in duis ea consequat sunt Lorem aute.\n\nEst elit sunt quis officia reprehenderit do elit commodo eiusmod esse voluptate. Sit ipsum commodo sint voluptate culpa labore elit magna ullamco nostrud. Laboris magna magna anim labore mollit irure voluptate. Aute non magna aliqua aliqua sunt. Velit mollit consectetur aliqua id tempor ut. Tempor cupidatat aliquip excepteur occaecat incididunt nulla Lorem sint.\n\nNon commodo anim deserunt in et aliquip incididunt ut consectetur sunt esse commodo deserunt et. Tempor fugiat laboris cillum laboris labore. Deserunt quis ad do labore amet culpa officia. Esse et officia nostrud tempor occaecat officia anim incididunt amet sunt excepteur Lorem. Aute occaecat magna velit nisi sit anim consequat velit qui pariatur. Esse incididunt id officia aliqua anim ut et.",
-        "comments": [
-            {
-                "id": "23rfasdfasdvg",
-                "user": "Hello World",
-                "text": "Non qui Lorem qui commodo sint in esse non aliqua pariatur mollit veniam. Elit labore ad nisi anim adipisicing tempor velit commodo adipisicing ipsum ut. Nostrud cillum aliquip adipisicing id do occaecat est eiusmod adipisicing duis. Magna dolore et non nisi in non cillum officia elit non esse proident irure aute. Proident mollit amet enim dolore eiusmod dolor qui. Eiusmod reprehenderit cillum sit deserunt nostrud enim duis excepteur. Excepteur pariatur sunt in ipsum id minim est mollit."
-            },
-            {
-                "id": "fqasfd4r35tga",
-                "user": "Sofia Michailenko",
-                "text": "Non qui Lorem qui commodo sint in esse non aliqua pariatur mollit veniam. Elit labore ad nisi anim adipisicing tempor velit commodo adipisicing ipsum ut. Nostrud cillum aliquip adipisicing id do occaecat est eiusmod adipisicing duis. Magna dolore et non nisi in non cillum officia elit non esse proident irure aute. Proident mollit amet enim dolore eiusmod dolor qui. Eiusmod reprehenderit cillum sit deserunt nostrud enim duis excepteur. Excepteur pariatur sunt in ipsum id minim est mollit."
-            }
-        ]
-    }
-
-]
+export const user_agreement = {
+    "text": "Соглашение об использовании сервиса ARBITRAGE BETS\n" +
+    "Версия от 25 декабря 2017 года.\n" +
+    "Пожалуйста, ознакомьтесь с соглашением об использовании сервиса  ARBITRAGE BETS до начала использования услуг сервиса. Любое использование сервиса, включая, но не ограничивая, обращение в техническую поддержку и заказ услуг, будет означать Ваше согласие с условиями соглашения об использовании сервиса  ARBITRAGE BETS. Если вы не принимаете условия настоящего соглашения, не заказывайте и не используйте услуги, не обращайтесь за консультациями и в службу технической поддержки сервиса. \n" +
+    "Сервис ARBITRAGE BETS, с одной стороны, и лицо, акцептовавшее оферту на заключение соглашения об использовании сервиса ARBITRAGE BETS, с другой стороны, заключили настоящее соглашение об использовании сервиса ARBITRAGE BETS, состоящее в нижеследующем.\n" +
+    "1. Термины\n" +
+    "1.1. В настоящем соглашении об использовании сервиса ARBITRAGE BETS используемые термины будут иметь следующие значения:\n" +
+    "«Клиент» - дееспособное лицо, акцептующее Соглашение.\n" +
+    "«Сервис» - сервис ARBITRAGE BETS.\n" +
+    "«Стороны» - Клиент и Сервис.\n" +
+    "«Комплект» - пакет файлов и логов.\n" +
+    "«Оплата» - перевод денежных средств Сервису.\n" +
+    "«Сервисные решения» - услуги Сервиса.\n" +
+    "\n" +
+    "2. Порядок заключения Соглашения\n" +
+    "2.1. Текст настоящего Соглашения содержит все существенные условия договора и является публичной офертой.\n" +
+    "2.2. Надлежащим акцептом оферты считается последовательное осуществление Клиентом следующих действий:\n" +
+    "2.2.1. Ознакомление с условиями Соглашения.\n" +
+    "2.2.2. Обращение по контактным данным \n" +
+    "2.2.3. Предоставление всей необходимой информации.\n" +
+    "2.2.4. Оплата выбранных Клиентом Сервисных решений.\n" +
+    "2.3. С момента совершения всех действий, указанных в пункте 2.2 Соглашения, Соглашение считается заключенным между Сторонами.\n" +
+    "\n" +
+    "3. Предмет Соглашения\n" +
+    "3.1. Сервис предоставляет Клиентам Сервисные решения в соответствии с условиями, установленными в пунктах 4,5 и 6 Соглашения, а Клиент обязуется оплачивать предоставляемые Сервисом Сервисные решения.\n" +
+    "3.2. Сервис обязуется передать, а Клиент оплатить Сервисные решения в соответствии с условиями, указанными в пункте 7 Соглашения.\n" +
+    "\n" +
+    "\n" +
+    "4 Комплекты\n" +
+    "\n" +
+    "4.1. Сервис обязуется предоставить Клиенту:\n" +
+    "4.1.1. Комплект , который включает в себя:\n" +
+    "-\tВерифицированный аккаунт платежной системы Skrill/NETELLER RU\n" +
+    "-\tВерифицированный аккаунт букмекерской конторы UK\n" +
+    "-\tДокументы\n" +
+    "-\tЛог с полной информацией по регистрации\n" +
+    "\n" +
+    "\n" +
+    "4.2. После передачи Комплекта , Клиент обязан в течении 60 минут подтвердить , что он проверил Комплект:  \n" +
+    "4.2.1. Максимумы в букмекерской конторы не порезаны\n" +
+    "4.2.2. Аккаунт в букмекерской конторе верифицирован, вывод открыт\n" +
+    "4.2.3. Аккаунт в платежной системе верифицирован, вся сопутствующая информация в логе корректна.\n" +
+    "4.2.4. Данные платежных реквизитов и ФИО в букмекерской конторе и платежной системе совпадают.\n" +
+    "4.2.5. Документы в хорошем качестве\n" +
+    "4.2.6. Любые другие замечания\n" +
+    "\n" +
+    "4.3. Сервис не несет ответственности:  \n" +
+    "4.3.1. Если по пришествию 60 минут с момента передачи Комплекта Клиент не дал обратной связи, Сервис считает, что Клиент проверил и одобрил полученный Комплект и претензий к сервису не имеет.  За все замечания после обозначенного времени сервис ответственности не несет.\n" +
+    "4.3.2. За порезку максимумов и за запрос дополнительных документов по любой причине во время вывода средств, так как это зависит сугубо от качества и стратегии игры Клиента. В свою очередь Сервис гарантирует Клиенту , что аккаунт прошел полную верификацию по двум документам – id и bill, дополнительных документов на момет передачи комплекта не требуется, вывод открыт.\n" +
+    "4.3.3. Cервис не несет ответственности за сохранность денежных средств на счете букмекерской конторы и платежной системы. Все риски связанные с безопасностью транзакций клиент берет на себя и обязуется предпринять все необходимые меры предосторожности:\n" +
+    "-\tДвухфакторная аунтификация в платежной системе\n" +
+    "-\tСмена паролей на почте , платежной системе, букмекерской конторе\n" +
+    "-\tСмена секереток в платежной системе\n" +
+    "-\tПри необходимости изменение почты в платежной системе, букмекерской конторе\n" +
+    "\n" +
+    "\n" +
+    "5 Аренда VDS\n" +
+    "\n" +
+    "5.1. Сервис обязуется предоставить Клиенту:\n" +
+    "5.1.1. Специально настроенную для работы с анти-фрод системами сборку VDS\n" +
+    "5.1.2. Добросовестно выполнять обязательства по уникализации каждой сборки\n" +
+    "5.1.3. Предоставлять все необходимые тесты для контроля уникальности сборки\n" +
+    "5.1.4. Консультировать и поддерживать Клиента по всем вопросам связанным с настройкой VDS\n" +
+    "5.1.5. Предоставить мануал для начала работы\n" +
+    "\n" +
+    "\n" +
+    "5.2. Клиент обязуется:\n" +
+    "5.2.1. Ознакомиться с мануалом и неукоснительно следовать ему перед каждым запуском системы \n" +
+    "5.2.2. Не нарушать правила Сервиса оговоренные в пункте 5.4 \n" +
+    "\n" +
+    "5.3. На VDS разрешается работать с:\n" +
+    "5.3.1. Гемблинг ресурсами\n" +
+    "-\tБукмекерскими конторами\n" +
+    "-\tПокер румами\n" +
+    "-\tФорекс\n" +
+    "\n" +
+    "5.3.2. Рекламными ресурсами\n" +
+    "-\tФейсбук\n" +
+    "-\tГугл\n" +
+    "\n" +
+    "5.3.3. Любые другие не запрещенные ресурсы, Клиент обязан за ранние оговорить перед началом работы.\n" +
+    "\n" +
+    "5.4. На VDS запрещается:\n" +
+    "5.4.1. Заниматься кардингом\n" +
+    "5.4.2. Работать с любыми денежными средствами , кроме своих собственных \n" +
+    "5.4.3. Заниматься любыми проектами, противоречащими УК РФ \n" +
+    "5.4.4. Заниматься любыми проектами, которых нет в списке разрешенных и которые заранее не были согласованы с Сервисом.\n" +
+    "\n" +
+    "5.5. Сервис не несет ответственности:\n" +
+    "5.3.1. За не законное использование Клиентом выделенных ресурсов. Не законное использование VDS строго запрещено!\n" +
+    "\n" +
+    "5.6. Политика конфиденциальности\n" +
+    "5.6.1. Сервис полностью передает VDS в собственность Клиента на срок аренды, но оставляет за собой право вести логи. \n" +
+    "5.6.2. Сервис гарантируют клиенту полную конфиденциальность данных при условии не нарушения им правил пункта 5.4 настоящего Соглашения. \n" +
+    "5.6.2. Спустя 3 месяца с момента прекращения аренды VDS уничтожается.\n" +
+    "5.7. В случае если Сервис решит , что клиент использует VDS не по назначению, нарушает правила пункта 5.4 настоящего Соглашения , Сервис оставляет за собой право в одностороннем порядке разорвать Соглашение на предоставление услуг , прекратить все обязательства перед клиентом без объяснения причин.\n" +
+    "5.8. Комплексные решения обладают фиксированными характеристиками в виде предустановленного программного обеспечения и подменяемых параметров. Сервис не гарантирует, что Сервисное решение решит проблему Клиента, и не возвращает денежные средства, если проблема Клиента не была решена.\n" +
+    "\n" +
+    "6 Cash-Back\n" +
+    "\n" +
+    "6.1. Cash-Back с букмекеров:\n" +
+    "6.1.1. Сервис выплачивает Клиентам % от объема ставок на счет NETELLER/Skrill в период с 15 по 25 число следующего месяца.\n" +
+    "6.1.1. Выплаты не имеют ограничений по максимальному размеру. Минимальный размер выплат - 5 USD.\n" +
+    "\n" +
+    "6.2 Cash-Back с платежных систем:\n" +
+    "6.2.1. Бонусная часть, которую выплачивает Сервис, отправляется пользователям на счет NETELLER в период с 15 по 25 число следующего месяца.\n" +
+    "6.2.2. При расчетах бонусов учитываются все депозиты, совершенные с большинством покер-румов, букмекерами, онлайн-казино и трейдинг-сайтами. Сервис оставляем за собой право исключить некоторые сделки из расчета бонуса в случае отрицательного дохода по ним.\n" +
+    "6.2.3. Бонусные выплаты не имеют ограничений по максимальному размеру. Минимальный размер выплат на NETELLER - 5 USD.\n" +
+    "6.2.4. Сервис оставляет за собой право отказать в участии или прекратить участие Клиента в бонусной программе, если есть основания полагать, что Клиент участвует в мошеннических или других незаконных операциях.\n" +
+    "6.2.5 Сервис оставляет за собой право изменять условия программы в любое время.\n" +
+    "6.2.6 Любые злоупотребления и нарушения условий Соглашения в пунктах 4 5 и 6 могут привести к исключению Клиента из состава участников программ Сервиса.\n" +
+    "\n" +
+    "7. Общие положения об оплате\n" +
+    "7.1. Сервис предоставляет Сервисные решения по предоплате в размере 100%.\n" +
+    "7.2. Платежные реквизиты, предоставленные Представителем Сервиса, действительны в течение трех дней, если не было оговорено иное, или Представитель Сервиса не сообщил вам об утрате актуальности предоставленных платежных реквизитов.\n" +
+    "7.3 Реквизиты должны соответствовать реквизитам обозначенным в блоке «Оплата».\n" +
+    "7.4. Актуальные цены на Сервисные решения размещены в Теме Сервиса. При пересчете стоимости в другую валюту используется курс продажи валюты, взятый с официального сайта Сбербанка РФ www.sberbank.ru на момент оплаты. При оплате биткоинами либо иными криптовалютами используется курс биржи, с которой Сервис сотрудничает на момент обращения Клиента.\n" +
+    "7.5. Клиент может вернуть внесенные средства, за исключением средств за уже оказанные услуги. Возврат внесенной суммы независимо от способа и валюты взноса производится в долларах США, при пересчете в другую валюту используется курс покупки валюты, взятый с официального Веб-сайта Сбербанка РФ www.sberbank.ru на момент оплаты.\n" +
+    "При возврате биткоинами либо иными криптовалютами используется курс биржи, с которой Сервис сотрудничает на момент обращения Клиента.\n" +
+    "7.6. Запрос на возврат средств, за которые еще не были оказаны услуги, должен быть направлен Представителю Сервиса.\n" +
+    "Представитель Сервиса обязуется ответить на запрос в течение 7 (семи) рабочих дней, ответ будет отправлен на контакты Клиента, с которых был осуществлен запрос.\n" +
+    "7.7. В случае положительного ответа выплата производится в течение 3 (трех) рабочих дней на предоставленные Клиентом реквизиты, если Сервис работает с предоставленной платежной системой.\n" +
+    "7.8. Сервис не несет ответственности за оплату на реквизиты, полученные не от Представителя Сервиса или те реквизиты, которые не совпадают с указанными в Теме Сервиса и не оказывает услуги в случае подобной оплаты.\n" +
+    "\n" +
+    "8. Гарантии Клиента\n" +
+    "8.1. Клиент гарантирует, что он является дееспособным лицом старше 18 лет и осознает риски использования Сервисных решений.\n" +
+    "8.2. Клиент не вправе использовать Сервисные решения в противоправных целях. Сервис оставляет за собой право отказать в предоставлении Сервисных решений Клиентам, чья деятельность нарушает законодательство Российской Федерации или Украины. Также Сервис вправе отказать в предоставлении Сервисных решений, если у Сервиса возникает подозрение, что услуги могут быть использованы для совершения противоправных целей.\n" +
+    "8.3. Сервис не оказывает юридических консультационных услуг по вопросам законности применения полученных технологий и Сервисных решений на территории страны проживания Клиента. Клиент обязан самостоятельно определить законность применения полученных технологий, использования Сервисных решений, в том числе путем получения профессиональной юридической консультации. Сервис не несет ответственности за правовые последствия для Клиента, вызванные использованием Сервисных решений и полученных знаний.\n" +
+    "8.4. Клиент не вправе рекомендовать Сервис, Сервисные решения другим Клиентам, а также иным третьим лицам, которые могут использовать их для совершения действий, нарушающих законодательство Украины или Российской Федерации.\n" +
+    "8.5. Клиент гарантирует, что он не использует и не будет использовать в будущем Сервисные решения в каких-либо противоправных целях.\n" +
+    "8.6. Клиент гарантирует, что он не будет раскрывать, передавать третьим лицам либо хранить без адекватных мер защиты данные, предоставленные Сервису. При утрате либо компрометации данных Клиент обязан незамедлительно сообщить об этом Сервису через Представителя Сервиса. До момента поступления такого сообщения все действия, совершенные с использованием предоставленных данных Клиента, будут считаться совершенными самим Клиентом.\n" +
+    "\n" +
+    "9. Ответственность\n" +
+    "9.1. В случае нарушения срока оплаты Сервисных решений Сервис вправе требовать от Клиента выплаты неустойки в размере 0,05% (пять сотых процента) от невыплаченной суммы за каждый день просрочки.\n" +
+    "9.2. Если Сервису станет известно о том, что Клиент заключил Соглашение в нарушение требований Соглашения, то Сервис вправе расторгнуть Соглашение с Клиентом без предварительного уведомления.\n" +
+    "9.3. Сервис не гарантирует Клиенту достижения каких-либо результатов вследствие использования Сервисных решений.\n" +
+    "\n" +
+    "10. Заключительные положения\n" +
+    "10.1. Все споры, разногласия и претензии, которые могут возникнуть в связи с исполнением, расторжением или признанием недействительным Соглашения, Стороны будут стремиться решить путем переговоров. Сторона, у которой возникли претензии и/или разногласия, направляет другой Стороне сообщение с указанием возникших претензий и/или разногласий.\n" +
+    "10.2. В случае если ответ на сообщение не будет получен направившей сообщение Стороной в течение 30 (тридцати) рабочих дней с даты направления соответствующего сообщения, либо если Стороны не придут к соглашению по возникшим претензиям и/или разногласиям, спор подлежит разрешению в судебном порядке по месту нахождения Сервиса.\n" +
+    "10.3. Сервис вправе в одностороннем порядке изменять условия Соглашения, при этом такие изменения вступают в силу с момента опубликования новой версии Соглашения.\n" +
+    "10.4. При каждом последующем приобретении Сервисных решений Клиент обязан знакомиться с новой версией Соглашения. Продолжение использования Сервисных решений будет означать согласие Клиента с условиями новой версии Соглашения.\n" +
+    "10.5. Если Клиент не согласен с условиями новой версии Соглашения, он должен прекратить использование Сервисных решений.\n" +
+    "10.6. Соглашение и все возникающие из него правоотношения регулируются законодательством Российской Федерации. Все возникающие споры разрешаются в соответствии с законодательством Российской Федерации.\n"
+}

@@ -6,7 +6,7 @@ const articles  = [
         },
         "advantages": [
             {
-                "title_vds": "VDS Anti-Detect",
+                "title_vds": "VDS",
                 "text_vds": "Передовые технологии в сфере антидетект систем сделают Вас не заметными для букмекерских контор.",
                 "title_proxy": "Proxy",
                 "text_proxy": "Собственные прокси сервера с гарантией up-time и уникальным IP под каждый аккаунт.",

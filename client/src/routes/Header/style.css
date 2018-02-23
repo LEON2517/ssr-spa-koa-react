@@ -1,3 +1,22 @@
 .bg-react {
     background-color: #20232a;
 }
+
+.header__logout_h1 {
+    font-size: 15px;
+}
+
+.header__link {
+    color: white;
+    font-size: 17px;
+}
+
+.header__link:hover {
+    color: #61dafb;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.header__link_position {
+    margin-right: 15px;
+}
