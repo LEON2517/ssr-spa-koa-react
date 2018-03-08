@@ -68,9 +68,8 @@ export function signIn(formData) {
             })
                 .then(res => res.json())
                 .then(response => {
-                    if (response.error)
-                        throw response.error;
-
+                    if (response.message)
+                        throw response.message;
                     return response.token;
                 })
                 .then(token => {

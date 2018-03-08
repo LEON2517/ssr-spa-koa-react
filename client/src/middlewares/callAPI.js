@@ -31,6 +31,9 @@ export default store => next => action => {
                         response})
                 }
             )
-            .catch(error => next({...rest, type: type + FAIL, error}))
+            .catch(error => next({
+                ...rest,
+                type: type + FAIL,
+                error}))
         , 1000)
 }

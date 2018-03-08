@@ -29,7 +29,7 @@ exports.post = async function(ctx) {
     try {
         await newUser.save();
     } catch(e) {
-        ctx.body = { message: 'Другая ошибка' };
+        ctx.body = { message: 'Что то пошло не так, попробуйте еще раз' };
         return;
     }
 

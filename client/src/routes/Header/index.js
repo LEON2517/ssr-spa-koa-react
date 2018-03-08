@@ -17,10 +17,8 @@ class Header extends Component {
         const {status} = this.props
         const buttonLog = status ? <button className="btn btn-homepage btn-sm align-middle btn-primary " type="button" onClick = {this.handleLogOut}>Log out</button>
             : <button className="btn btn-homepage btn-sm align-middle btn-outline-main btn-log " type="button">Log in</button>;
-
         const buttonReg = status ? null
             : <button className="btn btn-homepage btn-sm align-middle btn-primary" type="button">Join</button>;
-
         const linkAccount = status ? <div>Личный кабинет</div>
             : null;
 

@@ -15,6 +15,7 @@ export default (state = defaultForm, action) => {
             localStorage.removeItem('accountUserInfo');
             return {
                 ...state,
+                status: false,
                 accountUserInfo: null
             };
 
@@ -52,7 +53,7 @@ export default (state = defaultForm, action) => {
             const accountUserInfo = JSON.parse(localStorage.getItem("accountUserInfo"));
             return {
                 ...state,
-                status: true,
+                status: false,
                 accountUserInfo
             };
 
@@ -62,7 +63,7 @@ export default (state = defaultForm, action) => {
                 status: true,
                 response
             };
-            
+
 
 
         case FORGOT_PASSWORD_USER + START:

@@ -13,9 +13,9 @@ class LoginForm extends Component {
 
     render() {
         const {user, status} = this.props;
-/*        const message = status ? (
-            <h2 className="server-response">{user.response.message}</h2>
-        ) : null;*/
+        const message = status ? (
+            <h2 className="server-response">{user.response}</h2>
+        ) : null;
 
         const InnerForm = ({
                                values,
@@ -48,7 +48,7 @@ class LoginForm extends Component {
                     placeholder="Пароль"/>
                 {touched.password && errors.password && <div className="input-feedback">{errors.password}</div>}
 
-{/*                <div>{message}</div>*/}
+                <div>{message}</div>
 
                 <div className="row">
                     <div className="col">

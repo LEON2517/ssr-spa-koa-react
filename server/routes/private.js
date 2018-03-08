@@ -6,7 +6,7 @@ exports.get = compose([
   async (ctx, next) => {
     if (!ctx.state.user) {
       ctx.status = 400;
-      ctx.body = {error: 'invalid credentials'};
+      ctx.body = {message: 'invalid credentials'};
       return;
     }
 
