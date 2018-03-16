@@ -1,0 +1,54 @@
+.vds-presentation__row {
+    height: 560px;
+    background-color: #292d34;
+}
+
+.vds-presentation__col {
+    top: 150px;
+    height: 230px;
+}
+
+.vds-presentation__text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+.vds-presentation__btn-outline-secondary {
+    border-color: white;
+    color: white;
+}
+
+.vds-presentation__btn-outline-secondary:hover {
+    border-color:  white;
+    background-color:  rgba(192, 192, 192, 0.1);
+    transition: 0.5s;
+    color: white;
+}
+
+.vds-presentation__btn_centre {
+    width: 420px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+
+.col__vds-presentation {
+    top: 170px;
+}
+
+.vds-presentation_video {
+    margin-top: 50px;
+    height: 350px;
+    width: 622px;
+}
+
+.vds-presentation__container_video {
+    height: 450px;
+    width: 1150px;
+    background-color: #61dafb;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 110px;
+}

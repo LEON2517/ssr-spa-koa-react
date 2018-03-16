@@ -1,0 +1,28 @@
+.row__vds-basic {
+    height: 560px;
+}
+
+.col__vds-basic_video {
+    height: 300px;
+    width: 533px;
+}
+
+.col__vds-basic_video {
+    top: 160px;
+}
+
+.col__vds-basic_text {
+    top: 160px;
+}
+
+.vds-basic_text {
+    height: 300px;
+    width: 533px;
+}
+
+.col__vds-basic_text_advanced {
+    height: 300px;
+    width: 533px;
+    margin-right: auto;
+    margin-left: auto;
+}

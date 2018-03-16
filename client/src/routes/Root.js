@@ -14,7 +14,8 @@ export default class Root extends Component {
         return (
             <div>
                 <Switch>
-                    <Route exact path="/" component={HomePage}/>
+                    <Redirect from="/" exact to="vds" />
+                    <Route exact path="/home" component={HomePage}/>
                     <Route path="/vds" component={VdsPage}/>
                     <Route path="/account" component={AccountPage}/>
                     <Route path="/forgot-recover/forgot-password" component={ForgotPasswordPage}/>

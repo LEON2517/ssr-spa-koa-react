@@ -27,7 +27,7 @@ module.exports = {
         transport: 'gmail',
         gmail: {
             user: 'servertestnode@gmail.com',
-            password: 'zebra1985'
+            password: 'zevs29384JSn'
         },
         senders:  {
             // transactional emails, register/forgot pass etc
