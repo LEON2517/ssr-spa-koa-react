@@ -1,0 +1,11 @@
+.vds-technical__container {
+    height: 600px;
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.vds-technical__row_block_one {
+    margin-top: 50px;
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}

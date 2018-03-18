@@ -1,0 +1,55 @@
+.vds-info__container {
+    height: 650px;
+}
+
+.vds-info__h2 {
+    color: #292d34;
+    margin-top: 80px;
+    font-weight: 400;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.vds-info__row_block_one {
+    margin-top: 40px;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.vds-info__row_block_two {
+    margin-top: 30px;
+
+}
+
+.vds-info__img {
+    width: 700px;
+    height: 431px;
+}
+
+.vds-info__img_margin {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vds-info__icon_bios {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.vds-info__icon_acpi {
+    width: 80px;
+    height: 80px;
+    margin-top: 32px;
+    margin-bottom: 58px;
+}
+
+.vds-info__icon_vm {
+    width: 95px;
+    height: 88px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}

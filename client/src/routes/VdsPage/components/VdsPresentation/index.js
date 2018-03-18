@@ -15,7 +15,8 @@ class VdsPresentation extends Component {
         return (
             <div className="container-fluid">
                 <div className="row vds-presentation__row block-center">
-                    <div className="col text-center vds-presentation__col">
+                    <div className="col text-center">
+
                         <div className="vds-presentation__text">
                             <h1 className="slider-presentation__h1">VDS</h1>
                             <h2 className="slider-presentation__h2">Заряженная VDS: быстрее, мощнее, не уязвимие для антифрод систем. Попробуйте будущее беттинга.</h2>

@@ -1,14 +1,10 @@
 .vds-presentation__row {
-    height: 560px;
+    height: 535px;
     background-color: #292d34;
 }
 
-.vds-presentation__col {
-    top: 150px;
-    height: 230px;
-}
-
 .vds-presentation__text {
+    margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
     width: 900px;

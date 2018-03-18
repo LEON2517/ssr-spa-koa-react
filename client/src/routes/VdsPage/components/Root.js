@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import VdsBasic from './VdsBasic'
+import VdsTechnical from './VdsTechnical'
+import VdsInfo from './VdsInfo'
 import VdsPresentation from './VdsPresentation'
 import Header from '../../Header'
 import Footer from '../../Footer'
@@ -12,7 +13,8 @@ class Root extends Component {
             <div>
                 <Header/>
                 <VdsPresentation/>
-                <VdsBasic/>
+                <VdsInfo/>
+                <VdsTechnical/>
                 <Footer/>
             </div>
         )
