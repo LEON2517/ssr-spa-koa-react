@@ -7,6 +7,7 @@ import ForgotPasswordPage from './ForgotPasswordPage'
 import RecoverPasswordPage from './RecoverPasswordPage'
 import AccountPage from './AccountPage'
 import VdsPage from './VdsPage'
+import FaqPage from './FaqPage'
 
 
 export default class Root extends Component {
@@ -22,6 +23,7 @@ export default class Root extends Component {
                     <Route path="/forgot-recover/recover-password/:passwordResetToken" component={RecoverPasswordPage}/>
                     <Route path="/sign_up" component={RegistrationPage}/>
                     <Route path="/sign_in" component={LoginPage}/>
+                    <Route path="/faq" component={FaqPage}/>
                     <Route path="/error" render={() => <h1 style={styles}>Error</h1>}/>
                     <Route path="*" render={() => <h1 style={styles}>Not Found</h1>}/>
                 </Switch>

@@ -1,0 +1,45 @@
+.vds-as__container {
+    height: 720px;
+
+}
+
+.vds-as__h2 {
+    color: #292d34;
+    margin-top: 80px;
+    font-weight: 400;
+    width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.vds-as__row_block_one {
+    width: 1100px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vds-as__video_basic {
+    width: 440px;
+    height: 247px;
+    background-color: #292d34;
+    margin: 20px auto 50px auto;
+}
+
+.vds-as__video_basic {
+    width: 440px;
+    height: 247px;
+    background-color: #292d34;
+    margin: 20px auto 50px auto;
+}
+
+.vds-as__video_advanced {
+    width: 440px;
+    height: 247px;
+    background-color: #292d34;
+    margin: 20px auto 50px auto;
+}
+
+.col__basic {
+    width: 247px;
+}

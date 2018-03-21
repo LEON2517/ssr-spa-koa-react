@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './style.css'
+import classNames from 'classnames'
 
 class VdsInfo extends Component {
     static propTypes = {
@@ -15,6 +16,30 @@ class VdsInfo extends Component {
 
     render() {
 
+        const vdsInfoClassH3Hardware = classNames({
+            'vds-info__h3': true,
+            'vds-info__h3_active': this.state.hardware
+        });
+
+        const vdsInfoClassH3OS = classNames({
+            'vds-info__h3': true,
+            'vds-info__h3_active': this.state.os
+        });
+
+        const vdsInfoClassH3Browser = classNames({
+            'vds-info__h3': true,
+            'vds-info__h3_active': this.state.browser
+        });
+
+        const vdsInfoClassUnderline = classNames({
+            'vds-info__h3': true,
+            'row': true,
+            'vds-info__row_block_one': true,
+            'vds-info__row_block_border-hardware': this.state.hardware,
+            'vds-info__row_block_border-os': this.state.os,
+            'vds-info__row_block_border-browser': this.state.browser
+        });
+
         return (
             <div className="container vds-info__container">
 
@@ -24,17 +49,17 @@ class VdsInfo extends Component {
                     </div>
                 </div>
 
-                <div className="row vds-info__row_block_one">
+                <div className={vdsInfoClassUnderline}>
                     <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
-                        <h3 onClick={this.handleClickHardware} className="slider-presentation__h3">antiHARDWARE</h3>
+                        <h3 onClick={this.handleClickHardware} className={vdsInfoClassH3Hardware}>antiHARDWARE</h3>
                     </div>
 
                     <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
-                        <h3 onClick={this.handleClickOs} className="slider-presentation__h3">antiOS</h3>
+                        <h3 onClick={this.handleClickOs} className={vdsInfoClassH3OS}>antiOS</h3>
                     </div>
 
                     <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center" >
-                        <h3 onClick={this.handleClickBrowser} className="slider-presentation__h3">antiBROWSER</h3>
+                        <h3 onClick={this.handleClickBrowser} className={vdsInfoClassH3Browser}>antiBROWSER</h3>
                     </div>
                 </div>
 
@@ -52,19 +77,19 @@ class VdsInfo extends Component {
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
                     <img className="vds-info__icon_bios" src={require('./icon/bios.png')}/>
                     <h3 className="slider-presentation__h3">BIOS</h3>
-                    <p className="slider-presentation__p">Уникальное железо под каждый аккаунт на уровне BIOS.</p>
+                    <p className="vds-info__p">Уникальное железо под каждый аккаунт на уровне BIOS.</p>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
                     <img className="vds-info__icon_acpi" src={require('./icon/acpi.png')}/>
                     <h3 className="slider-presentation__h3">ACPI</h3>
-                    <p className="slider-presentation__p">Переписанные на аssembler ACPI таблицы.  </p>
+                    <p className="vds-info__p">Переписанные на аssembler ACPI таблицы.  </p>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
                     <img className="vds-info__icon_vm" src={require('./icon/vm.png')}/>
                     <h3 className="slider-presentation__h3">VM</h3>
-                    <p className="slider-presentation__p">Вырезаны и переписаны все патерны виртуальной среды.</p>
+                    <p className="vds-info__p">Вырезаны и переписаны все патерны виртуальной среды.</p>
                 </div>
             </div>
         ) : null;
@@ -73,17 +98,17 @@ class VdsInfo extends Component {
             <div className="row vds-info__row_block_two">
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
                     <h3 className="slider-presentation__h3">4</h3>
-                    <p className="slider-presentation__p">Уникальное железо под каждый аккаунт на уровне BIOS.</p>
+                    <p className="vds-info__p">Уникальное железо под каждый аккаунт на уровне BIOS.</p>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
                     <h3 className="slider-presentation__h3">5</h3>
-                    <p className="slider-presentation__p">Переписанные на аssembler ACPI таблицы.  </p>
+                    <p className="vds-info__p">Переписанные на аssembler ACPI таблицы.  </p>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
                     <h3 className="slider-presentation__h3">6</h3>
-                    <p className="slider-presentation__p">Вырезаны и переписаны все патерны виртуальной среды.</p>
+                    <p className="vds-info__p">Вырезаны и переписаны все патерны виртуальной среды.</p>
                 </div>
             </div>
         ) : null;
@@ -92,17 +117,17 @@ class VdsInfo extends Component {
             <div className="row vds-info__row_block_two">
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
                     <h3 className="slider-presentation__h3">7</h3>
-                    <p className="slider-presentation__p">Уникальное железо под каждый аккаунт на уровне BIOS.</p>
+                    <p className="vds-info__p">Уникальное железо под каждый аккаунт на уровне BIOS.</p>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
                     <h3 className="slider-presentation__h3">8</h3>
-                    <p className="slider-presentation__p">Переписанные на аssembler ACPI таблицы.  </p>
+                    <p className="vds-info__p">Переписанные на аssembler ACPI таблицы.  </p>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
                     <h3 className="slider-presentation__h3">9</h3>
-                    <p className="slider-presentation__p">Вырезаны и переписаны все патерны виртуальной среды.</p>
+                    <p className="vds-info__p">Вырезаны и переписаны все патерны виртуальной среды.</p>
                 </div>
             </div>
         ) : null;

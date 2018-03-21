@@ -1,5 +1,5 @@
 .vds-info__container {
-    height: 650px;
+    height: 660px;
 }
 
 .vds-info__h2 {
@@ -12,10 +12,57 @@
 }
 
 .vds-info__row_block_one {
-    margin-top: 40px;
-    width: 600px;
+    margin-top: 50px;
+    width: 530px;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 60px;
+}
+
+.vds-info__h3:hover {
+    cursor: pointer;
+}
+
+.vds-info__row_block_border-hardware {
+    background-image: linear-gradient(to left, darkgray 64%, #61dafb 36%);
+    background-size: 100% 2px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+
+.vds-info__row_block_border-os {
+    background-image: linear-gradient(to right, darkgray 0%, darkgray 36%, #61dafb 36%, #61dafb 64%, darkgray 64%, darkgray 100%);
+    background-size: 100% 2px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+
+.vds-info__row_block_border-browser {
+    background-image: linear-gradient(to right, darkgray 64%, #61dafb 36%);
+    background-size: 100% 2px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+
+.vds-info__h3 {
+    font-size: 22px;
+    font-weight: 400;
+    color: darkgray;
+}
+
+.vds-info__h3_active {
+    color: #61dafb;
+    font-weight: 400;
+}
+
+.vds-info__p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.vds-info__h3:hover {
+    cursor: pointer;
+    color: #61dafb;
 }
 
 .vds-info__row_block_two {

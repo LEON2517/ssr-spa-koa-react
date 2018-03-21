@@ -1,0 +1,14 @@
+.vds-reviews__container {
+    height: 400px;
+    background-color: #61dafb;
+    margin-top: 40px;
+}
+
+.vds-reviews__h2 {
+    color: white;
+    margin-top: 40px;
+    font-weight: 400;
+    width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+}
