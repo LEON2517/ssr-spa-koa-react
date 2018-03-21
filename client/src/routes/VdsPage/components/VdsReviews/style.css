@@ -1,5 +1,5 @@
 .vds-reviews__container {
-    height: 400px;
+    height: 490px;
     background-color: #61dafb;
     margin-top: 40px;
 }
@@ -12,3 +12,44 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+.vds-reviews__link {
+    color: white;
+    font-size: 20px;
+}
+
+.vds-reviews__link:hover {
+    color: white;
+    font-size: 20px;
+}
+
+.vds-reviews__text {
+    color: white;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vds-reviews__carousel_margin {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
+}
+
+.carousel-control-prev-icon {
+    width: 80px;
+    height: 80px;
+    background-image: url(./icon/left-arrow.png)
+
+}
+
+.carousel-control-next-icon {
+    width: 80px;
+    height: 80px;
+    background-image: url(./icon/right-arrow.png)
+}
+
+
+
+

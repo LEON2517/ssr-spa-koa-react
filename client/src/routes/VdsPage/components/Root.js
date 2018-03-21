@@ -11,6 +11,7 @@ import VdsTechnical from './VdsTechnical'
 import VdsReviews from './VdsReviews'
 import VdsInfo from './VdsInfo'
 import VdsPresentation from './VdsPresentation'
+import ReviewsList from './ReviewsList'
 import Header from '../../Header'
 import Footer from '../../Footer'
 
