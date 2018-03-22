@@ -23,24 +23,36 @@ class VdsAntidetect extends Component {
 
                 <div className="row vds-as__row_block_one">
                     <div className="col">
-                        <div className="vds-as__video_basic"/>
+                        <div className="vds-as__video_basic">
+                            <div className="vds-as__video_play">
+                                <div className="vds-as__video_play-icon"/>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="col">
-                        <h3 className="slider-presentation__h3 vds-antidetect__h3">VDS</h3>
-                        <p className="vds-info__p">Приглашайте друзей присоединиться к вашему приключению, бросайте им вызов в многопользовательских матчах или позвольте им играть вместо вас, даже если у них нет этой игры.</p>
+                        <div className="vds-antifrod_p">
+                            <h3 className="slider-presentation__h3 vds-antidetect__h3">VDS</h3>
+                            <p className="vds-info__p">Приглашайте друзей присоединиться к вашему приключению, бросайте им вызов в многопользовательских матчах или позвольте им играть вместо вас, даже если у них нет этой игры.</p>
+                        </div>
                     </div>
                 </div>
 
                 <div className="row vds-as__row_block_one">
 
                     <div className="col">
-                        <h3 className="slider-presentation__h3 vds-antidetect__h3">BROWSER</h3>
-                        <p className="vds-info__p">Приглашайте друзей присоединиться к вашему приключению, бросайте им вызов в многопользовательских матчах или позвольте им играть вместо вас, даже если у них нет этой игры.</p>
+                        <div className="vds-antifrod_p">
+                            <h3 className="slider-presentation__h3 vds-antidetect__h3">BROWSER</h3>
+                            <p className="vds-info__p">Приглашайте друзей присоединиться к вашему приключению, бросайте им вызов в многопользовательских матчах или позвольте им играть вместо вас, даже если у них нет этой игры.</p>
+                        </div>
                     </div>
 
                     <div className="col text-center">
-                        <div className="vds-as__video_basic"/>
+                        <div className="vds-as__video_basic">
+                            <div className="vds-as__video_play">
+                                <div className="vds-as__video_play-icon"/>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

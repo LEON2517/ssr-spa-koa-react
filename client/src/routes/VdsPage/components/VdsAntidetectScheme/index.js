@@ -18,7 +18,7 @@ class VdsAntidetectScheme extends Component {
                 <div className="row vds-antidetect-scheme__container">
 
                     <div className="col">
-                        <h3 className="slider-presentation__h3 vds-antidetect__h3">VDS</h3>
+                        <h3 className="slider-presentation__h3 vds-antidetect__h3">Как работают профессионалы?</h3>
                         <p className="vds-info__p">Приглашайте друзей присоединиться к вашему приключению, бросайте им вызов в многопользовательских матчах или позвольте им играть вместо вас, даже если у них нет этой игры.</p>
                     </div>
 

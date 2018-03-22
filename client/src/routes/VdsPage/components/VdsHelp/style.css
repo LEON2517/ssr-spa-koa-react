@@ -1,7 +1,33 @@
 .vds-help__container {
-    height: 400px;
+    height: 340px;
 }
 
 .vds-antidetect__h3 {
     margin-top: 20px;
+}
+
+.vds-help__p {
+    color: black;
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+.vds-help__h2 {
+    color: #292d34;
+    margin-top: 60px;
+    font-weight: 400;
+    width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.vds-help__btn {
+    margin-top: 40px;
+    color: white;
+}
+
+.vds-help__btn:hover {
+    color: white;
 }

@@ -1,5 +1,5 @@
 .vds-as__container {
-    height: 720px;
+    height: 760px;
 
 }
 
@@ -43,3 +43,27 @@
 .col__basic {
     width: 247px;
 }
+
+.vds-as__video_play {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.vds-as__video_play-icon {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 20px;
+    background-color: #61dafb;
+    height: 30px;
+    width: 30px;
+    clip-path: polygon(0 0, 100% 50%, 0 100%, 0 0);
+}
+
+.vds-antifrod_p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 440px;
+}
+

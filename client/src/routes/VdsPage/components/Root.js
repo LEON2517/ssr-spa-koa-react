@@ -25,9 +25,13 @@ class Root extends Component {
                 <VdsInfo/>
                 <VdsTechnical/>
                 <VdsBk/>
+{/*
                 <VdsAntifrodScheme/>
+*/}
                 <VdsAntifrod/>
+{/*
                 <VdsAntidetectScheme/>
+*/}
                 <VdsAntidetect/>
                 <VdsReviews/>
                 <VdsTariffs/>

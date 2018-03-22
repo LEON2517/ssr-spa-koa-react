@@ -23,15 +23,28 @@ class VdsAntifrod extends Component {
 
                 <div className="row vds-as__row_block_one">
                     <div className="col text-center">
-                        <div className="vds-as__video_basic"/>
+                        <div className="vds-as__video_basic">
+                            <div className="vds-as__video_play">
+                                <div className="vds-as__video_play-icon"/>
+                            </div>
+                        </div>
                         <h3 className="slider-presentation__h3">BASIC</h3>
-                        <p className="vds-info__p">Приглашайте друзей присоединиться к вашему приключению, бросайте им вызов в многопользовательских матчах или позвольте им играть вместо вас, даже если у них нет этой игры.</p>
+                        <div className="vds-antifrod_p">
+                            <p className="vds-info__p">Приглашайте друзей присоединиться к вашему приключению, бросайте им вызов в многопользовательских матчах или позвольте им играть вместо вас.</p>
+                        </div>
                     </div>
 
                     <div className="col text-center">
-                        <div className="vds-as__video_advanced"/>
+                        <div className="vds-as__video_advanced">
+                            <div className="vds-as__video_play">
+                                <div className="vds-as__video_play-icon"/>
+                            </div>
+                        </div>
                         <h3 className="slider-presentation__h3">ADVANCED</h3>
-                        <p className="vds-info__p">Приглашайте друзей присоединиться к вашему приключению, бросайте им вызов в многопользовательских матчах или позвольте им играть вместо вас, даже если у них нет этой игры.</p>
+                        <div className="vds-antifrod_p">
+                            <p className="vds-info__p">Приглашайте друзей присоединиться к вашему приключению, бросайте им вызов в многопользовательских матчах или позвольте им играть вместо вас.</p>
+
+                        </div>
                     </div>
                 </div>
             </div>

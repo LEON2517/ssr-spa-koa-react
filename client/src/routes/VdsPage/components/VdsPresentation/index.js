@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import './style.css'
 import YouTube from 'react-youtube';
 import { Link } from 'react-router-dom'
+import Plx from 'react-plx';
 
 
 class VdsPresentation extends Component {
@@ -12,10 +13,29 @@ class VdsPresentation extends Component {
 
     render() {
 
+        const ParallaxData = [
+            {
+                start: 0,
+                end: 250,
+                properties: [
+                    {
+                        startValue: 1,
+                        endValue: 0,
+                        property: "opacity"
+                    }
+                ]
+            }
+        ];
+
         return (
             <div className="container-fluid">
                 <div className="row vds-presentation__row block-center">
+
                     <div className="col text-center">
+
+                        <Plx
+                            parallaxData={ParallaxData}
+                        >
 
                         <div className="vds-presentation__text">
                             <h1 className="slider-presentation__h1">VDS</h1>
@@ -35,6 +55,8 @@ class VdsPresentation extends Component {
                                 </button>
                             </Link>
                         </div>
+
+                        </Plx>
 
                     </div>
                 </div>
