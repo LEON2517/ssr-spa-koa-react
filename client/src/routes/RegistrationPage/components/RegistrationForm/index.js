@@ -10,7 +10,7 @@ import './style.css'
 class RegistrationForm extends Component {
 
     render() {
-        const {user, status, user_agreement} = this.props;
+        const {user, status} = this.props;
         const message = status ? (
             <h2 className="server-response">{user.response.message}</h2>
         ) : null;

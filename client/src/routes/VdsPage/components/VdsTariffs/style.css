@@ -1,11 +1,104 @@
-.vds-technical__container {
-    height: 610px;
+.vds-tariffs__container {
     background-color: rgba(128, 128, 128, 0.1);
+    height: 800px;
 }
 
-.vds-technical__row_block_one {
+.vds-tariffs__row_block_one {
     margin-top: 50px;
     width: 900px;
     margin-right: auto;
     margin-left: auto;
 }
+
+.vds-tariffs__h2 {
+    color: #292d34;
+    margin-top: 60px;
+    font-weight: 400;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.vds-tariffs__block {
+    width: 560px;
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.vds-tariffs__table {
+    margin-top: 60px;
+    background-color: white;
+    width: 580px;
+}
+
+.vds-tariffs__table_classic {
+    margin-top: 60px;
+    background-color: white;
+    width: 290px;
+}
+
+
+.vds-tariffs__checkbox {
+    margin-left: 20px;
+    position: relative;
+    bottom: 19px;
+}
+
+.vds-tariffs__block_checkbox {
+    position: relative;
+    bottom: 12px;
+    height: 44px;
+}
+
+.vds-tariffs__margin {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+
+.table-curved {
+    float: left;
+}
+
+.table-curved-pro {
+    border: 2px solid #61dafb;
+    position: relative;
+    top: -15px;
+    height: 530px;
+    float: left;
+}
+
+.vds-tariffs__position_block {
+    height: 420px;
+    width: 870px;
+    margin-left: 160px;
+}
+
+.vds-tariffs__centre {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.vds-tariffs__p {
+    color: gray;
+}
+
+.vds-tariffs__text_block {
+    margin-top: 415px;
+}
+
+.input-feedback {
+    color: red;
+    font-size: 15px;
+    font-weight: 500;
+
+}
+
+.vds-tariffs__btn_pro {
+    height: 50px;
+    margin-top: 26px;
+}
+
