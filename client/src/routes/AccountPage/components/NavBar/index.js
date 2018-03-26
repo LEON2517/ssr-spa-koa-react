@@ -17,21 +17,23 @@ class NavBar extends Component {
                     <h3 className="panel-information__h3_navigation">НАВИГАЦИЯ</h3>
                 </div>
 
-                    <div className="row row__account" onClick = {() => history.push(`/account/id`)}>
-                        <h3 className="panel-information__h3">Учетная запись</h3>
-                    </div>
+                <div className="row row__account" onClick = {() => history.push(`/account/id`)}>
+                    <h3 className="panel-information__h3">Учетная запись</h3>
+                </div>
 
 
-                    <div className="row row__account" onClick = {() => history.push(`/account/vds`)}>
-                        <h3 className="panel-information__h3">Пополнение счета</h3>
-                    </div>
+                <div className="row row__account" onClick = {() => history.push(`/account/bills`)}>
+                    <h3 className="panel-information__h3">Счета</h3>
+                </div>
 
-                <div className="row row__account">
+                <div className="row row__account" onClick = {() => history.push(`/account/vds`)}>
                     <h3 className="panel-information__h3">VDS</h3>
                 </div>
+
                 <div className="row row__account">
                     <h3 className="panel-information__h3">Proxy</h3>
                 </div>
+
                 <div className="row row__account">
                     <h3 className="panel-information__h3">Cash-Back</h3>
                 </div>

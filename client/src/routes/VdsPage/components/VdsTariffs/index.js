@@ -3,56 +3,36 @@ import React, { Component } from 'react';
 import {Link, NavLink } from 'react-router-dom'
 import { withFormik } from 'formik';
 import {connect} from 'react-redux'
-import {signUp} from '../../../../actions'
+import {savingTariffs} from '../../../../actions'
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
+import { Async } from 'react-select';
+
 
 import './style.css'
 
 class VdsTariffs extends Component {
 
     state = {
+        selectedOption: '',
         isSelectPro: true,
         isSelectClassic: false
     };
 
-    handleSelectPro = () => {
-        const {isSelectPro, isSelectClassic} = this.state
-        if (isSelectPro == false && isSelectClassic == true) {
-            this.setState({
-                isSelectPro: !this.state.isSelectPro,
-                isSelectClassic: !this.state.isSelectClassic
-            })
-        } else {
-            this.setState({
-                isSelectPro: !this.state.isSelectPro
-            })
-        }
-    };
-
-    handleSelectClassic = () => {
-        const {isSelectPro, isSelectClassic} = this.state
-        if (isSelectPro == true && isSelectClassic == false) {
-            this.setState({
-                isSelectPro: !this.state.isSelectPro,
-                isSelectClassic: !this.state.isSelectClassic
-            })
-        } else {
-            this.setState({
-                isSelectClassic: !this.state.isSelectClassic
-            })
-        }
-    };
-
+    handleChange = (selectedOption) => {
+        this.setState({ selectedOption });
+        console.log(`Selected: ${selectedOption.label}`);
+    }
 
     render() {
+        const {isSelectPro, isSelectClassic, selectedOption } = this.state;
+        const value = selectedOption && selectedOption.value;
 
-        const {isSelectPro, isSelectClassic } = this.state;
-
-            const buttonPro = isSelectPro ? <button type="button" className="btn btn-primary text-center" onClick = {this.handleSelectPro}>Выбрано</button>
+        const buttonPro = isSelectPro ? <button type="button" className="btn btn-primary text-center" onClick = {this.handleSelectPro}>Выбрано</button>
             : <button type="button" className="btn btn-secondary text-center" onClick = {this.handleSelectPro}>Выбрать</button>;
 
         const buttonClassic = isSelectClassic ? <button type="button" className="btn btn-primary text-center" onClick = {this.handleSelectClassic}>Выбрано</button>
         : <button type="button" className="btn btn-secondary text-center" onClick = {this.handleSelectClassic}>Выбрать</button>;
-
 
         const InnerForm = ({
                                values,
@@ -141,7 +121,7 @@ class VdsTariffs extends Component {
 
                                                 <div className="form-group">
                                                     <label className="" htmlFor="inlineFormCustomSelect">Выберите количество дней:</label>
-                                                    <select className="form-control " id="exampleFormControlSelect1">
+                                                    <select className="form-control " id="exampleFormControlSelect1" defaultValue = "7">
                                                         <option
                                                             onChange={handleChange}
                                                             onBlur={handleBlur}
@@ -151,7 +131,6 @@ class VdsTariffs extends Component {
                                                             onBlur={handleBlur}
                                                             value={values.inputVdsClassicDay = "7"}>7 дней</option>
                                                         <option
-                                                            selected
                                                             onChange={handleChange}
                                                             onBlur={handleBlur}
                                                             value={values.inputVdsClassicDay = "30"}>30 дней</option>
@@ -159,7 +138,7 @@ class VdsTariffs extends Component {
                                                 </div>
                                                 <div className="form-group">
                                                     <label className="t" htmlFor="inlineFormCustomSelect">Выберите количество VDS:</label>
-                                                    <select className="form-control " id="exampleFormControlSelect1">
+                                                    <select className="form-control " id="exampleFormControlSelect1" defaultValue = "7">
                                                         <option
                                                             onChange={handleChange}
                                                             onBlur={handleBlur}
@@ -169,7 +148,6 @@ class VdsTariffs extends Component {
                                                             onBlur={handleBlur}
                                                             value={values.inputVdsClassicVds = "7"}>7 шт</option>
                                                         <option
-                                                            selected
                                                             onChange={handleChange}
                                                             onBlur={handleBlur}
                                                             value={values.inputVdsClassicVds = "30"}>30 шт</option>
@@ -287,39 +265,29 @@ class VdsTariffs extends Component {
 
                                                 <div className="form-group">
                                                     <label className="" htmlFor="inlineFormCustomSelect">Выберите количество дней:</label>
-                                                    <select className="form-control " id="exampleFormControlSelect1">
-                                                        <option
-                                                            onChange={handleChange}
-                                                            onBlur={handleBlur}
-                                                            value={values.inputVdsProDay = "1"}>1 день</option>
-                                                        <option
-                                                            onChange={handleChange}
-                                                            onBlur={handleBlur}
-                                                            value={values.inputVdsProDay = "7"}>7 дней</option>
-                                                        <option
-                                                            selected
-                                                            onChange={handleChange}
-                                                            onBlur={handleBlur}
-                                                            value={values.inputVdsProDay = "30"}>30 дней</option>
-                                                    </select>
+                                                    <Select
+                                                        name="form-field-name"
+                                                        value={values.selectVdsProDay = value}
+                                                        onChange={this.handleChange}
+                                                        options={[
+                                                            { value: '1 день', label: '1 день' },
+                                                            { value: '7 дней', label: '7 дней' },
+                                                            { value: '30 дней', label: '30 дней' }
+                                                        ]}
+                                                    />
                                                 </div>
                                                 <div className="form-group">
                                                     <label className="" htmlFor="inlineFormCustomSelect">Выберите количество VDS:</label>
-                                                    <select className="form-control " id="exampleFormControlSelect1">
-                                                        <option
-                                                            onChange={handleChange}
-                                                            onBlur={handleBlur}
-                                                            value={values.inputVdsClassicVds = "1"}>1 шт</option>
-                                                        <option
-                                                            onChange={handleChange}
-                                                            onBlur={handleBlur}
-                                                            value={values.inputVdsClassicVds = "7"}>7 шт</option>
-                                                        <option
-                                                            selected
-                                                            onChange={handleChange}
-                                                            onBlur={handleBlur}
-                                                            value={values.inputVdsClassicVds = "30"}>30 шт</option>
-                                                    </select>
+                                                    <Select
+                                                        name="form-field-name"
+                                                        value={values.selectVdsProVds = value}
+                                                        onChange={this.handleChange}
+                                                        options={[
+                                                            { value: '1 шт', label: '1 шт' },
+                                                            { value: '7 шт', label: '7 шт' },
+                                                            { value: '30 шт', label: '30 шт' }
+                                                        ]}
+                                                    />
                                                 </div>
                                                 <div className="text-center vds-tariffs__btn_pro">
                                                     {buttonPro}
@@ -341,8 +309,11 @@ class VdsTariffs extends Component {
                             <div className="">
                                 <button
                                     name="selectTariff"
-                                    value={values.selectTariff = false}
-                                    type="submit" disabled={isSubmitting}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.selectTariff = true}
+                                    type="submit"
+                                    disabled={isSubmitting}
                                     className="btn btn-primary text-center">Оплатить</button>
                             </div>
                             {touched.selectTariff && errors.selectTariff && <div className="input-feedback">{errors.selectTariff}</div>}
@@ -355,10 +326,24 @@ class VdsTariffs extends Component {
 
         const Form = withFormik({
             mapPropsToValues: props => ({
-                inputVdsClassicDay : 30, selectTariff: false,
-                checkboxVdsClassicRU: false, checkboxVdsClassicUA: false, checkboxVdsClassicUK: false,
-                checkboxVdsProRU: false, checkboxVdsProUA: false, checkboxVdsProUK: false,
-                checkboxVdsProProxyLimit: false, checkboxVdsProProxyUnlimit: false}),
+                service: "VDS",
+                tariffs: false,
+                inputVdsClassicDay : 7,
+                inputVdsClassicVds: 7,
+
+                selectVdsProDay: false,
+
+                selectVdsProVds: false,
+
+                selectTariff: false,
+                checkboxVdsClassicRU: false,
+                checkboxVdsClassicUA: false,
+                checkboxVdsClassicUK: false,
+                checkboxVdsProRU: false,
+                checkboxVdsProUA: false,
+                checkboxVdsProUK: false,
+                checkboxVdsProProxyLimit: false,
+                checkboxVdsProProxyUnlimit: false}),
             validate: (values) => {
                 const errors = {};
                 if (!(values.checkboxVdsProRU || values.checkboxVdsProUA || values.checkboxVdsProUK) && this.state.isSelectPro) {
@@ -367,18 +352,21 @@ class VdsTariffs extends Component {
                     errors.checkboxVdsProProxyLimit = 'Выберите время смены IP.';
                 } if (!(values.checkboxVdsClassicRU || values.checkboxVdsClassicUA || values.checkboxVdsClassicUK) && this.state.isSelectClassic) {
                     errors.checkboxVdsClassicRU = 'Выберите геолокацию.';
-                } if (!(values.selectTariff && this.state.isSelectPro && this.state.isSelectClassic)) {
-                    errors.selectTariff = 'Выберите тариф.';
-                } if (!(values.selectTariff) && (this.state.isSelectPro || this.state.isSelectClassic)) {
-                    errors.selectTariff = null;
+                } if (values.selectTariff && !this.state.isSelectPro && !this.state.isSelectClassic) {
+                    errors.selectTariff = "Выберите тариф.";
+                } if (this.state.isSelectPro) {
+                    values.tariffs = 'PRO'
+                } if (this.state.isSelectClassic) {
+                    values.tariffs = 'CLASSIC'
                 }
+                console.log(errors);
                 return errors;
             },
             handleSubmit: (values) => {
-                this.props.signUp(values);
+                console.log(values);
+                this.props.savingTariffs(values);
             },
         })(InnerForm);
-
 
         return (
             <div>
@@ -386,11 +374,34 @@ class VdsTariffs extends Component {
             </div>
         )
     }
+
+    handleSelectPro = () => {
+        const {isSelectPro, isSelectClassic} = this.state
+        if (isSelectPro == false && isSelectClassic == true) {
+            this.setState({
+                isSelectPro: !this.state.isSelectPro,
+                isSelectClassic: !this.state.isSelectClassic
+            })
+        } else {
+            this.setState({
+                isSelectPro: !this.state.isSelectPro
+            })
+        }
+    };
+
+    handleSelectClassic = () => {
+        const {isSelectPro, isSelectClassic} = this.state
+        if (isSelectPro == true && isSelectClassic == false) {
+            this.setState({
+                isSelectPro: !this.state.isSelectPro,
+                isSelectClassic: !this.state.isSelectClassic
+            })
+        } else {
+            this.setState({
+                isSelectClassic: !this.state.isSelectClassic
+            })
+        }
+    };
 }
 
-export default connect(state => {
-    return {
-        user: state.user,
-        status: state.user.status
-    }
-},{signUp})(VdsTariffs)
+export default connect(null,{savingTariffs})(VdsTariffs)

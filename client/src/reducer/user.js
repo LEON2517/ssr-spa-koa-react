@@ -1,12 +1,15 @@
-import { LOG_OUT_USER, SIGN_IN_USER, SIGN_UP_USER, FORGOT_PASSWORD_USER, RECOVERY_PASSWORD_USER, SUCCESS, START, FAIL } from '../constants'
+import {
+    LOG_OUT_USER, SIGN_IN_USER, SIGN_UP_USER, FORGOT_PASSWORD_USER, RECOVERY_PASSWORD_USER, SAVING_TARIFFS_USER,
+    SUCCESS, START, FAIL } from '../constants'
 
 const defaultForm = {
     status: false,
-    accountUserInfo: JSON.parse(localStorage.getItem('accountUserInfo'))
+    accountUserInfo: JSON.parse(localStorage.getItem('accountUserInfo')),
+    tariffsUserInfo: JSON.parse(localStorage.getItem('tariffsUserInfo'))
 };
 
 export default (state = defaultForm, action) => {
-    const { type, response } = action;
+    const { type, response, payload } = action;
 
 
     switch (type) {
@@ -19,6 +22,17 @@ export default (state = defaultForm, action) => {
                 accountUserInfo: null
             };
 
+
+        case SAVING_TARIFFS_USER:
+            console.log(payload.tariffsData)
+            const serialTariffsUserInfo = JSON.stringify(payload.tariffsData);
+            localStorage.setItem('tariffsUserInfo', serialTariffsUserInfo);
+            const tariffsUserInfo = JSON.parse(localStorage.getItem("tariffsUserInfo"));
+            return {
+                ...state,
+                status: false,
+                tariffsUserInfo
+            };
 
 
         case SIGN_UP_USER + START:

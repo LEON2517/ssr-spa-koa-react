@@ -1,4 +1,7 @@
-import {LOG_OUT_USER, LOAD_HOME_PAGE_ARTICLES,SIGN_IN_USER, SIGN_UP_USER, FORGOT_PASSWORD_USER, RECOVERY_PASSWORD_USER, START, SUCCESS, FAIL } from '../constants'
+import {
+    LOG_OUT_USER, SIGN_IN_USER, SIGN_UP_USER, FORGOT_PASSWORD_USER, RECOVERY_PASSWORD_USER, SAVING_TARIFFS_USER,
+    START, SUCCESS, FAIL,
+    LOAD_HOME_PAGE_ARTICLES } from '../constants'
 import {push} from 'react-router-redux'
 
 
@@ -7,6 +10,18 @@ export function loadHomePageArticles() {
         type: LOAD_HOME_PAGE_ARTICLES,
         callAPI: `http://localhost:3001/api/home`
     };
+}
+
+
+export function savingTariffs(tariffsData) {
+    return (dispatch) => {
+
+        dispatch({
+            type: SAVING_TARIFFS_USER,
+            payload: { tariffsData }
+        });
+        dispatch(push('/sign_up'));
+    }
 }
 
 
