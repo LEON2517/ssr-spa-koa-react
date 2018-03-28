@@ -20,6 +20,11 @@ export function savingTariffs(tariffsData) {
             type: SAVING_TARIFFS_USER,
             payload: { tariffsData }
         });
+        if (tariffsData.userLog == true) {
+            dispatch(push('/account/bills'));
+            return
+        }
+
         dispatch(push('/sign_up'));
     }
 }

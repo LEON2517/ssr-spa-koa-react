@@ -21,7 +21,6 @@ class NavBar extends Component {
                     <h3 className="panel-information__h3">Учетная запись</h3>
                 </div>
 
-
                 <div className="row row__account" onClick = {() => history.push(`/account/bills`)}>
                     <h3 className="panel-information__h3">Счета</h3>
                 </div>

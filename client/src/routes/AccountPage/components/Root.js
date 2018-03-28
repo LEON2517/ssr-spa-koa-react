@@ -5,6 +5,7 @@ import Header from '../../Header'
 import Account from './Account'
 import VDS from './VDS'
 import Bills from './Bills'
+import PaymentSystems from './PaymentSystems'
 import {Route, Link, Switch, Redirect, withRouter} from 'react-router-dom'
 
 import NavBar from './NavBar'
@@ -33,6 +34,7 @@ class Root extends Component {
                                 <Route path="/account/id" render={() => <Account user={user}  />}/>
                                 <Route path="/account/vds" render={() => <VDS user={user} />}/>
                                 <Route path="/account/bills" render={() => <Bills user={user}/>}/>
+                                <Route path="/account/payment" render={() => <PaymentSystems user={user}/>}/>
                             </Switch>
                         </div>
 

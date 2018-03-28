@@ -1,6 +1,5 @@
 .vds-tariffs__container {
     background-color: rgba(128, 128, 128, 0.1);
-    height: 800px;
 }
 
 .vds-tariffs__row_block_one {
@@ -91,6 +90,7 @@
 }
 
 .input-feedback {
+    margin-top: -5px;
     color: red;
     font-size: 15px;
     font-weight: 500;
@@ -100,5 +100,12 @@
 .vds-tariffs__btn_pro {
     height: 50px;
     margin-top: 26px;
+}
+
+.row__block_info_tariffs {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
 }
 

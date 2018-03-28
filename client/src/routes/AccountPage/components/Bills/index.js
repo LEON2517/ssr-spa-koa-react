@@ -12,30 +12,12 @@ class Bills extends Component {
     render() {
         const { user } = this.props;
 
-        if (user.tariffsUserInfo.checkboxVdsClassicRU) {
-            user.tariffsUserInfo.checkboxVdsClassicRU = 'RU'
-        } if (user.tariffsUserInfo.checkboxVdsClassicUA) {
-            user.tariffsUserInfo.checkboxVdsClassicUA = 'UA'
-        } if (user.tariffsUserInfo.checkboxVdsClassicUK) {
-            user.tariffsUserInfo.checkboxVdsClassicUK = 'UK'
-        } if (user.tariffsUserInfo.checkboxVdsProRU) {
-            user.tariffsUserInfo.checkboxVdsProRU = 'RU'
-        } if (user.tariffsUserInfo.checkboxVdsProUA) {
-            user.tariffsUserInfo.checkboxVdsProUA = 'UA'
-        } if (user.tariffsUserInfo.checkboxVdsProUK) {
-            user.tariffsUserInfo.checkboxVdsProUK = 'UK'
-        } if (user.tariffsUserInfo.checkboxVdsProProxyLimit) {
-            user.tariffsUserInfo.checkboxVdsProProxyLimit = '20-30 сек'
-        } if (user.tariffsUserInfo.checkboxVdsProProxyUnlimit) {
-            user.tariffsUserInfo.checkboxVdsProProxyUnlimit = 'Без ожидания'
-        }
-
         return (
 
             <div className="panel-information__col-10_wight">
                 <div className="row bills__row">
                     <div className="col">
-                        <h2 className="">СЧЕТА</h2>
+                        <h2 className="">СЧЕТ</h2>
                     </div>
                 </div>
 
@@ -48,27 +30,42 @@ class Bills extends Component {
                                 <th>Услуга</th>
                                 <th>Тариф</th>
                                 <th>Геолокация</th>
-                                <th>Ожидание смены IP</th>
-                                <th>Количество дней</th>
-                                <th>Количество VDS</th>
+                                <th>Смена сборки</th>
+                                <th>Смена IP</th>
+                                <th>VDS</th>
+                                <th>Сборка</th>
+                                <th>Срок</th>
                                 <th>Сумма</th>
+                                <th>Статус</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                                 <td>{user.tariffsUserInfo.service}</td>
                                 <td>{user.tariffsUserInfo.tariffs}</td>
-                                <td>{user.tariffsUserInfo.checkboxVdsClassicRU ||
-                                user.tariffsUserInfo.checkboxVdsClassicUA ||
-                                user.tariffsUserInfo.checkboxVdsClassicUK ||
-                                user.tariffsUserInfo.checkboxVdsProRU ||
-                                user.tariffsUserInfo.checkboxVdsProUA ||
-                                user.tariffsUserInfo.checkboxVdsProUK}</td>
-                                <td>{user.tariffsUserInfo.checkboxVdsProProxyLimit ||
-                                user.tariffsUserInfo.checkboxVdsProProxyUnlimit}</td>
-                                <td>{user.tariffsUserInfo.inputVdsClassicDay}</td>
-                                <td>{user.tariffsUserInfo.inputVdsClassicVds}</td>
+                                {/*геолокация*/}
+                                <td>
+                                    {user.tariffsUserInfo.checkboxVdsClassicRU || user.tariffsUserInfo.checkboxVdsClassicUA ||
+                                    user.tariffsUserInfo.checkboxVdsClassicUK || user.tariffsUserInfo.checkboxVdsProRU ||
+                                    user.tariffsUserInfo.checkboxVdsProUA || user.tariffsUserInfo.checkboxVdsProUK}
+                                </td>
+                                {/*смена сборки*/}
+                                <td>
+                                    {user.tariffsUserInfo.checkboxVdsClassicTimeUnlimit || user.tariffsUserInfo.checkboxVdsClassicTimeLimit
+                                    || user.tariffsUserInfo.checkboxVdsProTimeUnlimit || user.tariffsUserInfo.checkboxVdsProTimeLimit}
+                                </td>
+                                {/*смена IP*/}
+                                <td>
+                                    {user.tariffsUserInfo.checkboxVdsProProxyLimit || user.tariffsUserInfo.checkboxVdsProProxyUnlimit || user.tariffsUserInfo.checkboxVdsProProxyNull}
+                                </td>
+                                {/*количество VDS*/}
+                                <td>{user.tariffsUserInfo.selectVdsClassicVds || user.tariffsUserInfo.selectVdsProVds}</td>
+                                {/*количество сборок*/}
+                                <td>{user.tariffsUserInfo.selectVdsProBuild || user.tariffsUserInfo.selectVdsClassicBuild}</td>
+                                {/*количество дней*/}
+                                <td>{user.tariffsUserInfo.selectVdsClassicDay || user.tariffsUserInfo.selectVdsProDay}</td>
                                 <td>100$</td>
+                                <td>Не оплачен</td>
                             </tr>
                             </tbody>
                         </table>
@@ -77,6 +74,9 @@ class Bills extends Component {
                 </div>
 
                 <div className="row justify-content-end">
+                    <div className="col col-auto">
+                        <button type="submit" className="btn btn-secondary bills_col_button">Изменить</button>
+                    </div>
                     <div className="col col-auto">
                         <button type="submit" className="btn btn-primary">Оплатить</button>
                     </div>
