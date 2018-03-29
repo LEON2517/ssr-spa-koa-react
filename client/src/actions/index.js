@@ -1,7 +1,8 @@
 import {
     LOG_OUT_USER, SIGN_IN_USER, SIGN_UP_USER, FORGOT_PASSWORD_USER, RECOVERY_PASSWORD_USER, SAVING_TARIFFS_USER,
     START, SUCCESS, FAIL,
-    LOAD_HOME_PAGE_ARTICLES } from '../constants'
+    LOAD_HOME_PAGE_ARTICLES,
+    TARIFF_CHANGE_FORM} from '../constants'
 import {push} from 'react-router-redux'
 
 
@@ -26,6 +27,15 @@ export function savingTariffs(tariffsData) {
         }
 
         dispatch(push('/sign_up'));
+    }
+}
+
+export function changeTariffsPro() {
+    return (dispatch) => {
+
+        dispatch({
+            type: TARIFF_CHANGE_FORM
+        });
     }
 }
 

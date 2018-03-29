@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Root from './Root'
 
-class VdsTariffs extends Component {
+class TariffsForm extends Component {
 
     render() {
         return(
@@ -12,4 +12,4 @@ class VdsTariffs extends Component {
     }
 }
 
-export default VdsTariffs
+export default TariffsForm
