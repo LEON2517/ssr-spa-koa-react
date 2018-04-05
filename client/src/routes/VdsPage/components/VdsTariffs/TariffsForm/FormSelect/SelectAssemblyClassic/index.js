@@ -2,14 +2,14 @@ import React from 'react';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 
-class SelectDay extends React.Component {
+class SelectAssemblyClassic extends React.Component {
 
     render() {
         return (
             <div>
-                <label>Количество дней:</label>
+                <label>Количество сборок:</label>
                 <Select
-                    name="day"
+                    name="assemblyClassic"
                     options={options}
                     multi={false}
                     onChange={this.handleChange}
@@ -22,20 +22,21 @@ class SelectDay extends React.Component {
 
     handleChange = value => {
         // this is going to call setFieldValue and manually update values.assembly
-        this.props.onChange('day', value);
+        this.props.onChange('assemblyClassic', value);
     };
 
     handleBlur = () => {
         // this is going to call setFieldTouched and manually update touched.assembly
-        this.props.onBlur('day', true);
+        this.props.onBlur('assemblyClassic', true);
     };
 
 }
 
 const options = [
-    { value: '1 день', label: '1 день' },
-    { value: '7 дней', label: '7 дней' },
-    { value: '30 дней', label: '30 дней' }
+    { value: '1 сборка', label: '1 сборка' },
+    { value: '7 сборок', label: '7 сборок' },
+    { value: '30 сборок', label: '30 сборок' }
 ];
 
-export default SelectDay
+export default SelectAssemblyClassic
+

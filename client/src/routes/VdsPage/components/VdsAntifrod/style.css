@@ -31,6 +31,7 @@
     height: 247px;
     background-color: #292d34;
     margin: 20px auto 50px auto;
+    cursor: pointer;
 }
 
 .vds-as__video_advanced {
@@ -65,5 +66,55 @@
     margin-left: auto;
     margin-right: auto;
     width: 440px;
+}
+
+.vds-as__youtube {
+    display: none;
+}
+
+.vds-as__youtube_play {
+    display: block;
+    position: absolute;
+    z-index: 10000;
+}
+
+.Modal {
+    position: absolute;
+    top: 120px;
+    left: 150px;
+    right: 150px;
+    bottom: 80px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ModalBtn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #61dafb;
+    border: none;
+    top: -50px;
+    right: 0;
+    cursor: pointer;
+}
+
+.ModalBtn:hover {
+    background-color:  #02ccf0;
+    transition: 0.5s;
+}
+
+.vds-af__icon_cross {
+    width: 25px;
+    height: 25px;
+    padding: 3px;
 }
 

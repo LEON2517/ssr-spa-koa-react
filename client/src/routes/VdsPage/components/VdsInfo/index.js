@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './style.css'
 import classNames from 'classnames'
+import Plx from 'react-plx';
 
 class VdsInfo extends Component {
     static propTypes = {
@@ -15,6 +16,33 @@ class VdsInfo extends Component {
     };
 
     render() {
+        const Parallax1X2 = [
+            {
+                start: 0,
+                duration: 350,
+                properties: [
+                    {
+                        startValue: 190,
+                        endValue: 400,
+                        property: "translateX"
+                    }
+                ]
+            }
+        ];
+
+        const Parallax1fg2 = [
+            {
+                start: 0,
+                duration: 350,
+                properties: [
+                    {
+                        startValue: -170,
+                        endValue: -500,
+                        property: "translateX"
+                    }
+                ]
+            }
+        ];
 
         const vdsInfoClassH3Hardware = classNames({
             'vds-info__h3': true,
@@ -42,6 +70,19 @@ class VdsInfo extends Component {
 
         return (
             <div className="container vds-info__container">
+
+                <Plx
+                    parallaxData={Parallax1X2}
+                >
+                    <img className="vds-presentation-img_1x2" src={require('./img/1x2d.png')}/>
+                </Plx>
+
+                <Plx
+                    parallaxData={Parallax1fg2}
+                >
+                    <img className="vds-presentation-img_f1g2" src={require('./img/f1g2.png')}/>
+                </Plx>
+
 
                 <div className="row">
                     <div className="col text-center">
@@ -77,19 +118,19 @@ class VdsInfo extends Component {
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
                     <img className="vds-info__icon_bios" src={require('./icon/bios.png')}/>
                     <h3 className="slider-presentation__h3">BIOS</h3>
-                    <p className="vds-info__p">Уникальное железо под каждый аккаунт на уровне BIOS.</p>
+                    <p className="vds-info__p">147 уникальных параметров BIOS. Переписаны ACPI таблицы, сетевой адаптер и многое другое.</p>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
-                    <img className="vds-info__icon_acpi" src={require('./icon/acpi.png')}/>
-                    <h3 className="slider-presentation__h3">ACPI</h3>
-                    <p className="vds-info__p">Переписанные на аssembler ACPI таблицы.  </p>
+                    <img className="vds-info__icon_cpu" src={require('./icon/cpu.png')}/>
+                    <h3 className="slider-presentation__h3">CPU</h3>
+                    <p className="vds-info__p">ID процессора, винчестера и материнской платы уникальны для каждой сборки VDS. </p>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
-                    <img className="vds-info__icon_vm" src={require('./icon/vm.png')}/>
-                    <h3 className="slider-presentation__h3">VM</h3>
-                    <p className="vds-info__p">Вырезаны и переписаны все патерны виртуальной среды.</p>
+                    <img className="vds-info__icon_gpu" src={require('./icon/gpu.png')}/>
+                    <h3 className="slider-presentation__h3">GPU</h3>
+                    <p className="vds-info__p">Интегрирована полноценная видеокарта. Реализована подмена WebGL и Canvas на всех уровнях.</p>
                 </div>
             </div>
         ) : null;
@@ -97,18 +138,21 @@ class VdsInfo extends Component {
         const os = this.state.os ? (
             <div className="row vds-info__row_block_two">
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
-                    <h3 className="slider-presentation__h3">4</h3>
-                    <p className="vds-info__p">Уникальное железо под каждый аккаунт на уровне BIOS.</p>
+                    <img className="vds-info__icon_acpi" src={require('./icon/acpi.png')}/>
+                    <h3 className="slider-presentation__h3">РЕЕСТР</h3>
+                    <p className="vds-info__p">194 уникальных параметра реестра.<br/>ID OS, SID, WSUS Client ID, Product ID, Serial Number и многое другое.</p>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
-                    <h3 className="slider-presentation__h3">5</h3>
-                    <p className="vds-info__p">Переписанные на аssembler ACPI таблицы.  </p>
+                    <img className="vds-info__icon_network" src={require('./icon/network.png')}/>
+                    <h3 className="slider-presentation__h3">СЕТЬ</h3>
+                    <p className="vds-info__p">Весь трафик проходит через наши PROXY сервера. Мы гарантируем качество и уникальность IP.</p>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
-                    <h3 className="slider-presentation__h3">6</h3>
-                    <p className="vds-info__p">Вырезаны и переписаны все патерны виртуальной среды.</p>
+                    <img className="vds-info__icon_vm" src={require('./icon/vm.png')}/>
+                    <h3 className="slider-presentation__h3">ГИПЕРВИЗОР</h3>
+                    <p className="vds-info__p">Вырезаны все патерны виртуальной среды. Скрыто RDP подключение. Имитация «удобного» пользователя.</p>
                 </div>
             </div>
         ) : null;
@@ -116,18 +160,21 @@ class VdsInfo extends Component {
         const browser = this.state.browser ? (
             <div className="row vds-info__row_block_two">
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
-                    <h3 className="slider-presentation__h3">7</h3>
-                    <p className="vds-info__p">Уникальное железо под каждый аккаунт на уровне BIOS.</p>
+                    <img className="vds-info__icon_obraz" src={require('./icon/obraz.png')}/>
+                    <h3 className="slider-presentation__h3">ОБРАЗЫ</h3>
+                    <p className="vds-info__p">Реализована возможность вернуться к нужному аккаунту спустя любое <br/>время.</p>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
-                    <h3 className="slider-presentation__h3">8</h3>
-                    <p className="vds-info__p">Переписанные на аssembler ACPI таблицы.  </p>
+                    <img className="vds-info__icon_obraz" src={require('./icon/plag.png')}/>
+                    <h3 className="slider-presentation__h3">ПЛАГИНЫ</h3>
+                    <p className="vds-info__p">Переписаны разрешения и плагины, благодаря чему каждый слепок браузера уникальный.</p>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
-                    <h3 className="slider-presentation__h3">9</h3>
-                    <p className="vds-info__p">Вырезаны и переписаны все патерны виртуальной среды.</p>
+                    <img className="vds-info__icon_obraz" src={require('./icon/gecko.png')}/>
+                    <h3 className="slider-presentation__h3">ДВИЖОК</h3>
+                    <p className="vds-info__p">У Mozilla Firefox открытый исходный код. Браузер прошит и модернизирован на уровне движка.</p>
                 </div>
             </div>
         ) : null;

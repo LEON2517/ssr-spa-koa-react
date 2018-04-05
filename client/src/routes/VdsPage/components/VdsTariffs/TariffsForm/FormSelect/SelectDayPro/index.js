@@ -2,14 +2,14 @@ import React from 'react';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 
-class SelectDay extends React.Component {
+class SelectDayPro extends React.Component {
 
     render() {
         return (
             <div>
                 <label>Количество дней:</label>
                 <Select
-                    name="day"
+                    name="dayPro"
                     options={options}
                     multi={false}
                     onChange={this.handleChange}
@@ -22,12 +22,12 @@ class SelectDay extends React.Component {
 
     handleChange = value => {
         // this is going to call setFieldValue and manually update values.assembly
-        this.props.onChange('day', value);
+        this.props.onChange('dayPro', value);
     };
 
     handleBlur = () => {
         // this is going to call setFieldTouched and manually update touched.assembly
-        this.props.onBlur('day', true);
+        this.props.onBlur('dayPro', true);
     };
 
 }
@@ -38,4 +38,4 @@ const options = [
     { value: '30 дней', label: '30 дней' }
 ];
 
-export default SelectDay
+export default SelectDayPro

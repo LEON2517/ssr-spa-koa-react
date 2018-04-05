@@ -29,6 +29,7 @@ class InnerForm extends Component {
         })
     }
 
+
     render() {
         const {
             values,
@@ -47,9 +48,6 @@ class InnerForm extends Component {
             isSelectPro,
             isSelectClassic
         } = this.props
-
-        console.log(values)
-
 
         const buttonPro = isSelectPro ? <button type="button" className="btn btn-primary text-center" onClick = {handleSelectPro}>Выбрано</button>
             : <button type="button" className="btn btn-secondary text-center" onClick = {handleSelectPro}>Выбрать</button>;
@@ -401,8 +399,6 @@ class InnerForm extends Component {
 
 
 
-
-
 const Form = withFormik({
     mapPropsToValues: props => ({
         handleSelectPro: props.handleSelectPro,
@@ -497,68 +493,3 @@ const Form = withFormik({
         this.props.savingTariffs(values);
     },
 })(InnerForm);
-
-
-
-
-
-
-class TariffsForm extends Component {
-
-    state = {
-        isSelectPro: true,
-        isSelectClassic: false,
-    };
-
-    handleSelectPro = () => {
-        const {isSelectPro, isSelectClassic} = this.state
-        if (isSelectPro == false && isSelectClassic == true) {
-            this.setState({
-                isSelectPro: !this.state.isSelectPro,
-                isSelectClassic: !this.state.isSelectClassic
-            })
-        } else {
-            this.setState({
-                isSelectPro: !this.state.isSelectPro
-            })
-        }
-    };
-
-    handleSelectClassic = () => {
-        const {isSelectPro, isSelectClassic} = this.state
-        if (isSelectPro == true && isSelectClassic == false) {
-            this.setState({
-                isSelectPro: !this.state.isSelectPro,
-                isSelectClassic: !this.state.isSelectClassic
-            })
-        } else {
-            this.setState({
-                isSelectClassic: !this.state.isSelectClassic
-            })
-        }
-    };
-
-    render() {
-
-        const { userLog, savingTariffs } = this.props
-        const { isSelectPro, isSelectClassic } = this.state
-
-
-        return (
-            <div>
-                <Form
-                    isSelectPro= {isSelectPro}
-                    isSelectClassic = {isSelectClassic}
-                    handleSelectClassic = {this.handleSelectClassic}
-                    handleSelectPro = {this.handleSelectPro}
-                />
-            </div>
-        )
-    }
-}
-
-export default (connect(state => {
-    return {
-        userLog: state.user.accountUserInfo
-    }
-},{savingTariffs})(TariffsForm))

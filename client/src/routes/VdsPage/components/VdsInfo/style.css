@@ -82,21 +82,57 @@
 }
 
 .vds-info__icon_bios {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
+    height: 110px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .vds-info__icon_acpi {
-    width: 80px;
-    height: 80px;
+    height: 53px;
     margin-top: 32px;
-    margin-bottom: 58px;
+    margin-bottom: 85px;
 }
 
 .vds-info__icon_vm {
-    width: 95px;
-    height: 88px;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    height: 65px;
+    margin-top: 31px;
+    margin-bottom: 68px;
+}
+
+.vds-info__icon_network {
+    height: 57px;
+    margin-top: 32px;
+    margin-bottom: 77px;
+}
+
+.vds-presentation-img_f1g2 {
+    position: fixed;
+    height: 200px;
+    left: 0;
+    top: -40px;
+}
+
+.vds-presentation-img_1x2 {
+    position: fixed;
+    height: 200px;
+    right: 0;
+    top: -200px;
+}
+
+.vds-info__icon_cpu {
+    height: 72px;
+    margin-top: 31px;
+    margin-bottom: 65px;
+}
+
+.vds-info__icon_gpu {
+    height: 75px;
+    margin-top: 25px;
+    margin-bottom: 65px;
+}
+
+.vds-info__icon_obraz {
+    height: 62px;
+    margin-top: 32px;
+    margin-bottom: 75px;
 }

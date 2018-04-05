@@ -1,123 +1,344 @@
-import React, {Component} from 'react'
-import FormClassic from './FormClassic'
-import FormPro from './FormPro'
-import {connect} from 'react-redux'
-import {savingTariffs} from '../../../../../actions'
-import './style.css'
+const InnerForm = ({
+                       values,
+                       touched,
+                       dirty,
+                       errors,
+                       handleChange,
+                       handleBlur,
+                       handleSubmit,
+                       handleReset,
+                       setFieldValue,
+                       setFieldTouched,
+                       isSubmitting,
+                   }) => (
+    <div className="container-fluid vds-tariffs__container">
 
+        <form onSubmit={handleSubmit}>
 
+            <div className="row">
+                <div className="col-9">
+                    <div className="vds-tariffs__position_block">
 
-class Root extends Component {
+                        <table className="table table-bordered vds-tariffs__table_classic table-curved ">
+                            <thead>
+                            <tr className="">
+                                <th colSpan={2} className="text-center">CLASSIC</th>
+                            </tr>
+                            <tr>
+                                <th scope="row" className="w-50">VDS</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td scope="row">
+                                    <p className="vds-tariffs__p">CPU: 2500 Mhz</p>
+                                    <p className="vds-tariffs__p">RAM: 4 GB</p>
+                                    <p className="vds-tariffs__p">SSD + RAID5: 65 GB</p>
+                                    <p className="vds-tariffs__p">Ожидание смены сборки:</p>
 
-    state = {
-        isSelectPro: true,
-        isSelectClassic: false
-    };
+                                    <div className="vds-tariffs__block_checkbox">
+                                        <div className="form-check form-check-inline">
+                                            <label className="form-check-label">
+                                                <input
+                                                    type="checkbox"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    name="timeAssemblyLimitedClassic"
+                                                    value={values.timeAssemblyLimitedClassic}
+                                                />
+                                                <p className="vds-tariffs__checkbox vds-tariffs__p">24 часа</p>
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline">
+                                            <label className="form-check-label">
+                                                <input
+                                                    type="checkbox"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    name="timeAssemblyUnlimitedClassic"
+                                                    value={values.timeAssemblyUnlimitedClassic}
+                                                />
+                                                <p className="vds-tariffs__checkbox vds-tariffs__p">Без ожидания</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    {(touched.timeAssemblyLimitedClassic || touched.timeAssemblyUnlimitedClassic) && errors.timeAssemblyErrClassic && <div className="input-feedback">{errors.timeAssemblyErrClassic}</div>}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colSpan={2} className="">
 
-    render() {
-        const { userLog } = this.props
-        const { isSelectPro, isSelectClassic } = this.state
+                                    <p className="vds-tariffs__p">Геолокация:</p>
 
-        const buttonPro = isSelectPro ? <button type="button" className="btn btn-primary text-center" onClick = {this.handleSelectPro}>Выбрано</button>
-            : <button type="button" className="btn btn-secondary text-center" onClick = {this.handleSelectPro}>Выбрать</button>;
+                                    <div className="vds-tariffs__block_checkbox">
+                                        <div className="form-check form-check-inline">
+                                            <label className="form-check-label">
+                                                <input
+                                                    type="checkbox"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    name="geoRuClassic"
+                                                    value={values.geoRuClassic}
+                                                />
+                                                <p className="vds-tariffs__checkbox vds-tariffs__p">RU</p>
+                                            </label>
+                                        </div>
+                                        <div className="form-check registration-page__form-check_margin form-check-inline">
+                                            <label className="form-check-label">
+                                                <input
+                                                    type="checkbox"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    name="geoUaClassic"
+                                                    value={values.geoUaClassic}
+                                                />
+                                                <p className="vds-tariffs__checkbox vds-tariffs__p">UA</p>
+                                            </label>
+                                        </div>
+                                        <div className="form-check registration-page__form-check_margin form-check-inline">
+                                            <label className="form-check-label">
+                                                <input
+                                                    type="checkbox"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    name="geoUkClassic"
+                                                    value={values.geoUkClassic}
+                                                />
+                                                <p className="vds-tariffs__checkbox vds-tariffs__p">UK</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    {(touched.geoRuClassic || touched.geoUaClassic || touched.geoUkClassic) && errors.geoErrClassic && <div className="input-feedback">{errors.geoErrClassic}</div>}
 
-        const buttonClassic = isSelectClassic ? <button type="button" className="btn btn-primary text-center" onClick = {this.handleSelectClassic}>Выбрано</button>
-            : <button type="button" className="btn btn-secondary text-center" onClick = {this.handleSelectClassic}>Выбрать</button>;
+                                    <div className="form-group">
+                                        <SelectVdsClassic
+                                            value={values.vdsClassic}
+                                            onChange={setFieldValue}
+                                            onBlur={setFieldTouched}
+                                            error={errors.vdsClassic}
+                                            touched={touched.vdsClassic}
+                                        />
+                                    </div>
 
-        //количество дней
-        const oneDay = 1
-        const sevenDay = 7
-        const thirtyDay = 30
+                                    <div className="form-group">
+                                        <SelectAssemblyClassic
+                                            value={values.assemblyClassic}
+                                            onChange={setFieldValue}
+                                            onBlur={setFieldTouched}
+                                            error={errors.assemblyClassic}
+                                            touched={touched.assemblyClassic}
+                                        />
+                                    </div>
 
-        //количество VDS
-        // один VDS
-        const oneVdsOneDay = 350*oneDay
-        const oneVdssevenDay = 150*sevenDay
-        const threeVdsthirtyDay = 75*thirtyDay
+                                    <div className="form-group">
+                                        <SelectDayClassic
+                                            value={values.dayClassic}
+                                            onChange={setFieldValue}
+                                            onBlur={setFieldTouched}
+                                            error={errors.dayClassic}
+                                            touched={touched.dayClassic}
+                                        />
+                                    </div>
 
-        // два VDS скидка 15%
-        const twoVdsOneDay = (300*oneDay)*2
-        const twoVdsSevenDay = (130*sevenDay)*2
-        const twoVdsThirtyDay = (65*thirtyDay)*2
+                                    <div className="text-center vds-tariffs__btn_pro">
+                                        {buttonClassic}
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
 
-        // три VDS скидка 30%
-        const threeVdsOneDay = (250*oneDay)*3
-        const threeVdsSevenDay = (105*sevenDay)*3
-        const threeVdsThirtyDay = (55*thirtyDay)*3
+                        {/*PRO*/}
 
-        //количество сборок
-        const oneBuild = 350
-        const sevenBuild = 2100
-        const thirtyBuild = 7500
+                        <table className="table table-bordered vds-tariffs__table table-curved-pro">
+                            <thead>
+                            <tr className="">
+                                <th colSpan={2} className="text-center">PRO</th>
+                            </tr>
+                            <tr>
+                                <th scope="row" className="w-50">VDS</th>
+                                <th className="w-50">PROXY</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td scope="row">
+                                    <p className="vds-tariffs__p">CPU: 2500 Mhz</p>
+                                    <p className="vds-tariffs__p">RAM: 4 GB</p>
+                                    <p className="vds-tariffs__p">SSD + RAID5: 65 GB</p>
+                                    <p className="vds-tariffs__p">Ожидание смены сборки:</p>
 
-        return(
-            <div className="container-fluid vds-tariffs__container">
-                <div className="row">
+                                    <div className="vds-tariffs__block_checkbox">
+                                        <div className="form-check form-check-inline">
+                                            <label className="form-check-label">
+                                                <input
+                                                    type="checkbox"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    name="timeAssemblyLimitedPro"
+                                                    value={values.timeAssemblyLimitedPro}
+                                                />
+                                                <p className="vds-tariffs__checkbox vds-tariffs__p">24 часа</p>
+                                            </label>
+                                        </div>
+                                        <div className="form-check form-check-inline">
+                                            <label className="form-check-label">
+                                                <input
+                                                    type="checkbox"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    name="timeAssemblyUnlimitedPro"
+                                                    value={values.timeAssemblyUnlimitedPro}
+                                                />
+                                                <p className="vds-tariffs__checkbox vds-tariffs__p">Без ожидания</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    {(touched.timeAssemblyLimitedPro || touched.timeAssemblyUnlimitedPro) && errors.timeAssemblyErrPro && <div className="input-feedback">{errors.timeAssemblyErrPro}</div>}
+                                </td>
+                                <td>
+                                    <div className="">
+                                        <p className="vds-tariffs__p">Количество IP: Безлимит</p>
+                                        <p className="vds-tariffs__p">Трафик: Безлимит</p>
+                                        <p className="vds-tariffs__p">Скорость: до 20 Мбит</p>
+                                        <p className="vds-tariffs__p">Ожидание смены IP: </p>
 
-                    <div className="col-9">
-                        <div className="vds-tariffs__position_block">
-                            <FormClassic buttonClassic = {buttonClassic}/>
-                            <FormPro buttonPro = {buttonPro}/>
-                        </div>
-                    </div>
+                                        <div className="vds-tariffs__block_checkbox">
+                                            <div className="form-check form-check-inline">
+                                                <label className="form-check-label">
+                                                    <input
+                                                        type="checkbox"
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                        name="timeIpLimitedPro"
+                                                        value={values.timeIpLimitedPro}
+                                                    />
+                                                    <p className="vds-tariffs__checkbox vds-tariffs__p">20-30 сек</p>
+                                                </label>
+                                            </div>
+                                            <div className="form-check registration-page__form-check_margin form-check-inline">
+                                                <label className="form-check-label">
+                                                    <input
+                                                        type="checkbox"
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                        name="timeIpUnlimitedPro"
+                                                        value={values.timeIpUnlimitedPro}
+                                                    />
+                                                    <p className="vds-tariffs__checkbox vds-tariffs__p">Без ожидания</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        {(touched.timeIpLimitedPro || touched.timeIpUnlimitedPro) && errors.timeIpErrPro && <div className="input-feedback">{errors.timeIpErrPro}</div>}
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colSpan={2} className="">
 
-                    <div className="col-3">
-                        <div className="vds-tariffs__text_block">
-                            <p>250 руб за каждый день</p>
-                            <p>Экономия 30%</p>
-                            <p>Итого: {/*{values.payment}*/} руб</p>
-                        </div>
-                        <div className="">
-                            <button
-          /*                      name="selectTariff"
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.selectTariff = true}
-                                type="submit"
-                                disabled={isSubmitting}*/
-                                className="btn btn-primary text-center">Оплатить</button>
-                        </div>
-{/*
-                        {touched.selectTariff && errors.selectTariff && <div className="input-feedback">{errors.selectTariff}</div>}
-*/}
+                                    <p className="vds-tariffs__p">Геолокация:</p>
+
+                                    <div className="vds-tariffs__block_checkbox">
+                                        <div className="form-check form-check-inline">
+                                            <label className="form-check-label">
+                                                <input
+                                                    type="checkbox"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    name="geoRuPro"
+                                                    value={values.geoRuPro}
+                                                />
+                                                <p className="vds-tariffs__checkbox vds-tariffs__p">RU</p>
+                                            </label>
+                                        </div>
+                                        <div className="form-check registration-page__form-check_margin form-check-inline">
+                                            <label className="form-check-label">
+                                                <input
+                                                    type="checkbox"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    name="geoUaPro"
+                                                    value={values.geoUaPro}
+                                                />
+                                                <p className="vds-tariffs__checkbox vds-tariffs__p">UA</p>
+                                            </label>
+                                        </div>
+                                        <div className="form-check registration-page__form-check_margin form-check-inline">
+                                            <label className="form-check-label">
+                                                <input
+                                                    type="checkbox"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    name="geoUkPro"
+                                                    value={values.geoUkPro}
+                                                />
+                                                <p className="vds-tariffs__checkbox vds-tariffs__p">UK</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    {(touched.geoRuPro || touched.geoUaPro || touched.geoUkPro) && errors.geoErrPro && <div className="input-feedback">{errors.geoErrPro}</div>}
+
+                                    <div className="form-group">
+                                        <SelectVdsPro
+                                            value={values.vdsPro}
+                                            onChange={setFieldValue}
+                                            onBlur={setFieldTouched}
+                                            error={errors.vdsPro}
+                                            touched={touched.vdsPro}
+                                        />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <SelectAssemblyPro
+                                            value={values.assemblyPro}
+                                            onChange={setFieldValue}
+                                            onBlur={setFieldTouched}
+                                            error={errors.assemblyPro}
+                                            touched={touched.assemblyPro}
+                                        />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <SelectDayPro
+                                            value={values.dayPro}
+                                            onChange={setFieldValue}
+                                            onBlur={setFieldTouched}
+                                            error={errors.dayPro}
+                                            touched={touched.dayPro}
+                                        />
+                                    </div>
+
+                                    <div className="text-center vds-tariffs__btn_pro">
+                                        {buttonPro}
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
+
+                <div className="col-3">
+                    <div className="vds-tariffs__text_block">
+                        <p>250 руб за каждый день</p>
+                        <p>Экономия 30%</p>
+                        <p>Итого: {this.state.payment} руб</p>
+                    </div>
+                    <div className="">
+                        <button
+                            name="selectTariff"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="btn btn-primary text-center">Оплатить</button>
+                    </div>
+
+                    {errors.selectTariff && <div className="input-feedback">{errors.selectTariff}</div>}
+
+                </div>
             </div>
-        )
-    }
-
-    handleSelectPro = () => {
-        const {isSelectPro, isSelectClassic} = this.state
-        if (isSelectPro == false && isSelectClassic == true) {
-            this.setState({
-                isSelectPro: !this.state.isSelectPro,
-                isSelectClassic: !this.state.isSelectClassic
-            })
-        } else {
-            this.setState({
-                isSelectPro: !this.state.isSelectPro
-            })
-        }
-    };
-
-    handleSelectClassic = () => {
-        const {isSelectPro, isSelectClassic} = this.state
-        if (isSelectPro == true && isSelectClassic == false) {
-            this.setState({
-                isSelectPro: !this.state.isSelectPro,
-                isSelectClassic: !this.state.isSelectClassic
-            })
-        } else {
-            this.setState({
-                isSelectClassic: !this.state.isSelectClassic
-            })
-        }
-    };
-}
-
-export default (connect(state => {
-    return {
-        isSelectPro: state.form.isSelectPro,
-        isSelectClassic: state.form.isSelectClassic
-    }
-},{savingTariffs})(Root))
+        </form>
+    </div>
+);

@@ -29,6 +29,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "@u-wave/react-youtube": "^0.4.2",
     "bootstrap": "^4.0.0",
     "classnames": "^2.2.5",
     "css-loader": "^0.28.7",

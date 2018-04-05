@@ -40,7 +40,9 @@ router.get('/api/home', require('./routes/HomePage').get);
 
 router.get('/api/home', require('./routes/HomePage').get);
 
+/*
 router.post('/api/payment', require('./routes/payment').post);
+*/
 
 router.post('/sign_in', require('./routes/sign_in').post);
 router.post('/sign_up', require('./routes/sign_up').post);

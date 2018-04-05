@@ -32,7 +32,9 @@ class Root extends Component {
 {/*
                 <VdsAntidetectScheme/>
 */}
+{/*
                 <VdsAntidetect/>
+*/}
                 <VdsReviews/>
                 <VdsTariffs/>
                 <VdsHelp/>

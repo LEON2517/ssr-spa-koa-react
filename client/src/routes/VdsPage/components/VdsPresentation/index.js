@@ -57,7 +57,6 @@ class VdsPresentation extends Component {
                         </div>
 
                         </Plx>
-
                     </div>
                 </div>
             </div>

@@ -9,6 +9,11 @@ import AccountPage from './AccountPage'
 import VdsPage from './VdsPage'
 import FaqPage from './FaqPage'
 
+import Account from '/Users/macbook/ssr-spa-koa-react/client/src/routes/AccountPage/components/Account'
+import VDS from '/Users/macbook/ssr-spa-koa-react/client/src/routes/AccountPage/components/VDS'
+import Bills from '/Users/macbook/ssr-spa-koa-react/client/src/routes/AccountPage/components/Bills'
+import PaymentSystems from '/Users/macbook/ssr-spa-koa-react/client/src/routes/AccountPage/components/PaymentSystems'
+
 
 export default class Root extends Component {
     render() {
@@ -19,6 +24,10 @@ export default class Root extends Component {
                     <Route exact path="/home" component={HomePage}/>
                     <Route path="/vds" component={VdsPage}/>
                     <Route path="/account" component={AccountPage}/>
+                    <Route path="/account/id" component={Account}/>
+                    <Route path="/account/vds" component={VDS}/>
+                    <Route path="/account/bills" component={Bills}/>
+                    <Route path="/account/payment" component={PaymentSystems}/>
                     <Route path="/forgot-recover/forgot-password" component={ForgotPasswordPage}/>
                     <Route path="/forgot-recover/recover-password/:passwordResetToken" component={RecoverPasswordPage}/>
                     <Route path="/sign_up" component={RegistrationPage}/>
