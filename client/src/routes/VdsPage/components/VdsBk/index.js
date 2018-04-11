@@ -14,9 +14,8 @@ class VdsBk extends Component {
 
         return (
             <div className="container-fluid vds-bk__container">
-                <div className="row">
-                    <div className="col vds-bk__col">
-                        <img className="vds-bk-img img-fluid" src={require('./img/bk.png')}/>
+                <div className="row vds-bk-img__md">
+                    <div className="col vds-bk__col ">
 
                         <div className="vds-bk__block_info">
                             <h3 className="vds-bk__h3">Безопасные ставки</h3>

@@ -13,7 +13,6 @@ class CallForRegistration extends Component {
             <div className="container-fluid call-for-registration__carousel">
 
                 <div className="row">
-
                     <div className="container call-for-registration__container_width">
 
                             <div className="row call-for-registration__row align-items-center">
@@ -35,7 +34,6 @@ class CallForRegistration extends Component {
                         </div>
 
                     </div>
-
                 </div>
 
                 <div className="row align-items-start call-for-registration__row_btn">

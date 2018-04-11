@@ -1,5 +1,13 @@
 @media (min-width: 0) and (max-width: 575px) {
 
+    .vds-bk-img__md {
+        height: 630px;
+        background-image: url(./img/bk.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 1160px;
+    }
+
     .vds-bk__container {
         background-color: rgba(128, 128, 128, 0.1);
     }
@@ -10,30 +18,35 @@
     }
 
     .vds-bk__block_info {
+        position: relative;
         padding: 30px;
-        position: absolute;
-        top: 160px;
-        margin-left: 740px;
-        height: 330px;
-        width: 380px;
+        top: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 295px;
+        width: 320px;
         background-color: rgba(0, 0, 0, 0.8);
         clip-path: polygon(0 0, 80% 0, 80% 20%, 100% 20%, 100% 100% , 0 100%, 0 0);
     }
 
     .vds-bk__h3 {
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 300;
         color: white;
     }
 
     .vds-bk__p {
-        font-size: 17px;
+        font-size: 14px;
         margin-top: 30px;
         color: white;
     }
 
     .vds-bk__btn {
         margin-top: 10px;
+    }
+
+    .vds-bk-img {
+        display: none;
     }
 
 }
@@ -41,10 +54,17 @@
 /* sm */
 @media (min-width: 576px) {
 
+    .vds-bk-img__md {
+        height: 630px;
+        background-image: url(./img/bk.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 1180px;
+    }
+
     .vds-bk__container {
         background-color: rgba(128, 128, 128, 0.1);
     }
-
 
     .vds-bk__col {
         padding: 0;
@@ -54,27 +74,31 @@
         padding: 30px;
         position: absolute;
         top: 160px;
-        margin-left: 740px;
-        height: 330px;
-        width: 380px;
+        margin-left: 250px;
+        height: 295px;
+        width: 320px;
         background-color: rgba(0, 0, 0, 0.8);
         clip-path: polygon(0 0, 80% 0, 80% 20%, 100% 20%, 100% 100% , 0 100%, 0 0);
     }
 
     .vds-bk__h3 {
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 300;
         color: white;
     }
 
     .vds-bk__p {
-        font-size: 17px;
+        font-size: 14px;
         margin-top: 30px;
         color: white;
     }
 
     .vds-bk__btn {
         margin-top: 10px;
+    }
+
+    .vds-bk-img {
+        display: none;
     }
 
 }
@@ -82,6 +106,14 @@
 /* md*/
 @media (min-width: 768px) {
 
+    .vds-bk-img__md {
+        height: 630px;
+        background-image: url(./img/bk.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 1180px;
+    }
+
     .vds-bk__container {
         background-color: rgba(128, 128, 128, 0.1);
     }
@@ -95,21 +127,21 @@
         padding: 30px;
         position: absolute;
         top: 160px;
-        margin-left: 740px;
-        height: 330px;
-        width: 380px;
+        margin-left: 420px;
+        height: 295px;
+        width: 340px;
         background-color: rgba(0, 0, 0, 0.8);
         clip-path: polygon(0 0, 80% 0, 80% 20%, 100% 20%, 100% 100% , 0 100%, 0 0);
     }
 
     .vds-bk__h3 {
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 300;
         color: white;
     }
 
     .vds-bk__p {
-        font-size: 17px;
+        font-size: 14px;
         margin-top: 30px;
         color: white;
     }
@@ -118,11 +150,23 @@
         margin-top: 10px;
     }
 
+    .vds-bk-img {
+        display: none;
+    }
+
 
 }
 
 /* lg*/
 @media (min-width: 992px) {
+
+    .vds-bk-img__md {
+        height: 671px;
+        background-image: url(./img/bk.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 1250px;
+    }
 
     .vds-bk__container {
         background-color: rgba(128, 128, 128, 0.1);
@@ -160,10 +204,22 @@
         margin-top: 10px;
     }
 
+    .vds-bk-img {
+        display: block;
+    }
+
 }
 
 /* xl*/
 @media (min-width: 1200px) {
+
+    .vds-bk-img__md {
+        height: 740px;
+        background-image: url(./img/bk.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     .vds-bk__container {
         background-color: rgba(128, 128, 128, 0.1);
@@ -199,6 +255,10 @@
 
     .vds-bk__btn {
         margin-top: 10px;
+    }
+
+    .vds-bk-img {
+        display: block;
     }
 
 }

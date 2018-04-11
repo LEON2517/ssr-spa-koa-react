@@ -1,22 +1,14 @@
 import React, { Component } from 'react';
 import { withFormik } from 'formik';
-import SelectVdsClassic from './FormSelect/SelectVdsClassic'
-import SelectAssemblyClassic from './FormSelect/SelectAssemblyClassic'
-import SelectDayClassic from './FormSelect/SelectDayClassic'
-import SelectVdsPro from './FormSelect/SelectVdsPro'
-import SelectAssemblyPro from './FormSelect/SelectAssemblyPro'
-import SelectDayPro from './FormSelect/SelectDayPro'
+import SelectVdsClassic from '../FormSelect/SelectVdsClassic'
+import SelectAssemblyClassic from '../FormSelect/SelectAssemblyClassic'
+import SelectDayClassic from '../FormSelect/SelectDayClassic'
+import SelectVdsPro from '../FormSelect/SelectVdsPro'
+import SelectAssemblyPro from '../FormSelect/SelectAssemblyPro'
+import SelectDayPro from '../FormSelect/SelectDayPro'
 
-import {connect} from 'react-redux'
-import {savingTariffs} from '../../../../../actions'
 
-/*const buttonPro = isSelectPro ? <button type="button" className="btn btn-primary text-center" onClick = {this.handleSelectPro}>Выбрано</button>
-    : <button type="button" className="btn btn-secondary text-center" onClick = {this.handleSelectPro}>Выбрать</button>;
-
-const buttonClassic = isSelectClassic ? <button type="button" className="btn btn-primary text-center" onClick = {this.handleSelectClassic}>Выбрано</button>
-    : <button type="button" className="btn btn-secondary text-center" onClick = {this.handleSelectClassic}>Выбрать</button>;*/
-
-class InnerForm extends Component {
+class FormInner extends Component {
 
     state = {
         sum: 100
@@ -27,8 +19,7 @@ class InnerForm extends Component {
         this.setState({
             sum: this.state.sum + 100
         })
-    }
-
+    };
 
     render() {
         const {
@@ -48,6 +39,9 @@ class InnerForm extends Component {
             isSelectPro,
             isSelectClassic
         } = this.props
+
+        console.log(values)
+
 
         const buttonPro = isSelectPro ? <button type="button" className="btn btn-primary text-center" onClick = {handleSelectPro}>Выбрано</button>
             : <button type="button" className="btn btn-secondary text-center" onClick = {handleSelectPro}>Выбрать</button>;
@@ -397,99 +391,4 @@ class InnerForm extends Component {
     }
 }
 
-
-
-const Form = withFormik({
-    mapPropsToValues: props => ({
-        handleSelectPro: props.handleSelectPro,
-        handleSelectClassic: props.handleSelectClassic,
-        //CLASSIC
-        //время сборки
-        timeAssemblyLimitedClassic: false,
-        timeAssemblyUnlimitedClassic: false,
-
-        //геолокация
-        geoRuClassic: false,
-        geoUaClassic: false,
-        geoUkClassic: false,
-
-        //селекты
-        vdsClassic: {},
-        assemblyClassic: {},
-        dayClassic: {},
-
-
-        //PRO
-        //время сборки
-        timeAssemblyLimitedPro: false,
-        timeAssemblyUnlimitedPro: false,
-
-        //геолокация
-        geoRuPro: false,
-        geoUaPro: false,
-        geoUkPro: false,
-
-        //IP
-        timeIpLimitedPro: false,
-        timeIpUnlimitedPro: false,
-
-        //селекты
-        vdsPro: {},
-        assemblyPro: {},
-        dayPro: {},
-
-
-        //флажки
-        userLog: false,
-        payment: 100
-
-    }),
-    validate: (values, props) => {
-        const errors = {};
-        const {isSelectPro, isSelectClassic} = props
-
-        //валидация CLASSIC
-        // время сборки
-        if (!(values.timeAssemblyLimitedClassic || values.timeAssemblyUnlimitedClassic) && isSelectClassic) {
-            errors.timeAssemblyErrClassic = 'Выберите время сборки.';
-        }
-        //геолокация
-        if (!(values.geoRuClassic || values.geoUaClassic || values.geoUkClassic) && isSelectClassic) {
-            errors.geoErrClassic = 'Выберите геопозицию.';
-        }
-
-        //валидация PRO
-        // время сборки
-        if (!(values.timeAssemblyLimitedPro || values.timeAssemblyUnlimitedPro) && isSelectPro) {
-            errors.timeAssemblyErrPro = 'Выберите время сборки.';
-        }
-        //геолокация
-        if (!(values.geoRuPro || values.geoUaPro || values.geoUkPro) && isSelectPro) {
-            errors.geoErrPro = 'Выберите геопозицию.';
-        }
-        //IP
-        if (!(values.timeIpLimitedPro || values.timeIpUnlimitedPro) && isSelectPro) {
-            errors.timeIpErrPro = 'Выберите время смены IP.';
-        }
-
-        //проверка выбран/не выбран тариф перед субмитом
-        if (!isSelectPro && !isSelectClassic) {
-            errors.selectTariff = 'Выберите тариф.';
-        }
-
-        //валидация итоговой суммы
-        if (!isSelectPro && !isSelectClassic) {
-            values.payment = '600';
-        }
-
-        //редирект на счет/регистрацию
-        /*        if (userLog) {
-                    values.userLog = true;
-                }*/
-
-        return errors;
-    },
-    handleSubmit: (values) => {
-        this.props.savingTariffs(values);
-    },
-})(InnerForm);
+export default FormInner

@@ -44,17 +44,40 @@ class VdsPresentation extends Component {
 
                         <div className="form-inline vds-presentation__btn_centre">
                             <Link to="/forgot-recover/forgot-password">
-                                <button className="btn btn-lg btn-outline-secondary vds-presentation__btn-outline-secondary" type="submit">
+                                <button className="btn btn-lg btn-outline-secondary vds-presentation__btn-outline-secondary vds-presentation__btn_acquainted-vds" type="submit">
                                     &#9654;
                                     Познакомиться с VDS
                                 </button>
                             </Link>
                             <Link to="/sign_up">
-                                <button className="btn btn-homepage btn-lg  btn-primary" type="button">
+                                <button className="btn btn-homepage btn-lg  btn-primary vds-presentation__btn_buy-vds" type="button">
                                     Купить VDS
                                 </button>
                             </Link>
                         </div>
+
+                            <div className="vds-presentation__btn_block">
+                                <div className="row">
+                                    <div className="col block-center">
+                                        <Link to="/forgot-recover/forgot-password">
+                                            <button className="btn btn-mg btn-outline-secondary vds-presentation__btn-outline-secondary" type="submit">
+                                                &#9654;
+                                                Познакомиться с VDS
+                                            </button>
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="row vds-presentation__btn_row">
+                                    <div className="col block-center">
+                                        <Link to="/sign_up">
+                                            <button className="btn btn-homepage btn-mg  btn-primary" type="button">
+                                                Купить VDS
+                                            </button>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+
 
                         </Plx>
                     </div>

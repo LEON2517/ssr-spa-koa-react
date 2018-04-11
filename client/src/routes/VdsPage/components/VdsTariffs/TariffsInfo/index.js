@@ -8,10 +8,10 @@ class VdsTariffsInfo extends Component {
         return (
             <div className="container-fluid vds-tariffs__container">
 
-                <div className="row">
+                <div className="row ">
                     <div className="col text-center">
                         <h2 className="vds-tariffs__h2">ТАРИФЫ</h2>
-                        <p>Мы разработали самые гибкие тарифы , каждый сможет подобрать персонально териф для себя</p>
+                        <p className="vds-tariffs__leble">Мы разработали очень гибкую систему, подберите тариф индивидуально для себя</p>
                     </div>
                 </div>
 
@@ -45,15 +45,15 @@ class VdsTariffsInfo extends Component {
                     </div>
 
                     <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <h3 className="slider-presentation__h3">Ожидание смены IP</h3>
-                        <p className="slider-presentation__p">Выберите страну, в которой планируете работать. На данный момент доступны Россия, Украина и Великобритания.
-                            В каждой стране у нас собственные Proxy сервера.</p>
+                        <h3 className="vds-tariffs__h3">Ожидание смены IP</h3>
+                        <p className="vds-tariffs__p_top">В базовой конфигурация за вами закрепляется один PROXY сервер, IP можно менять как угодно часто, но с временным интервалом в 20-30 сек.
+                      Если необходима мгновенной смены IP , выберите "Без ожидания" за Вами закрепляется сразу два сервера.</p>
                     </div>
 
                     <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <h3 className="slider-presentation__h3">Ожидание смены сборки</h3>
-                        <p className="slider-presentation__p">Выберите страну, в которой планируете работать. На данный момент доступны Россия, Украина и Великобритания.
-                            В каждой стране у нас собственные Proxy сервера.</p>
+                        <p className="vds-tariffs__p_top">В базовой сборке за вами закрепляется один VDS сервер, пересборка VDS осуществляется в порядке очереди в течении 24 часов после запроса.
+                            Если необходимо мгновенное переключение на новую сборку – выберите режим "Без ожидания".</p>
                     </div>
 
                 </div>

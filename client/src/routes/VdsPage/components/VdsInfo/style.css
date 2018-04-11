@@ -1,138 +1,824 @@
-.vds-info__container {
-    height: 700px;
+@media (min-width: 0) and (max-width: 575px) {
+
+    .vds-info__col_7_browser {
+        margin-left: 50px;
+    }
+
+    .vds-info__col_3 {
+        margin-left: 10px;
+    }
+
+    .vds-info__col_7 {
+        margin-left: 40px;
+    }
+
+    .vds-info__col_7_os {
+        margin-left: 50px;
+    }
+
+    .vds-info__icon_network {
+        height: 47px;
+        margin-top: 32px;
+        margin-bottom: 77px;
+        margin-left: 30px;
+    }
+
+    .vds-info__icon_acpi {
+        height: 47px;
+        margin-top: 32px;
+        margin-bottom: 85px;
+        margin-left: 30px;
+    }
+
+    .vds-info__icon_vm {
+        height: 55px;
+        margin-top: 31px;
+        margin-bottom: 68px;
+        margin-left: 23px;
+    }
+
+    .vds-info__icon_gpu_sm {
+        height: 60px;
+        margin-top: 25px;
+        margin-bottom: 65px;
+        margin-left: 13px;
+    }
+
+    .vds-info__icon_cpu_sm {
+        height: 60px;
+        margin-top: 31px;
+        margin-bottom: 65px;
+        margin-left: 18px;
+    }
+
+    .vds-info__icon_bios {
+        height: 95px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .vds-info__icon_obraz {
+        height: 55px;
+        margin-top: 32px;
+        margin-bottom: 75px;
+        margin-left: 25px;
+    }
+
+    .slider-presentation__h3 {
+        font-size: 20px;
+        font-weight: 300;
+        color: darkgray;
+    }
+
+    .vds-info__p_sm {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .row__lg{
+        display: none;
+    }
+
+    .row__sm {
+        display: block;
+        width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .vds-info__container {
+        height: 820px;
+    }
+
+    .vds-info__h2 {
+        color: #292d34;
+        margin-top: 80px;
+        font-weight: 400;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 25px;
+    }
+
+    .vds-info__row_block_one {
+        margin-top: 50px;
+        width: 370px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 60px;
+    }
+
+    .vds-info__h3:hover {
+        cursor: pointer;
+    }
+
+    .vds-info__row_block_border-hardware {
+        background-image: linear-gradient(to left, darkgray 64%, #61dafb 36%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__row_block_border-os {
+        background-image: linear-gradient(to right, darkgray 0%, darkgray 36%, #61dafb 36%, #61dafb 64%, darkgray 64%, darkgray 100%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__row_block_border-browser {
+        background-image: linear-gradient(to right, darkgray 64%, #61dafb 36%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__h3 {
+        font-size: 16px;
+        font-weight: 400;
+        color: darkgray;
+    }
+
+    .vds-info__h3_active {
+        color: #61dafb;
+        font-weight: 400;
+    }
+
+    .vds-info__p {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .vds-info__h3:hover {
+        cursor: pointer;
+        color: #61dafb;
+    }
+
+    .vds-info__row_block_two {
+        margin-top: 30px;
+
+    }
+
+    .vds-info__img {
+        width: 700px;
+        height: 431px;
+    }
+
+    .vds-info__img_margin {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .vds-presentation-img_f1g2 {
+        position: fixed;
+        height: 200px;
+        left: 0;
+        top: -40px;
+        display: none;
+    }
+
+    .vds-presentation-img_1x2 {
+        position: fixed;
+        height: 200px;
+        right: 0;
+        top: -200px;
+        display: none;
+    }
+
 }
 
-.vds-info__h2 {
-    color: #292d34;
-    margin-top: 100px;
-    font-weight: 400;
-    width: 600px;
-    margin-right: auto;
-    margin-left: auto;
+/* sm */
+@media (min-width: 576px) {
+
+    .vds-info__icon_gpu_sm {
+        height: 75px;
+        margin-top: 25px;
+        margin-bottom: 65px;
+        margin-left: 10px;
+
+    }
+
+    .vds-info__p_sm {
+        font-size: 18px;
+        margin-top: 20px;
+        width: 415px;
+    }
+
+    .vds-info__icon_cpu_sm {
+        height: 72px;
+        margin-top: 31px;
+        margin-bottom: 65px;
+        margin-left: 17px;
+    }
+
+    .row__lg{
+        display: none;
+    }
+
+    .row__sm {
+        display: block;
+    }
+
+    .vds-info__container {
+        height: 900px;
+    }
+
+    .vds-info__h2 {
+        color: #292d34;
+        margin-top: 100px;
+        font-weight: 400;
+        width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .vds-info__row_block_one {
+        margin-top: 50px;
+        width: 530px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 60px;
+    }
+
+    .vds-info__h3:hover {
+        cursor: pointer;
+    }
+
+    .vds-info__row_block_border-hardware {
+        background-image: linear-gradient(to left, darkgray 64%, #61dafb 36%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__row_block_border-os {
+        background-image: linear-gradient(to right, darkgray 0%, darkgray 36%, #61dafb 36%, #61dafb 64%, darkgray 64%, darkgray 100%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__row_block_border-browser {
+        background-image: linear-gradient(to right, darkgray 64%, #61dafb 36%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__h3 {
+        font-size: 22px;
+        font-weight: 400;
+        color: darkgray;
+    }
+
+    .vds-info__h3_active {
+        color: #61dafb;
+        font-weight: 400;
+    }
+
+    .vds-info__p {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .vds-info__h3:hover {
+        cursor: pointer;
+        color: #61dafb;
+    }
+
+    .vds-info__row_block_two {
+        margin-top: 30px;
+
+    }
+
+
+
+    .vds-info__img_margin {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .vds-info__icon_bios {
+        height: 110px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .vds-info__icon_acpi {
+        height: 53px;
+        margin-top: 32px;
+        margin-bottom: 85px;
+    }
+
+    .vds-info__icon_vm {
+        height: 65px;
+        margin-top: 31px;
+        margin-bottom: 68px;
+    }
+
+    .vds-info__icon_network {
+        height: 57px;
+        margin-top: 32px;
+        margin-bottom: 77px;
+    }
+
+    .vds-presentation-img_f1g2 {
+        position: fixed;
+        height: 200px;
+        left: 0;
+        top: -40px;
+        display: none;
+    }
+
+    .vds-presentation-img_1x2 {
+        position: fixed;
+        height: 200px;
+        right: 0;
+        top: -200px;
+        display: none;
+    }
+
+    .vds-info__icon_cpu {
+        height: 72px;
+        margin-top: 31px;
+        margin-bottom: 65px;
+    }
+
+    .vds-info__icon_gpu {
+        height: 75px;
+        margin-top: 25px;
+        margin-bottom: 65px;
+    }
+
+    .vds-info__icon_obraz {
+        height: 62px;
+        margin-top: 32px;
+        margin-bottom: 75px;
+    }
+
 }
 
-.vds-info__row_block_one {
-    margin-top: 50px;
-    width: 530px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 60px;
+/* md*/
+@media (min-width: 768px) {
+
+    .row__lg{
+        display: block;
+    }
+
+    .row__sm {
+        display: none;
+    }
+
+    .vds-info__container {
+        height: 750px;
+    }
+
+    .vds-info__h2 {
+        color: #292d34;
+        margin-top: 80px;
+        font-weight: 400;
+        width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .vds-info__row_block_one {
+        margin-top: 50px;
+        width: 530px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 60px;
+    }
+
+    .vds-info__h3:hover {
+        cursor: pointer;
+    }
+
+    .vds-info__row_block_border-hardware {
+        background-image: linear-gradient(to left, darkgray 64%, #61dafb 36%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__row_block_border-os {
+        background-image: linear-gradient(to right, darkgray 0%, darkgray 36%, #61dafb 36%, #61dafb 64%, darkgray 64%, darkgray 100%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__row_block_border-browser {
+        background-image: linear-gradient(to right, darkgray 64%, #61dafb 36%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__h3 {
+        font-size: 22px;
+        font-weight: 400;
+        color: darkgray;
+    }
+
+    .vds-info__h3_active {
+        color: #61dafb;
+        font-weight: 400;
+    }
+
+    .vds-info__p {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .vds-info__h3:hover {
+        cursor: pointer;
+        color: #61dafb;
+    }
+
+    .vds-info__row_block_two {
+        margin-top: 30px;
+
+    }
+
+    .vds-info__img {
+        width: 700px;
+        height: 431px;
+    }
+
+    .vds-info__img_margin {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .vds-info__icon_bios {
+        height: 110px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .vds-info__icon_acpi {
+        height: 53px;
+        margin-top: 32px;
+        margin-bottom: 85px;
+    }
+
+    .vds-info__icon_vm {
+        height: 65px;
+        margin-top: 31px;
+        margin-bottom: 68px;
+    }
+
+    .vds-info__icon_network {
+        height: 57px;
+        margin-top: 32px;
+        margin-bottom: 77px;
+    }
+
+    .vds-presentation-img_f1g2 {
+        position: fixed;
+        height: 200px;
+        left: 0;
+        top: -40px;
+        display: none;
+    }
+
+    .vds-presentation-img_1x2 {
+        position: fixed;
+        height: 200px;
+        right: 0;
+        top: -200px;
+        display: none;
+    }
+
+    .vds-info__icon_cpu {
+        height: 72px;
+        margin-top: 31px;
+        margin-bottom: 65px;
+    }
+
+    .vds-info__icon_gpu {
+        height: 75px;
+        margin-top: 25px;
+        margin-bottom: 65px;
+    }
+
+    .vds-info__icon_obraz {
+        height: 62px;
+        margin-top: 32px;
+        margin-bottom: 75px;
+    }
+
 }
 
-.vds-info__h3:hover {
-    cursor: pointer;
+/* lg*/
+@media (min-width: 992px) {
+
+    .row__lg{
+        display: block;
+    }
+
+    .row__sm {
+        display: none;
+    }
+
+    .vds-info__container {
+        height: 700px;
+    }
+
+    .vds-info__h2 {
+        color: #292d34;
+        margin-top: 100px;
+        font-weight: 400;
+        width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .vds-info__row_block_one {
+        margin-top: 50px;
+        width: 530px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 60px;
+    }
+
+    .vds-info__h3:hover {
+        cursor: pointer;
+    }
+
+    .vds-info__row_block_border-hardware {
+        background-image: linear-gradient(to left, darkgray 64%, #61dafb 36%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__row_block_border-os {
+        background-image: linear-gradient(to right, darkgray 0%, darkgray 36%, #61dafb 36%, #61dafb 64%, darkgray 64%, darkgray 100%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__row_block_border-browser {
+        background-image: linear-gradient(to right, darkgray 64%, #61dafb 36%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__h3 {
+        font-size: 22px;
+        font-weight: 400;
+        color: darkgray;
+    }
+
+    .vds-info__h3_active {
+        color: #61dafb;
+        font-weight: 400;
+    }
+
+    .vds-info__p {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .vds-info__h3:hover {
+        cursor: pointer;
+        color: #61dafb;
+    }
+
+    .vds-info__row_block_two {
+        margin-top: 30px;
+
+    }
+
+    .vds-info__img {
+        width: 700px;
+        height: 431px;
+    }
+
+    .vds-info__img_margin {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .vds-info__icon_bios {
+        height: 110px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .vds-info__icon_acpi {
+        height: 53px;
+        margin-top: 32px;
+        margin-bottom: 85px;
+    }
+
+    .vds-info__icon_vm {
+        height: 65px;
+        margin-top: 31px;
+        margin-bottom: 68px;
+    }
+
+    .vds-info__icon_network {
+        height: 57px;
+        margin-top: 32px;
+        margin-bottom: 77px;
+    }
+
+    .vds-presentation-img_f1g2 {
+        position: fixed;
+        height: 200px;
+        left: 0;
+        top: -40px;
+        display: block;
+    }
+
+    .vds-presentation-img_1x2 {
+        position: fixed;
+        height: 200px;
+        right: 0;
+        top: -200px;
+        display: block;
+    }
+
+    .vds-info__icon_cpu {
+        height: 72px;
+        margin-top: 31px;
+        margin-bottom: 65px;
+    }
+
+    .vds-info__icon_gpu {
+        height: 75px;
+        margin-top: 25px;
+        margin-bottom: 65px;
+    }
+
+    .vds-info__icon_obraz {
+        height: 62px;
+        margin-top: 32px;
+        margin-bottom: 75px;
+    }
+
+
 }
 
-.vds-info__row_block_border-hardware {
-    background-image: linear-gradient(to left, darkgray 64%, #61dafb 36%);
-    background-size: 100% 2px;
-    background-position: left bottom;
-    background-repeat: no-repeat;
+/* xl*/
+@media (min-width: 1200px) {
+    .row__lg{
+        display: block;
+    }
+
+    .row__sm {
+        display: none;
+    }
+
+    .vds-info__container {
+        height: 700px;
+    }
+
+    .vds-info__h2 {
+        color: #292d34;
+        margin-top: 100px;
+        font-weight: 400;
+        width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .vds-info__row_block_one {
+        margin-top: 50px;
+        width: 530px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 60px;
+    }
+
+    .vds-info__h3:hover {
+        cursor: pointer;
+    }
+
+    .vds-info__row_block_border-hardware {
+        background-image: linear-gradient(to left, darkgray 64%, #61dafb 36%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__row_block_border-os {
+        background-image: linear-gradient(to right, darkgray 0%, darkgray 36%, #61dafb 36%, #61dafb 64%, darkgray 64%, darkgray 100%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__row_block_border-browser {
+        background-image: linear-gradient(to right, darkgray 64%, #61dafb 36%);
+        background-size: 100% 2px;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    .vds-info__h3 {
+        font-size: 22px;
+        font-weight: 400;
+        color: darkgray;
+    }
+
+    .vds-info__h3_active {
+        color: #61dafb;
+        font-weight: 400;
+    }
+
+    .vds-info__p {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .vds-info__h3:hover {
+        cursor: pointer;
+        color: #61dafb;
+    }
+
+    .vds-info__row_block_two {
+        margin-top: 30px;
+
+    }
+
+    .vds-info__img {
+        width: 700px;
+        height: 431px;
+    }
+
+    .vds-info__img_margin {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .vds-info__icon_bios {
+        height: 110px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .vds-info__icon_acpi {
+        height: 53px;
+        margin-top: 32px;
+        margin-bottom: 85px;
+    }
+
+    .vds-info__icon_vm {
+        height: 65px;
+        margin-top: 31px;
+        margin-bottom: 68px;
+    }
+
+    .vds-info__icon_network {
+        height: 57px;
+        margin-top: 32px;
+        margin-bottom: 77px;
+    }
+
+    .vds-presentation-img_f1g2 {
+        position: fixed;
+        height: 200px;
+        left: 0;
+        top: -40px;
+        display: block;
+    }
+
+    .vds-presentation-img_1x2 {
+        position: fixed;
+        height: 200px;
+        right: 0;
+        top: -200px;
+        display: block;
+    }
+
+    .vds-info__icon_cpu {
+        height: 72px;
+        margin-top: 31px;
+        margin-bottom: 65px;
+    }
+
+    .vds-info__icon_gpu {
+        height: 75px;
+        margin-top: 25px;
+        margin-bottom: 65px;
+    }
+
+    .vds-info__icon_obraz {
+        height: 62px;
+        margin-top: 32px;
+        margin-bottom: 75px;
+    }
+
 }
 
-.vds-info__row_block_border-os {
-    background-image: linear-gradient(to right, darkgray 0%, darkgray 36%, #61dafb 36%, #61dafb 64%, darkgray 64%, darkgray 100%);
-    background-size: 100% 2px;
-    background-position: left bottom;
-    background-repeat: no-repeat;
-}
 
-.vds-info__row_block_border-browser {
-    background-image: linear-gradient(to right, darkgray 64%, #61dafb 36%);
-    background-size: 100% 2px;
-    background-position: left bottom;
-    background-repeat: no-repeat;
-}
-
-.vds-info__h3 {
-    font-size: 22px;
-    font-weight: 400;
-    color: darkgray;
-}
-
-.vds-info__h3_active {
-    color: #61dafb;
-    font-weight: 400;
-}
-
-.vds-info__p {
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-.vds-info__h3:hover {
-    cursor: pointer;
-    color: #61dafb;
-}
-
-.vds-info__row_block_two {
-    margin-top: 30px;
-
-}
-
-.vds-info__img {
-    width: 700px;
-    height: 431px;
-}
-
-.vds-info__img_margin {
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.vds-info__icon_bios {
-    height: 110px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
-
-.vds-info__icon_acpi {
-    height: 53px;
-    margin-top: 32px;
-    margin-bottom: 85px;
-}
-
-.vds-info__icon_vm {
-    height: 65px;
-    margin-top: 31px;
-    margin-bottom: 68px;
-}
-
-.vds-info__icon_network {
-    height: 57px;
-    margin-top: 32px;
-    margin-bottom: 77px;
-}
-
-.vds-presentation-img_f1g2 {
-    position: fixed;
-    height: 200px;
-    left: 0;
-    top: -40px;
-}
-
-.vds-presentation-img_1x2 {
-    position: fixed;
-    height: 200px;
-    right: 0;
-    top: -200px;
-}
-
-.vds-info__icon_cpu {
-    height: 72px;
-    margin-top: 31px;
-    margin-bottom: 65px;
-}
-
-.vds-info__icon_gpu {
-    height: 75px;
-    margin-top: 25px;
-    margin-bottom: 65px;
-}
-
-.vds-info__icon_obraz {
-    height: 62px;
-    margin-top: 32px;
-    margin-bottom: 75px;
-}

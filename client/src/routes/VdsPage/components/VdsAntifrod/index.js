@@ -53,7 +53,7 @@ class VdsAntifrod extends Component {
                 </div>
 
                 <div className="row vds-as__row_block_one">
-                    <div className="col text-center">
+                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
 
                         <div className="vds-as__video_basic" onClick={this.handleOpenModalBasic}>
 
@@ -79,11 +79,12 @@ class VdsAntifrod extends Component {
 
                         <h3 className="slider-presentation__h3">BASIC</h3>
                         <div className="vds-antifrod_p">
-                            <p className="vds-info__p">Приглашайте друзей присоединиться к вашему приключению, бросайте им вызов в многопользовательских матчах или позвольте им играть вместо вас.</p>
+                            <p className="vds-info__p">Вы познакомитесь с информацией об антифрод системах и об основных параметрах по которым происходит идентификация пользователей.
+                                Видео содержит базовую информацию и будет полезно новичкам в сфере арбитража.</p>
                         </div>
                     </div>
 
-                    <div className="col text-center">
+                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
 
                         <div className="vds-as__video_advanced" onClick={this.handleOpenModalAdvanced}>
 
@@ -109,7 +110,7 @@ class VdsAntifrod extends Component {
 
                         <h3 className="slider-presentation__h3">ADVANCED</h3>
                         <div className="vds-antifrod_p">
-                            <p className="vds-info__p">Приглашайте друзей присоединиться к вашему приключению, бросайте им вызов в многопользовательских матчах или позвольте им играть вместо вас.</p>
+                            <p className="vds-info__p">Вы узнаете о коммерческих антифрод системах , которые непосредственно используют букмекеры.Познакомитеь с альтернативными способами идентификации и разберетесь какие алгоритмы лежат в их основе.</p>
 
                         </div>
                     </div>
